@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'AkiraExpanded';
+  src: url("assets/AkiraExpandedDemo.otf") format("opentype");
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'AkiraExpanded', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
