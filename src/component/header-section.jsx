@@ -1,26 +1,16 @@
+import Navigation from "./navigation";
+import "../styles/header-section.css";
+
 export default function HeaderSection() {
     return (
-        <div>
-            <div>
-                <div>
-                    <h1>LOGO TITLE</h1>
-                </div>
-                <div>
-                    <input type="text" />
-                    <i className="fa-solid fa-magnifying-glass" />
-                </div>
-                <div>
-                    <i className="fa-solid fa-user" />
-                    <i className="fa-solid fa-heart" />
-                    <i className="fa-solid fa-cart-shopping" />
-                </div>
-            </div>
-            <div>
+        <div className="header-section">
+            <Navigation />
+            <div className="shipping-offer">
                 <p>
                    Free shipping for all order over £30 and just a reminder, all our deliveries are carbon neutral 
                 </p>
             </div>
-            <div>
+            <div className="text-links">
                 <p>Our Bestsellers</p>
                 <p>New Releases</p>
                 <p>Shop All</p>
