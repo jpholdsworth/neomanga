@@ -1,7 +1,10 @@
 export default function Navigation() {
     return (
         <div className="nav-bar">
-            <h1>NeoMANGA</h1>
+            <div>
+                <h1>NeoMANGA//</h1>
+                <h1>NeoMANGA//</h1>
+            </div>
             <div className="search-bar">
                 <input type="text" />
                 <i className="fa-solid fa-magnifying-glass" />
