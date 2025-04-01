@@ -1,6 +1,7 @@
 .header-section {
     width: 100vw;
-    background-color: crimson;
+    background-color: #0D0D0D;
+    color: #FFFFFF;
 }
 
 .nav-bar {
@@ -11,13 +12,22 @@
     font-size: 1.5rem;
 }
 
-.nav-bar > h1 {
-    font-size: 2.8rem;
+.nav-bar h1 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FFFFFF;
+    -webkit-text-fill-color: #0D0D0D;
+    letter-spacing: 4px;
+    font-size: 3rem;
     margin: 0;
 }
 
+.nav-bar h1:first-child {
+    -webkit-text-stroke-color: #DD2B37;
+    -webkit-text-fill-color: #DD2B37;
+}
+
 .shipping-offer {
-    background-color: black;
+    background-color: #DD2B37;
     padding: 6px 0;
     font-weight: bold;
     text-transform: uppercase;
