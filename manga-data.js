@@ -1197,7 +1197,6 @@ const MangaData = [
     price: 7.99,
     publisher: "VIZ Media LLC",
     isbn: "978-1974711147"
-  
   },
   {
     id: uniqid(),
@@ -1217,7 +1216,6 @@ const MangaData = [
     price: 59.99,
     publisher: "Kodansha USA Publishing",
     isbn: "978-1612629711"
-  
   },
   {
     id: uniqid(),
@@ -1237,7 +1235,6 @@ const MangaData = [
     price: 6.99,
     publisher: "VIZ Media LLC",
     isbn: "978-1591164418"
-  
   },
   {
     id: uniqid(),
@@ -1257,7 +1254,6 @@ const MangaData = [
     price: 7.99,
     publisher: "VIZ Media LLC",
     isbn: "978-1421516035"
-  
   },
   {
     id: uniqid(),
@@ -1277,7 +1273,6 @@ const MangaData = [
     price: 12.99,
     publisher: "VIZ Media LLC",
     isbn: "978-1421535388"
-  
   },
   {
     id: uniqid(),
@@ -1297,7 +1292,6 @@ const MangaData = [
     price: 9.99,
     publisher: "VIZ Media LLC",
     isbn: "978-1421580425"
-  
   },
   {
     id: uniqid(),
@@ -1317,7 +1311,6 @@ const MangaData = [
     price: 7.99,
     publisher: "VIZ Media LLC",
     isbn: "978-1421582696"
-  
   },
   {
     id: uniqid(),
@@ -1337,7 +1330,6 @@ const MangaData = [
     price: 7.99,
     publisher: "VIZ Media LLC",
     isbn: "978-1974732197"
-  
   },
   {
     id: uniqid(),
