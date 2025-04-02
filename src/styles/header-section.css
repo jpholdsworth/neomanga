@@ -21,11 +21,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: start;
     gap: 85px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1.8px;
     margin: auto;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #FFFFFF;
+    background: linear-gradient(to right, #DD2B37, #DD2B37 50%, #FFFFFF 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.375s ease;
+    cursor: pointer;
+}
+
+.link:hover {
+    background-position: 0 100%;
 }
 
 hr {
