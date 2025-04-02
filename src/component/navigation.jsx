@@ -1,3 +1,5 @@
+import "../styles/navigation.css";
+
 export default function Navigation() {
     return (
         <div className="nav-bar">
@@ -6,7 +8,11 @@ export default function Navigation() {
                 <h1>NeoMANGA//</h1>
             </div>
             <div className="search-bar">
-                <input type="text" />
+                <input 
+                  type="text"
+                  onChange={undefined}
+                  placeholder="Search Product..."
+                />
                 <i className="fa-solid fa-magnifying-glass" />
             </div>
             <div className="icons-buttons">
