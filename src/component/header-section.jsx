@@ -11,10 +11,12 @@ export default function HeaderSection() {
                 </p>
             </div>
             <div className="text-links">
+                <p>Home</p>
                 <p>Our Bestsellers</p>
                 <p>New Releases</p>
                 <p>Shop All</p>
             </div>
+            <hr />
         </div>
     );
 }
