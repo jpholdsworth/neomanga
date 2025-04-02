@@ -1,30 +1,21 @@
 import './App.css';
 import MangaData from '../manga-data';
+import HeaderSection from './component/header-section';
 
 function App() {
   return (
-    // STORE NAME - NeoManga 
-    // TAGLINE - "Unleash the Power of the Next Generation"
-
     // HEADER with search and shopping cart
       // About
       // Upcoming EVENTS / Blogs
       // NEW ARRIVALS / Coming soon ?
-
+    // MAIN SECTION
       // Grid layout of manga
       // filter side
     // FOOTER 
     <>
-      {MangaData.map((item) => 
-        <div key={item.id}>
-          <img src={item.image} alt={`${item.title} volume ${item.vol}`} />
-          <p>{item.title + " Volume No: " + item.vol}</p>
-          <p>{item.author.name}</p>
-          <p>{item.price}</p>
-        </div>
-      )}
+      <HeaderSection />
     </>
   );
 }
 
-export default App
+export default App;
