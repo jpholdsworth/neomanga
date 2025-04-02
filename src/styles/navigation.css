@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 28px 8rem 16px;
+    padding: 28px 10rem 16px;
     font-size: 1.5rem;
 }
 
@@ -46,4 +46,23 @@ input {
     height: 45px;
     border-radius: 50%;
     font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-magnifying-glass:hover {
+    background-color: #FFFFFF;
+}
+
+.icons-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.icons-buttons > i:hover, .fa-magnifying-glass:hover {
+    cursor: pointer;
+    color: #DD2B37;
 }
