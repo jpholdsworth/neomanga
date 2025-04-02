@@ -1,51 +1,34 @@
 .header-section {
     width: 100vw;
-    background-color: #0D0D0D;
+    background-color: #242424;
     color: #FFFFFF;
-}
-
-.nav-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 16px 5rem;
-    font-size: 1.5rem;
-}
-
-.nav-bar h1 {
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #FFFFFF;
-    -webkit-text-fill-color: #0D0D0D;
-    letter-spacing: 4px;
-    font-size: 3rem;
-    margin: 0;
-}
-
-.nav-bar h1:first-child {
-    -webkit-text-stroke-color: #DD2B37;
-    -webkit-text-fill-color: #DD2B37;
 }
 
 .shipping-offer {
     background-color: #DD2B37;
-    padding: 6px 0;
+    padding: 2px 0;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1.6px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .shipping-offer > p {
-    margin: 0;
+    margin: 5px;
+    letter-spacing: 1.8px;
 }
 
 .text-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 75px;
+    gap: 85px;
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    background-color: lightblue;
+    letter-spacing: 1.8px;
+    margin: auto;
+}
+
+hr {
+    width: 95vw;
+    margin: 0 auto;
 }
