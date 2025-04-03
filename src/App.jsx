@@ -1,6 +1,7 @@
 import './App.css';
 import MangaData from '../manga-data';
 import HeaderSection from './component/header-section';
+import FooterSection from './component/footer';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
     // FOOTER 
     <>
       <HeaderSection />
+
+      <FooterSection />
     </>
   );
 }
