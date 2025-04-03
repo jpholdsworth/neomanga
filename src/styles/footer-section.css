@@ -1,0 +1,39 @@
+.footer-section {
+    width: 100vw;
+}
+
+.subscribe-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    background-color: #DD2B37;
+    color: #FFFFFF;
+    padding: 20px 0;
+}
+
+.subscribe-container > div:first-child {
+    width: 1000px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-align: start;
+    margin: 16px 0 8px;
+}
+
+.title {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #242424;
+    -webkit-text-fill-color: #DD2B37;
+    letter-spacing: 4px;
+}
+
+.subscribe-container p {
+    width: 85%;
+    text-align: start;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin: 0 0 16px;
+}
