@@ -39,7 +39,8 @@ input {
     color: #FFFFFF;
 }
 
-input:focus, input:active {
+.search-bar > input:focus, 
+.search-bar > input:active {
     width: 360px;
     outline: none;
 }
