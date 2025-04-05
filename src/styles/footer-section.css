@@ -9,7 +9,7 @@
     gap: 20px;
     background-color: #FFC038;
     color: #242424;
-    padding: 20px 0;
+    padding: 12px 0;
 }
 
 .subscribe-container > div:first-child {
@@ -71,4 +71,108 @@ input[type="email"]::placeholder {
 
 .subscribe-btn:hover {
     color: #FFC038;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    gap: 50px;
+    margin: 16px 18% 0;
+    line-height: 12px;
+}
+
+.contact-section h3 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.details {
+    display: flex;
+    text-align: left;
+    gap: 120px;
+}
+
+.details a {
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    position: relative;
+    display: block;
+    color: #FFFFFF;
+    background: linear-gradient(to right, #DD2B37, #DD2B37 50%, #FFFFFF 50%);
+    background-clip: text;
+    height: 16px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.375s ease;
+    cursor: pointer;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.details a:hover {
+    background-position: 0 100%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.social i {
+    font-size: 1.5rem;
+    margin: 0 6px;
+}
+
+.social > div:first-child i {
+    cursor: pointer;
+}
+
+.social > div:first-child i:hover {
+    color: #DD2B37;
+}
+
+.social > div:last-child i {
+    font-size: 1.6rem;
+}
+
+.policies {
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 16px;
+}
+
+.policies > p {
+    margin: 0;
+}
+
+.footer-title {
+    font-family: 'AkiraExpanded';
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #FFFFFF;
+    -webkit-text-fill-color: #242424;
+    letter-spacing: 1.4px;
+    margin-left: 5px;
+}
+
+.policies > a {
+    text-decoration: underline;
+    opacity: 0.7;
+    letter-spacing: 0.6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.policies > a:hover {
+    opacity: 1;
+    color: #DD2B37;
 }
