@@ -5,22 +5,22 @@ export default function FooterDetails() {
                 <div className="details">
                     <div>
                         <h3>COMPANY</h3>
-                        <a>Our Story</a>
-                        <a>Shop Locations</a>
-                        <a>Career Opportunities</a>
+                        <a>OUR STORY</a>
+                        <a>SHOP LOCATIONS</a>
+                        <a>CAREER OPPORTUNITIES</a>
                     </div>
                     <div>
                         <h3>BRAND</h3>
-                        <a>Reviews</a>
-                        <a>Blog</a>
-                        <a>Events</a>
-                        <a>Newsletters</a>
+                        <a>REVIEWS</a>
+                        <a>BLOG</a>
+                        <a>EVENTS</a>
+                        <a>NEWSLETTERS</a>
                     </div>
                     <div>
                         <h3>HELP</h3>
-                        <a>Shopping & Returns</a>
+                        <a>SHOPPING & RETURNS</a>
                         <a>FAQ</a>
-                        <a>Contact Us</a>
+                        <a>CONTACT US</a>
                     </div>
                 </div>
                 <div className="social">

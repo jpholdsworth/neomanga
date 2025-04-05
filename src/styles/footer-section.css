@@ -79,7 +79,7 @@ input[type="email"]::placeholder {
 
 .contact-section {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: start;
     gap: 50px;
     margin: 16px 18% 0;
@@ -94,14 +94,13 @@ input[type="email"]::placeholder {
 .details {
     display: flex;
     text-align: left;
-    gap: 120px;
+    gap: 80px;
 }
 
 .details a {
-    font-family: system-ui, Arial, Helvetica, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1.2px;
+    font-family: 'Noto Sans';
+    font-size: 0.85rem;
+    letter-spacing: 1px;
     position: relative;
     display: block;
     color: #FFFFFF;
@@ -147,15 +146,17 @@ input[type="email"]::placeholder {
 }
 
 .policies {
-    font-family: system-ui, Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans';
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     align-items: start;
     gap: 16px;
+    margin-top: 10px;
 }
 
 .policies > p {
-    margin: 0 0 16px;
+    margin: 0 0 10px;
 }
 
 .footer-title {
@@ -182,7 +183,7 @@ input[type="email"]::placeholder {
 }
 
 .github-section {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans';
     width: 100%;
     display: flex;
     justify-content: center;
