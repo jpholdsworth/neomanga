@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'Noto Sans';
+  src: url("assets/NotoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
   font-family: 'AkiraExpanded';
   src: url("assets/AkiraExpandedDemo.otf") format("opentype");
 }
