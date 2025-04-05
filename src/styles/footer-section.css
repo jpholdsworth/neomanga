@@ -1,5 +1,9 @@
 .footer-section {
     width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .subscribe-container {
@@ -151,7 +155,7 @@ input[type="email"]::placeholder {
 }
 
 .policies > p {
-    margin: 0;
+    margin: 0 0 16px;
 }
 
 .footer-title {
