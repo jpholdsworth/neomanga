@@ -180,3 +180,26 @@ input[type="email"]::placeholder {
     opacity: 1;
     color: #DD2B37;
 }
+
+.github-section {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.fa-github {
+    color: #FFFFFF;
+    font-size: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.fa-github:hover {
+    color: #FFC038;
+    transform: scale(1.2);
+}
