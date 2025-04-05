@@ -6,7 +6,7 @@ export default function SubsriptionBox() {
                 <p>Transmit your email address to unlock exclusive manga deals, special event updates, and the latest blog posts — straight to your inbox!</p>
             </div>
             <div>
-                <input type="email" placeholder="Email Address" />
+                <input type="email" placeholder="Enter your email here" />
                 <button className="subscribe-btn">Subscribe</button>
             </div>
         </div>
