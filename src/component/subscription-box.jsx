@@ -7,7 +7,7 @@ export default function SubsriptionBox() {
             </div>
             <div>
                 <input type="email" placeholder="Email Address" />
-                <button>Subscribe</button>
+                <button className="subscribe-btn">Subscribe</button>
             </div>
         </div>
     );
