@@ -1,11 +1,13 @@
 import App from "./App";
+import ErrorPage from "./component/error-page";
 
-// children and errorElement
+// children
 // APP
     // HOME
     // BEST SELLERS
     // NEW RELEASES
     // SHOP ALL
+        // PRODUCT DETAILS
     // SHOPPING CART
     // ACCOUNT SIGN IN
     // FILTER SEARCH
@@ -15,6 +17,7 @@ const routes = [
     {
         path: '/',
         element: <App />,
+        errorElement: <ErrorPage />
     },
 ];
 
