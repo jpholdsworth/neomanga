@@ -1,9 +1,6 @@
 .footer-section {
     width: 100vw;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    margin-top: auto;
 }
 
 .subscribe-container {
