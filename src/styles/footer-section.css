@@ -189,7 +189,7 @@ input[type="email"]::placeholder {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     letter-spacing: 1.2px;
     text-transform: uppercase;
 }
