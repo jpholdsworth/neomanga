@@ -5,7 +5,7 @@ export default function Home() {
     const [MangaData] = useOutletContext();
     
     function randomise(data) {
-        return data.sort(() => 0.5 - Math.random()).slice(0, 4);
+        return data.sort(() => 0.5 - Math.random()).slice(0, 6);
     }
 
     const random = randomise(MangaData);
