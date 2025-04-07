@@ -1,4 +1,5 @@
 import { useOutletContext } from "react-router-dom";
+import MangaCarousel from "./manga-carousel";
 
 export default function Home() {
     const [MangaData] = useOutletContext();
@@ -11,21 +12,13 @@ export default function Home() {
 
     return (
         <>
-            <div>
-                {random.map(manga => 
-                    <div key={manga.id}>
-                        <img src={manga.image} alt="" />
-                        <h1>{manga.title}</h1>
-                        <p>Volume {manga.vol}</p>
-                    </div>
-                )}
-                {/* DISPLAY 4 RANDOM MANGAS - 6 MANGAS for CAROUSEL EFFECT */}
-            </div>
+            <MangaCarousel data={random} />
+            {/* DISPLAY 4 RANDOM MANGAS - 6 MANGAS for CAROUSEL EFFECT */}
             <div>
                 {/* FEATURED COLLECTION */}
             </div>
             <div>
-                {/* SPECIAL OFFER - 10% for 3 books in the MANGA UNIVERSE */}
+                {/* SPECIAL OFFER - 10% off for 3 books */}
             </div>
             <div>
                 {/* BLOG POSTS / UPCOMING EVENTS */}
