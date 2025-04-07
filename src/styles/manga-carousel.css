@@ -8,6 +8,18 @@
     position: relative;
 }
 
+#carousel > button {
+    background-color: transparent;
+    padding: 10px;
+    font-size: 3rem;
+    border: 3px solid transparent;
+}
+
+#carousel > button:not(:disabled):hover {
+    color: #FFC038;
+    border: 3px solid rgba(100, 100, 100, 0.3);
+}
+
 .carousel-wrapper {
     display: flex;
     align-items: center;
