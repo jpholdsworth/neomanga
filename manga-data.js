@@ -1153,7 +1153,7 @@ const MangaData = [
   {
     id: uniqid(),
     image: 'https://m.media-amazon.com/images/I/91nJtdFj3CL._SL1500_.jpg',
-    title: 'Mob Psycho 101',
+    title: 'Mob Psycho 100',
     vol: 4,
     pageLength: 200,
     genres: [ 'Shōnen', 'Action', 'Comedy', 'Supernatural' ],
@@ -1173,7 +1173,7 @@ const MangaData = [
   {
     id: uniqid(),
     image: 'https://m.media-amazon.com/images/I/91bKgDiXVVL._SL1500_.jpg',
-    title: 'Mob Psycho 102',
+    title: 'Mob Psycho 100',
     vol: 12,
     pageLength: 200,
     genres: [ 'Shōnen', 'Action', 'Comedy', 'Supernatural' ],
@@ -1495,7 +1495,7 @@ const MangaData = [
   {
     id: uniqid(),
     image: 'https://m.media-amazon.com/images/I/815rJRMLqqL._SL1500_.jpg',
-    title: 'MHA',
+    title: 'My Hero Academia',
     vol: 1,
     pageLength: 192,
     genres: [ 'Shōnen', 'Adventure', 'Science Fantasy', 'Superhero' ],
