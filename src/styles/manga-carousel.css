@@ -4,12 +4,31 @@
     justify-content: center;
     gap: 30px;
     margin: 24px auto;
+    letter-spacing: 1.1px;
+    position: relative;
 }
 
-#carousel > div {
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 80%;
+    max-width: 1010px; 
+}
+
+.carousel-container {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.manga-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 200px;
-    font-size: 1.1rem;
-    letter-spacing: 1.1px;
+    font-size: 1rem;
     padding: 12px 8px 8px;
     border-left: 5px solid #DD2B37;
     border-right: 5px solid #DD2B37;
@@ -22,21 +41,64 @@
 }
 
 .manga-title {
-    margin: 8px 0 0;
+    padding: 0 6px;
+    margin: 12px 0 0;
 }
 
 .manga-title + p {
-    margin: 0;
+    margin: 0 0 12px;
+    font-size: 0.75rem;
+}
+
+.manga-price {
+    font-weight: 700;
+    align-self: flex-start;
+    margin: auto 0 10px 16px;
+}
+
+.carousel-btns {
+    font-family: 'Noto Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     font-size: 0.8rem;
 }
 
-#carousel p:last-child {
-    font-weight: 700;
-    text-align: left;
-    margin-left: 26px;
-}
-
 .add-cart-btn {
-    font-family: 'Noto Sans';
+    color: #FFC038;
+    letter-spacing: 1.1px;
+    width: max-content;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
 }
 
+.add-cart-btn, .fa-heart {
+    cursor: pointer;
+}
+
+.add-cart-btn:hover {
+    color: #242424;
+    background-color: #FFC038;
+}
+
+.fa-cart-plus {
+    font-size: 1rem;
+}
+
+.wishlist.fa-heart {
+    font-size: 1.2rem;
+}
+
+.wishlist.fa-regular:hover {
+    -webkit-text-fill-color: #DD2B37;
+}
+
+.wishlist.fa-solid {
+    color: #DD2B37;
+}
+
+.wishlist.fa-solid:hover {
+    color: #FFFFFF;
+}
