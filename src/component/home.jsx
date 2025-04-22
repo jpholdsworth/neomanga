@@ -1,22 +1,19 @@
 import { useOutletContext } from "react-router-dom";
 import MangaCarousel from "./manga-carousel";
+import FeaturedCollection from "./featured";
 
 export default function Home() {
     const [MangaData] = useOutletContext();
     
-    function randomise(data) {
-        return data.sort(() => 0.5 - Math.random()).slice(0, 6);
-    }
-
-    const random = randomise(MangaData);
+    const random = MangaData.sort(() => 0.5 - Math.random()).slice(0, 6);
+    const featuredManga = MangaData.find((obj) => obj.title === "AKIRA");
+    console.log(featuredManga);
 
     return (
         <>
             <MangaCarousel data={random} />
-            {/* DISPLAY 4 RANDOM MANGAS - 6 MANGAS for CAROUSEL EFFECT */}
-            <div>
-                {/* FEATURED COLLECTION */}
-            </div>
+            <FeaturedCollection data={featuredManga} />
+            {/* FEATURED COLLECTION */}
             <div>
                 {/* SPECIAL OFFER - 10% off for 3 books */}
             </div>
