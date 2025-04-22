@@ -47,12 +47,19 @@
     border-radius: 16px;
 }
 
+.manga-card:hover {
+    border-left: 5px solid rgba(255, 192, 56, 0.8);
+    border-right: 5px solid rgba(255, 192, 56, 0.8);
+}
+
 .carousel-image {
+    cursor: pointer;
     width: 180px;
     height: auto;
 }
 
 .manga-title {
+    cursor: pointer;
     padding: 0 6px;
     margin: 12px 0 0;
 }
@@ -78,11 +85,13 @@
 }
 
 .add-cart-btn {
-    color: #FFC038;
+    background-color: #FFC038;
+    color: #242424;
     letter-spacing: 1.1px;
     width: max-content;
     padding: 8px 12px;
     border: 2px solid transparent;
+    border-radius: 24px;
     transition: all 0.2s ease;
 }
 
@@ -91,8 +100,9 @@
 }
 
 .add-cart-btn:hover {
-    color: #242424;
-    background-color: #FFC038;
+    color: #FFC038;
+    background-color: #242424;
+    border-color: #FFC038;
 }
 
 .fa-cart-plus {
