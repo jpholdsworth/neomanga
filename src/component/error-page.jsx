@@ -8,8 +8,8 @@ function ErrorPage() {
     return (
         <div id="error-page">
             <div>
-                <h1>NeoMANGA//</h1>
-                <h1>NeoMANGA//</h1>
+                <h1 className="error-title">NeoMANGA//</h1>
+                <h1 className="error-title">NeoMANGA//</h1>
             </div>
             <div className="glitch">
                 <span>[ ERROR 404X ]</span>

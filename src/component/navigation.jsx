@@ -4,8 +4,8 @@ export default function Navigation() {
     return (
         <div className="nav-bar">
             <div>
-                <h1>NeoMANGA//</h1>
-                <h1>NeoMANGA//</h1>
+                <h1 className="logo-title">NeoMANGA//</h1>
+                <h1 className="logo-title">NeoMANGA//</h1>
             </div>
             <div className="search-bar">
                 <input 

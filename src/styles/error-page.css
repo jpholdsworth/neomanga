@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-div h1 {
+.error-title {
     font-family: 'AkiraExpanded';
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #FFFFFF;
@@ -20,7 +20,7 @@ div h1 {
     font-size: 2.6rem;
 }
 
-div h1:first-child {
+.error-title:first-child {
     -webkit-text-stroke-color: #DD2B37;
     -webkit-text-fill-color: #DD2B37;
 }
