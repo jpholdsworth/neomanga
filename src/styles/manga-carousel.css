@@ -1,9 +1,8 @@
 #carousel {
-    width: 100vw;
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 24px auto;
+    margin: 38px auto;
     letter-spacing: 1.1px;
     position: relative;
 }
