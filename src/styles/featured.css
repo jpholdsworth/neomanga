@@ -18,11 +18,11 @@
     justify-content: flex-start;
     align-items: center;
     gap: 24px;
-    background-color: #DD2B37;
+    background: linear-gradient(to right, rgba(221, 43, 55, 0.35), rgba(221, 43, 55, 0.9), rgba(221, 43, 55, 1));
     width: 60%;
-    padding: 34px;
-    margin: auto;
-    border-radius: 32px;
+    padding: 34px 0 34px 22%;
+    margin-left: 0;
+    border-radius: 0 180px 180px 0;
     overflow: hidden;
 }
 
@@ -62,7 +62,7 @@
     width: 400px;
     height: auto;
     bottom: -70px;
-    right: -50px;
+    right: -15px;
     transform: rotate(-25deg);
     z-index: 0;
     mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
