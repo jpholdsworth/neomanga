@@ -34,8 +34,9 @@ export default function FooterDetails() {
                     <div>
                         <i className="fa-brands fa-cc-visa"></i>
                         <i className="fa-brands fa-cc-mastercard"></i>
-                        <i className="fa-brands fa-paypal"></i>
+                        <i className="fa-brands fa-cc-paypal"></i>
                         <i className="fa-brands fa-cc-amex"></i>
+                        <i class="fa-brands fa-cc-apple-pay"></i>
                     </div>
                 </div>
             </div>
