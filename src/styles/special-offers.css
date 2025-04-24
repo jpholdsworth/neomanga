@@ -1,0 +1,41 @@
+.special-offer {
+    margin: 38px auto 50px;
+}
+
+.special-offer .subheading {
+    text-align: right;
+}
+
+.special-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(to left, rgba(255, 192, 56, 0.35), rgba(255, 192, 56, 0.9), rgba(255, 192, 56, 1));
+    color: #0D0D0D;
+    letter-spacing: 1px;
+    width: 60%;
+    padding: 34px 25% 34px 0;
+    margin-left: auto;
+    border-radius: 180px 0 0 180px;
+}
+
+.offer-text {
+    margin-left: 100px;
+    font-size: 1rem;
+    width: 60%;
+}
+
+.three-manga {
+    position: relative;
+    display: flex;
+    width: auto;
+}
+
+.three-manga img {
+    position: absolute;
+}
+
+.three-manga img:nth-child(1) { width: 190px; transform: translate(25px, -145px) rotate(-12deg);}
+.three-manga img:nth-child(2) { width: 190px; z-index: 1; transform: translate(160px, -145px);}
+.three-manga img:nth-child(3) { width: 190px; z-index: 2; transform: translate(305px, -145px) rotate(12deg);}
