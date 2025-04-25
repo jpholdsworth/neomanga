@@ -29,16 +29,20 @@
 
 .three-manga img {
     position: absolute;
-    width: 240px;
+    width: 245px;
 }
 
-.three-manga img:nth-child(1) { z-index: 2; transform: translate(-10px, -150px) rotate(-20deg); }
+.three-manga img:nth-child(1) { z-index: 2; transform: translate(-10px, -150px) rotate(-14deg); }
 .three-manga img:nth-child(2) { z-index: 1; transform: translate(160px, -170px); }
 .three-manga img:nth-child(3) { transform: translate(290px, -170px) rotate(15deg); }
 
 .offer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Noto Sans', sans-serif;
-    margin-left: 550px;
+    margin-left: 560px;
     width: 65%;
     text-align: left;
 }
@@ -52,5 +56,19 @@
 
 .offer-text p {
     font-size: 1rem;
-    margin: 10px 0;
+    margin: 2px 0;
+}
+
+.offer-text button {
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    border-radius: 28px;
+    padding: 12px 38px;
+    margin: 16px 0 0;
+    transition: all 0.15s ease-in-out;
+}
+
+.offer-text button:hover {
+    border: 2px solid #0D0D0D;
+    background-color: #DD2B37;
 }
