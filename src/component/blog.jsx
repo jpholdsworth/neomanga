@@ -9,10 +9,12 @@ export default function BlogPosts() {
                 {BlogData.map((blog, index) => 
                     <div key={blog.id} id={"blog-" + index} className="blog-post">
                         <img src={blog.image} alt="" />
-                        <p>{blog.date} / NEOMANGA//</p>
-                        <p>{blog.category}</p>
-                        <p>{blog.title}</p>
-                        <p>{blog.blurb}</p>
+                        <p className={"blog-category " + blog.category}>{blog.category}</p>
+                        <div className="blog-text">
+                            <p className="blog-date">{blog.date} / NEOMANGA//</p>
+                            <p className="blog-title">{blog.title}</p>
+                            <p className="blog-blurb">{blog.blurb}</p> 
+                        </div>
                         <button>READ MORE</button>
                     </div>
                 )}
