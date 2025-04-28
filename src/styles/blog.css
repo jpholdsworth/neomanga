@@ -1,0 +1,32 @@
+.blog-section {
+    margin-bottom: 32px;
+}
+
+.blog.subheading {
+    font-size: 2.5rem;
+    text-align: center;
+    -webkit-text-stroke-color: #FFC038;
+    -webkit-text-fill-color: #242424;
+}
+
+.blog-container {
+    font-family: 'Noto Sans', sans-serif;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    margin: auto;
+}
+
+.blog-post {
+    flex: 1;
+}
+
+.blog-post img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+}
+
+#blog-1 img { object-position: left; }
