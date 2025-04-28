@@ -2,6 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import MangaCarousel from "./manga-carousel";
 import FeaturedCollection from "./featured";
 import SpecialOffers from "./special-offers";
+import BlogPosts from "./blog";
 
 export default function Home() {
     const [MangaData] = useOutletContext();
@@ -15,10 +16,7 @@ export default function Home() {
             <MangaCarousel data={random} />
             <FeaturedCollection data={featuredManga} />
             <SpecialOffers onePiece={onePieceManga} />
-            {/* SPECIAL OFFER - 20% off for more than 3 books */}
-            <div>
-                {/* BLOG POSTS / UPCOMING EVENTS */}
-            </div>
+            <BlogPosts />
         </>
     );
 }
