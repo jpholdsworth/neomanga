@@ -34,6 +34,7 @@
     display: inline-block;
     overflow: hidden;
     color: #FFFFFF;
+    margin: 12px 0 8px;
     background: linear-gradient(to right, #DD2B37, #DD2B37 50%, #FFFFFF 50%);
     background-clip: text;
     -webkit-background-clip: text;
