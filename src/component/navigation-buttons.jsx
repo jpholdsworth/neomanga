@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function NavigationButtons() {
     return (
         <div className="text-links">
-            <p className="link">Home</p>
-            <p className="link">Our Bestsellers</p>
-            <p className="link">New Arrivals</p>
-            <p className="link">Shop All</p>
+            <Link to="" className="link">Home</Link>
+            <Link to="best-sellers" className="link">Our Bestsellers</Link>
+            <Link to="new-arrivals" className="link">New Arrivals</Link>
+            <Link to="shop-all" className="link">Shop All</Link>
         </div>
     );
 }
