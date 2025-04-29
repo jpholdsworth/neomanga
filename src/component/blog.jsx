@@ -11,11 +11,11 @@ export default function BlogPosts() {
                         <img src={blog.image} alt="" />
                         <p className={"blog-category " + blog.category}>{blog.category}</p>
                         <div className="blog-text">
-                            <p className="blog-date">{blog.date} / NEOMANGA//</p>
+                            <p className="blog-date">{blog.date} - <span>NEOMANGA//</span></p>
                             <p className="blog-title">{blog.title}</p>
                             <p className="blog-blurb">{blog.blurb}</p> 
                         </div>
-                        <button>READ MORE</button>
+                        <button className="blog-button">READ MORE</button>
                     </div>
                 )}
             </div>
