@@ -1,0 +1,26 @@
+.display-container {
+    margin: 38px 0;
+}
+
+.manga-grid {
+    width: 42%;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    gap: 20px 30px;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin: auto;
+}
+
+.manga-grid img {
+    width: 180px;
+}
+
+.index-nav {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 16px 0;
+}
