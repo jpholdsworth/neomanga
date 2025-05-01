@@ -53,8 +53,8 @@
 
 .carousel-image {
     cursor: pointer;
-    width: 180px;
-    height: auto;
+    width: auto;
+    height: 270px;
 }
 
 .manga-title {
