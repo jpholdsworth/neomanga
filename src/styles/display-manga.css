@@ -34,7 +34,7 @@
     transition: border-color 0.2s ease-in-out;
 }
 
-:not(.active):hover {
+.idx-btn:not(.active):hover {
     border-color: rgba(254, 254, 254, 0.5);
 }
 
