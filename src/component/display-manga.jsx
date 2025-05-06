@@ -18,7 +18,7 @@ export default function DisplayManga({ manga }) {
             </div>
             <div className="index-nav">
                 <button disabled={index ? false : true} onClick={() => setIndex(index - 1)}>&#8882;</button>
-                {[...Array(maxIndex + 1)].map((_, i) => <div key={i} onClick={() => setIndex(i)}>{i + 1}</div>)}
+                {[...Array(maxIndex + 1)].map((_, i) => <div key={i} className={'idx-btn' + (index === i ? ' active' : '')} onClick={() => setIndex(i)}>{i + 1}</div>)}
                 <button disabled={index !== maxIndex ? false : true} onClick={() => setIndex(index + 1)}>&#8883;</button>
             </div>
         </div>
