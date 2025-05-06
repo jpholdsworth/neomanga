@@ -13,6 +13,13 @@ export default function DisplayManga({ manga }) {
                 {manga.slice(sectionIndex, sectionIndex + 12).map(obj => 
                     <div key={obj.id}>
                         <img src={obj.image} alt="" />
+                        <div>
+                            <h4>{obj.title}</h4>
+                            <p>Volume: {obj.vol}</p>
+                            <p>£{obj.price}</p>
+                            <p>By: {obj.author.name}</p>
+                            {/* buttons for wishlist and add to cart */}
+                        </div>
                     </div>
                 )}
             </div>
