@@ -21,6 +21,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 18px;
+    gap: 6px;
     margin: 16px 0;
+}
+
+.idx-btn {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 6px 14px;
+    border: 2px solid #1A1A1A;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s ease-in-out;
+}
+
+:not(.active):hover {
+    border-color: rgba(254, 254, 254, 0.5);
+}
+
+.active {
+    color: #FFC038;
+    border: 2px solid rgba(255, 192, 56, 0.7);
+}
+
+.index-nav button {
+    color: #DD2B37;
+    background-color: transparent;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 4px 18px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-out;
+}
+
+.index-nav button:hover {
+    color: #FEFEFE;
+    border: 2px solid rgba(100, 100, 100, 0.3);
 }
