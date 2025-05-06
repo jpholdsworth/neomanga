@@ -1,15 +1,17 @@
 import { useOutletContext } from "react-router-dom";
+import { useState } from "react";
 import DisplayManga from "./display-manga";
 
 export default function AllProducts() {
-    const [mangaData] = useOutletContext();
+    const [MangaData] = useOutletContext();
+    const [allManga, setAllManga] = useState(MangaData);
 
-    // STATE FOR MANGA - IMMUTABLE
+    // NEED TO DO FILTERING FOR MANGA
 
     return (
         <div>
             {/* filter section */}
-            <DisplayManga manga={mangaData} />
+            <DisplayManga manga={allManga} />
         </div>
     );
 }
