@@ -31,6 +31,26 @@
     height: 240px;
 }
 
+.item-details h4 {
+    font-size: 1.2rem;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin: 16px 10px 8px;
+}
+
+.item-details p {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: left;
+    margin: 0 10px;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 8px 0;
+}
+
 .index-nav {
     font-size: 1.1rem;
     display: flex;
