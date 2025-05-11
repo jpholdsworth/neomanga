@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/display-manga.css";
+import "../styles/genres.css";
 
 export default function DisplayManga({ manga }) {
     const [index, setIndex] = useState(0);
@@ -13,10 +14,13 @@ export default function DisplayManga({ manga }) {
                 {manga.slice(sectionIndex, sectionIndex + 12).map(obj => 
                     <div key={obj.id} className="manga-grid-item">
                         <img src={obj.image} alt="" />
-                        <div>
+                        <div className="item-details">
                             <h4>{obj.title}</h4>
-                            <p>Volume: {obj.vol}</p>
                             <p>£{obj.price}</p>
+                            <div className="genres">
+                                {obj.genres.map(genre => <p key={genre} className={`genre-tag ${genre.toLowerCase().split(" ").join("-")}`} >{genre}</p>)}
+                            </div>
+                            <p>Volume {obj.vol}</p>
                             <p>By: {obj.author.name}</p>
                             {/* buttons for wishlist and add to cart */}
                         </div>
