@@ -795,7 +795,7 @@ const MangaData = [
       'Supernatural Thriller'
     ],
     author: {
-      name: 'Tsugumi Ohba (Author)\\nTakeshi Obata (Illustrator)',
+      name: 'Tsugumi Ohba (Author)\nTakeshi Obata (Illustrator)',
       bio: 'Tsugumi Ohba and Takeshi Obata are a highly successful manga duo, known for their collaborations on Death Note and Bakuman. Ohba, the writer, is recognized for their intricate, psychological storytelling, while Obata, the artist, is celebrated for his detailed, dynamic illustrations. Death Note (2003–2006) is a dark thriller that captivated audiences worldwide with its complex characters and moral dilemmas, while Bakuman (2008–2012) offers a behind-the-scenes look at the manga industry. Together, they have created some of the most influential and popular manga series, blending suspense, intellectual depth, and captivating artwork.'
     },
     context: {
@@ -849,7 +849,7 @@ const MangaData = [
       'Supernatural Thriller'
     ],
     author: {
-      name: 'Tsugumi Ohba (Author)\\nTakeshi Obata (Illustrator)',
+      name: 'Tsugumi Ohba (Author)\nTakeshi Obata (Illustrator)',
       bio: 'Tsugumi Ohba and Takeshi Obata are a highly successful manga duo, known for their collaborations on Death Note and Bakuman. Ohba, the writer, is recognized for their intricate, psychological storytelling, while Obata, the artist, is celebrated for his detailed, dynamic illustrations. Death Note (2003–2006) is a dark thriller that captivated audiences worldwide with its complex characters and moral dilemmas, while Bakuman (2008–2012) offers a behind-the-scenes look at the manga industry. Together, they have created some of the most influential and popular manga series, blending suspense, intellectual depth, and captivating artwork.'
     },
     context: {
