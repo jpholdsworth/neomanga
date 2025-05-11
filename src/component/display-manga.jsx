@@ -11,7 +11,7 @@ export default function DisplayManga({ manga }) {
         <div className="display-container">
             <div className="manga-grid">
                 {manga.slice(sectionIndex, sectionIndex + 12).map(obj => 
-                    <div key={obj.id}>
+                    <div key={obj.id} className="manga-grid-item">
                         <img src={obj.image} alt="" />
                         <div>
                             <h4>{obj.title}</h4>
