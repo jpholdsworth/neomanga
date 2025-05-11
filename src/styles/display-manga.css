@@ -35,13 +35,21 @@
     font-size: 1.2rem;
     line-height: 20px;
     letter-spacing: 2px;
-    margin: 16px 10px 8px;
+    margin: 16px 10px 6px;
+}
+
+h4 + p {
+    font-family: 'AkiraExpanded', system-ui !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: right !important;
 }
 
 .item-details p {
     font-family: 'Noto Sans', sans-serif;
     text-align: left;
-    margin: 0 10px;
+    margin: 0 14px 0 10px;
 }
 
 .genres {
