@@ -1389,7 +1389,7 @@ const MangaData = [
   {
     id: uniqid(),
     image: 'https://m.media-amazon.com/images/I/71+yrizg2JL._SL1200_.jpg',
-    title: 'Attack on Titan - Colossal Edition',
+    title: 'Attack on Titan Colossal Edition',
     vol: 1,
     pageLength: 970,
     genres: [ 'Shōnen', 'Action', 'Dark Fantasy', 'Post-apocalyptic' ],
