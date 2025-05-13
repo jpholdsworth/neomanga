@@ -1,7 +1,7 @@
-export default function MangaGridDisplay({ mangaData, sectionIndex }) {
+export default function MangaGridDisplay({ mangaData, sectionIndex, length }) {
     return (
         <div className="manga-grid">
-            {mangaData.slice(sectionIndex, sectionIndex + 12).map(obj => 
+            {mangaData.slice(sectionIndex, sectionIndex + length).map(obj => 
                 <div key={obj.id} className="product-container">
                     <div className="manga-grid-item">
                         <img src={obj.image} alt="" />
