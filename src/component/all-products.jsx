@@ -11,7 +11,7 @@ export default function AllProducts() {
     return (
         <div>
             {/* filter section */}
-            <DisplayManga manga={allManga} />
+            <DisplayManga manga={allManga} panelCount={12} />
         </div>
     );
 }
