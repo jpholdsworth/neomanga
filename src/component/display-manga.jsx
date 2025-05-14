@@ -4,16 +4,16 @@ import IndexNavigation from "./index-navigation";
 import "../styles/display-manga.css";
 import "../styles/genres.css";
 
-export default function DisplayManga({ manga, panelCount }) {
+export default function DisplayManga({ products, panelCount }) {
     const [index, setIndex] = useState(0);
 
-    const maxIndex = Math.floor(manga.length / panelCount);
+    const maxIndex = Math.floor(products.length / panelCount);
     const sectionIndex = index * panelCount;
 
     return (
         <div className="display-container">
             <MangaGridDisplay 
-                mangaData={manga}
+                mangaData={products}
                 sectionIndex={sectionIndex}
                 length={panelCount}
             />
