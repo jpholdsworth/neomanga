@@ -1,9 +1,7 @@
 import App from "./App";
 import Home from "./component/home";
 import ErrorPage from "./component/error-page";
-import BestSellingProducts from "./component/best-selling-product";
-import NewArrivalProducts from "./component/new-arrival-product";
-import AllProducts from "./component/all-products";
+import Products from "./component/products";
 
 // APP
     // BEST SELLERS
@@ -22,9 +20,9 @@ const routes = [
         errorElement: <ErrorPage />,
         children: [
             { path: '', element: <Home /> },
-            { path: 'best-sellers', element: <BestSellingProducts /> },
-            { path: 'new-arrivals', element: <NewArrivalProducts /> },
-            { path: 'shop-all', element: <AllProducts /> }
+            { path: 'best-sellers', element: <Products type="best-selling" /> },
+            { path: 'new-arrivals', element: <Products type="new-arrivals" /> },
+            { path: 'shop-all', element: <Products /> }
         ],
     },
 ];
