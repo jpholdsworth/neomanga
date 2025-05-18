@@ -26,11 +26,10 @@
     overflow: hidden;
 }
 
-.featured-container > img {
+.akira-img {
     width: 200px;
     height: auto;
     border: solid 3px #FEFEFE;
-    cursor: pointer;
 }
 
 .featured-container > div {
