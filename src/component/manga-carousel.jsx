@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/manga-carousel.css";
 
 export default function MangaCarousel({ data }) {
@@ -26,19 +27,23 @@ export default function MangaCarousel({ data }) {
                     style={{ transform: `translateX(-${(index * cardWidth)}%)` }}
                 >
                     {data.map(manga => (
-                        <div className="manga-card" key={manga.id}>
+                        <Link 
+                          className="manga-card product-link" 
+                          to={`/product/${manga.id}`}
+                          key={manga.id}
+                        >
                             <img className="carousel-image" src={manga.image} alt="" />
                             <p className="manga-title">{manga.title}</p>
                             <p>Volume {manga.vol}</p>
                             <p className="manga-price">£{manga.price}</p>
                             <div className="carousel-btns">
                                 <button className="add-cart-btn"><i className="fa-solid fa-cart-plus"></i> ADD TO CART</button>
-                                {manga.additionalInfo.wishlist ? 
-                                    <i className="wishlist fa-solid fa-heart"></i> : 
+                                {manga.additionalInfo.wishlist ?
+                                    <i className="wishlist fa-solid fa-heart"></i> :
                                     <i className="wishlist fa-regular fa-heart"></i>
                                 }
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
