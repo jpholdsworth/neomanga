@@ -25,6 +25,11 @@
     border-radius: 30px;
 }
 
+.product-link {
+    text-decoration: none;
+    color: #FEFEFE;
+}
+
 .manga-grid-item {
     display: flex;
     width: 380px;
