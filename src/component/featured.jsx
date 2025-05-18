@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/featured.css";
 
 export default function FeaturedCollection({ data }) {
@@ -5,7 +6,9 @@ export default function FeaturedCollection({ data }) {
         <div className="featured-collection">
             <h1 className="subheading">Featured Collection</h1>
             <div className="featured-container">
-                <img src={data.image} alt={data.title} />
+                <Link to={`/product/${data.id}`}>
+                    <img className="akira-img" src={data.image} alt={data.title} />
+                </Link>
                 <div>
                     <p>Power. <br />Chaos. <br />Revolution. <br />Welcome to Neo-Tokyo.</p>
                     <p>{data.context.main}</p>
