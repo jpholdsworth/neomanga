@@ -14,7 +14,7 @@ export default function MangaGridDisplay({ mangaData, sectionIndex, length }) {
                                 <div className="genres">
                                     {obj.genres.slice(1).map(genre => <p key={genre} className={`genre-tag ${genre.toLowerCase().split(" ").join("-")}`} >{genre}</p>)}
                                 </div>
-                                <p>Volume {obj.vol}</p>
+                                <p>{obj.vol !== null && `Volume ${obj.vol}`}</p>
                                 <p>By: {obj.author.name}</p>
                             </div>
                         </div>
