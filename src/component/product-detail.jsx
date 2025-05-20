@@ -23,17 +23,15 @@ export default function ProductDetail() {
                     <div className="product-genres">
                         {product.genres.map(genre => <p key={genre} className={`genre-tag ${genre.toLowerCase().split(" ").join("-")}`}>{genre}</p>)}
                     </div>
-                    <p className="product-author">by: {product.author.name}</p>
-                    {/* <p>£{product.price}</p> */}
-                    {/* <div>
-                        {product.genres.map(genre => <p>{genre}</p>)}
-                    </div>
-                    <p>{product.context.main}</p>
-                    <p>{product.context.sub}</p>
-                    <p>Author</p>
-                    <p>{product.author.name}</p>
-                    <p>{product.author.bio}</p> */}
+                    <p className="context">{product.context.main}</p>
+                    <p className="context">{product.context.sub}</p>
+                    <hr className="product-break-line"/>
+                    {/* ADDITIONAL INFO ABOUT THE PRODUCT - Page length, Language, Publisher, Dimensions - 14.61 x 1.78 x 20.96, ISBN-13 */}
                 </div>
+            </div>
+            <div className="author-details">
+                <p className="product-author">About {product.author.name}:</p>
+                <p className="author-bio">{product.author.bio}</p>
             </div>
             <FooterSection />
         </>
