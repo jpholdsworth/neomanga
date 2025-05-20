@@ -1192,7 +1192,7 @@ const MangaData = [
   },
   {
     id: uniqid(),
-    image: 'https://static.wikia.nocookie.net/fire_punch/images/0/0f/Volume_01.png',
+    image: 'https://m.media-amazon.com/images/I/91HmjQXIQ7L._SL1500_.jpg',
     title: 'Fire Punch',
     vol: 1,
     pageLength: 200,
