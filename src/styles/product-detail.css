@@ -4,14 +4,11 @@
     align-items: flex-start;
     gap: 30px;
     width: 60vw;
-    /* padding: 16px 20px;
-    border: 4px solid #DD2B37;
-    border-radius: 16px; */
     margin: 24px auto;
 }
 
 .detail-container > img {
-    width: 300px;
+    width: 350px;
     height: auto;
     margin-left: 26px;
 }
@@ -20,8 +17,7 @@
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.1rem;
     text-align: left;
-    letter-spacing: 1px;
-    /* background-color: blue; */
+    letter-spacing: 0.8px;
 }
 
 .title-and-vol {
@@ -56,7 +52,31 @@
     margin: 4px 0;
 }
 
-.product-author {
+.context {
+    width: 90%;
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+.product-break-line {
+    width: 80%;
+    margin: 12px 28px;
+}
+
+.author-details {
+    width: 56vw;
+    font-family: 'Noto Sans', system-ui;
     font-size: 0.95rem;
-    margin: 12px 0;
+    letter-spacing: 0.8px;
+    text-align: left;
+    margin: auto;
+}
+
+.product-author {
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+.author-bio {
+    margin: 6px 0 24px;
 }
