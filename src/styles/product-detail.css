@@ -14,11 +14,13 @@
 }
 
 .product-details {
+    display: flex;
+    flex-direction: column;
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.1rem;
     text-align: left;
     letter-spacing: 0.8px;
-    height: max-content;
+    height: 620px;
 }
 
 .title-and-vol {
@@ -62,7 +64,7 @@
 .product-btns {
     font-size: 0.8rem;
     display: flex;
-    justify-self: end;
+    align-self: end;
     justify-items: center;
     align-items: center;
     gap: 16px;
