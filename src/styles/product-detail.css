@@ -58,6 +58,16 @@
     margin: 8px 0;
 }
 
+.product-btns {
+    font-size: 0.8rem;
+    display: flex;
+    justify-self: end;
+    justify-items: center;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 120px;
+}
+
 .product-break-line {
     width: 80%;
     margin: 12px 28px;
