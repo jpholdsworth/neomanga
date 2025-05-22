@@ -8,6 +8,10 @@ export default function ProductDetail() {
     const { productId } = useParams();
 
     const product = MangaData.filter(manga => manga.id === productId)[0];
+    const longDesc = [/Monster/g, /Bleach /g, /PTSD/g, /Century/g, /Dragon/g]
+                        .map(regex => product.title.match(regex))
+                        .filter(item => item !== null).length > 0;
+    console.log(longDesc);
 
     return (
         <>
@@ -29,31 +33,62 @@ export default function ProductDetail() {
                         <button className="add-cart-btn"><i className="fa-solid fa-cart-plus"></i> ADD TO CART</button>
                         {product.additionalInfo.wishlist ? <i className="wishlist fa-solid fa-heart"></i> : <i className="wishlist fa-regular fa-heart"></i> }
                     </div>
-                    <hr className="product-break-line"/>
-                    <div className="additional-info-section">
-                        <div className="info">
-                            <p>Print Length</p>
-                            <i className="fa-regular fa-file-lines"></i>
-                            <p>{product.pageLength} pages</p>
+                    {!longDesc && (
+                        <>
+                        <hr className="product-break-line"/>
+                        <div className="additional-info-section">
+                            <div className="info">
+                                <p>Print Length</p>
+                                <i className="fa-regular fa-file-lines"></i>
+                                <p>{product.pageLength} pages</p>
+                            </div>
+                            <div className="info">
+                                <p>Language</p>
+                                <i className="fa-solid fa-language"></i>
+                                <p>English</p>
+                            </div>
+                            <div className="info">
+                                <p>Publisher</p>
+                                <i className="fa-regular fa-building"></i>
+                                <p>{product.publisher}</p>
+                            </div>
+                            <div className="info">
+                                <p>ISBN-13</p>
+                                <i className="fa-solid fa-barcode"></i>
+                                <p>{product.isbn}</p>
+                            </div>
                         </div>
-                        <div className="info">
-                            <p>Language</p>
-                            <i className="fa-solid fa-language"></i>
-                            <p>English</p>
-                        </div>
-                        <div className="info">
-                            <p>Publisher</p>
-                            <i className="fa-regular fa-building"></i>
-                            <p>{product.publisher}</p>
-                        </div>
-                        <div className="info">
-                            <p>ISBN-13</p>
-                            <i className="fa-solid fa-barcode"></i>
-                            <p>{product.isbn}</p>
-                        </div>
-                    </div>
+                        </>
+                    )}
                 </div>
             </div>
+            {longDesc && (
+                <>
+                <hr className="section-break-line"/>
+                <div className="additional-info-section">
+                    <div className="info">
+                        <p>Print Length</p>
+                        <i className="fa-regular fa-file-lines"></i>
+                        <p>{product.pageLength} pages</p>
+                    </div>
+                    <div className="info">
+                        <p>Language</p>
+                        <i className="fa-solid fa-language"></i>
+                        <p>English</p>
+                    </div>
+                    <div className="info">
+                        <p>Publisher</p>
+                        <i className="fa-regular fa-building"></i>
+                        <p>{product.publisher}</p>
+                    </div>
+                    <div className="info">
+                        <p>ISBN-13</p>
+                        <i className="fa-solid fa-barcode"></i>
+                        <p>{product.isbn}</p>
+                    </div>
+                </div>
+                </>
+            )}
             <div className="author-details">
                 <p className="product-author">About {product.author.name}:</p>
                 <p className="author-bio">{product.author.bio}</p>
