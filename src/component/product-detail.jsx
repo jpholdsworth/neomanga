@@ -26,6 +26,28 @@ export default function ProductDetail() {
                     <p className="context">{product.context.main}</p>
                     <p className="context">{product.context.sub}</p>
                     <hr className="product-break-line"/>
+                    <div className="additional-info-section">
+                        <div className="info">
+                            <p>Print Length</p>
+                            <i className="fa-regular fa-file-lines"></i>
+                            <p>{product.pageLength} pages</p>
+                        </div>
+                        <div className="info">
+                            <p>Language</p>
+                            <i className="fa-solid fa-language"></i>
+                            <p>English</p>
+                        </div>
+                        <div className="info">
+                            <p>Publisher</p>
+                            <i className="fa-regular fa-building"></i>
+                            <p>{product.publisher}</p>
+                        </div>
+                        <div className="info">
+                            <p>ISBN-13</p>
+                            <i className="fa-solid fa-barcode"></i>
+                            <p>{product.isbn}</p>
+                        </div>
+                    </div>
                     {/* ADDITIONAL INFO ABOUT THE PRODUCT - Page length, Language, Publisher, Dimensions - 14.61 x 1.78 x 20.96, ISBN-13 */}
                 </div>
             </div>
