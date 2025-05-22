@@ -25,6 +25,10 @@ export default function ProductDetail() {
                     </div>
                     <p className="context">{product.context.main}</p>
                     <p className="context">{product.context.sub}</p>
+                    <div className="product-btns">
+                        <button className="add-cart-btn"><i className="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                        {product.additionalInfo.wishlist ? <i className="wishlist fa-solid fa-heart"></i> : <i className="wishlist fa-regular fa-heart"></i> }
+                    </div>
                     <hr className="product-break-line"/>
                     <div className="additional-info-section">
                         <div className="info">
@@ -48,7 +52,6 @@ export default function ProductDetail() {
                             <p>{product.isbn}</p>
                         </div>
                     </div>
-                    {/* ADDITIONAL INFO ABOUT THE PRODUCT - Page length, Language, Publisher, Dimensions - 14.61 x 1.78 x 20.96, ISBN-13 */}
                 </div>
             </div>
             <div className="author-details">
