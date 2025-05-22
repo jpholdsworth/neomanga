@@ -63,6 +63,25 @@
     margin: 12px 28px;
 }
 
+.additional-info-section {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.info > p {
+    margin: 6px 0;
+}
+
+.info > i {
+    margin: 6px 0;
+    font-size: 26px;
+}
+
 .author-details {
     width: 56vw;
     font-family: 'Noto Sans', system-ui;
