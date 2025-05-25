@@ -1,10 +1,50 @@
+.back-btn-container {
+    font-family: 'Noto Sans', sans-serif;
+    width: 58%;
+    text-align: left;
+    margin: 14px auto;
+}
+
+.back-btn {
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+    background: linear-gradient(to left, #FFC038, #FFC038 50%, #FFFFFF 50%);
+    background-clip: text;
+    background-size: 200% 100%;
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    padding: 4px;
+    transition: background-position 0.375s ease;
+}
+
+.back-btn:hover { background-position: 100% 0; }
+
+.back-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFC038;
+    transform-origin: bottom right;
+    transition: transform 0.375s ease-out;
+}
+
+.back-btn:hover::after {
+    transform: scaleX(1);
+}
+
 .detail-container {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
     width: 60vw;
-    margin: 24px auto;
+    margin: 0px auto 24px;
 }
 
 .detail-container > img {
