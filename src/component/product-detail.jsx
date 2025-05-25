@@ -12,12 +12,13 @@ export default function ProductDetail() {
     const longDesc = [/Monster/g, /Bleach /g, /PTSD/g, /Century/g, /Dragon/g]
                         .map(regex => product.title.match(regex))
                         .filter(item => item !== null).length > 0;
-    console.log(longDesc);
 
     return (
         <>
             <HeaderSection />
-            {/* <button type="submit" onClick={() => window.history.back()}>Back</button> */}
+            <div className="back-btn-container">
+                <button className="back-btn" type="submit" onClick={() => window.history.back()}>&lt; Go Back</button>
+            </div>
             <div className="detail-container">
                 <img src={product.image} alt="" />
                 <div className="product-details">
