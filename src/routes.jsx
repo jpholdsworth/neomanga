@@ -28,7 +28,8 @@ const routes = [
     },
     {
         path: '/product/:productId',
-        element: <MangaProduct />
+        element: <MangaProduct />,
+        errorElement: <ErrorPage />,
     }
 ];
 
