@@ -19,7 +19,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1569319017',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -39,7 +39,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421534602',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -59,7 +59,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421539591',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -79,7 +79,7 @@ const MangaData = [
     price: 9.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974732173',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -99,7 +99,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974738700',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -119,7 +119,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974743278',
-    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false }
   },
   {
     id: uniqid(),
@@ -150,7 +150,7 @@ const MangaData = [
     price: 44.99,
     publisher: 'Dark Horse Manga',
     isbn: '978-1506711980',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -170,7 +170,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'Dark Horse Manga',
     isbn: '978-1593073312',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -190,7 +190,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'Dark Horse Manga',
     isbn: '978-1595822093',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -212,7 +212,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1569319208',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -234,7 +234,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1591164579',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -256,7 +256,7 @@ const MangaData = [
     price: 9.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1569319000',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -278,7 +278,7 @@ const MangaData = [
     price: 9.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1591163589',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -300,7 +300,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421518626',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -322,7 +322,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421531359',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -344,7 +344,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421579757',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -364,7 +364,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421508382',
-    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false }
   },
   {
     id: uniqid(),
@@ -386,7 +386,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421532325',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -408,7 +408,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421585642',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -430,7 +430,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421585659',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -452,7 +452,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421569543',
-    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false }
   },
   {
     id: uniqid(),
@@ -474,7 +474,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421590158',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -494,7 +494,7 @@ const MangaData = [
     price: 28.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421561325',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -516,7 +516,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421519876',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -538,7 +538,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421533254',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -560,7 +560,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421533360',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -582,7 +582,7 @@ const MangaData = [
     price: 29.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974752584',
-    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false }
   },
   {
     id: uniqid(),
@@ -604,7 +604,7 @@ const MangaData = [
     price: 19.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421522814',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -626,7 +626,7 @@ const MangaData = [
     price: 18.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421573342',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -648,7 +648,7 @@ const MangaData = [
     price: 20.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421578804',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -670,7 +670,7 @@ const MangaData = [
     price: 20.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421578859',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -692,7 +692,7 @@ const MangaData = [
     price: 20.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421591766',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -714,7 +714,7 @@ const MangaData = [
     price: 15.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974708109',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -736,7 +736,7 @@ const MangaData = [
     price: 15.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974708154',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -758,7 +758,7 @@ const MangaData = [
     price: 15.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974724161',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -780,7 +780,7 @@ const MangaData = [
     price: 20.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974752546',
-    additionalInfo: { bestSeller: true, newRelease: true, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: true, wishlist: false }
   },
   {
     id: uniqid(),
@@ -807,7 +807,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421501680',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -834,7 +834,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421501697',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -861,7 +861,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421501703',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -888,7 +888,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421503318',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -910,7 +910,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974720149',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -932,7 +932,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974714803',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -954,7 +954,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974718719',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -976,7 +976,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974725328',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -998,7 +998,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974743414',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1022,7 +1022,7 @@ const MangaData = [
     price: 18.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421569062',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1042,7 +1042,7 @@ const MangaData = [
     price: 19.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1612624204',
-    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1062,7 +1062,7 @@ const MangaData = [
     price: 19.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1612624235',
-    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1082,7 +1082,7 @@ const MangaData = [
     price: 22.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1612624242',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1106,7 +1106,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1591167532',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1128,7 +1128,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421522166',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1148,7 +1148,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'Dark Horse',
     isbn: '978-1506709871',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1168,7 +1168,7 @@ const MangaData = [
     price: 11.99,
     publisher: 'Dark Horse',
     isbn: '978-1506713694',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1188,7 +1188,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'Dark Horse',
     isbn: '978-1506730745',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1210,7 +1210,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421597171',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1232,7 +1232,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421598086',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1254,7 +1254,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974709939',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1274,7 +1274,7 @@ const MangaData = [
     price: 24.99,
     publisher: 'Kodansha USA Publishing',
     isbn: '978-1935429005',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1296,7 +1296,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974715466',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1318,7 +1318,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974717248',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1340,7 +1340,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974718160',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1362,7 +1362,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974704422',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1384,7 +1384,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974711147',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1404,7 +1404,7 @@ const MangaData = [
     price: 59.99,
     publisher: 'Kodansha USA Publishing',
     isbn: '978-1612629711',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1426,7 +1426,7 @@ const MangaData = [
     price: 6.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1591164418',
-    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1448,7 +1448,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421516035',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1470,7 +1470,7 @@ const MangaData = [
     price: 12.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421535388',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1490,7 +1490,7 @@ const MangaData = [
     price: 9.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421580425',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1512,7 +1512,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421582696',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1534,7 +1534,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974732197',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1554,7 +1554,7 @@ const MangaData = [
     price: 12.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421533636',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1574,7 +1574,7 @@ const MangaData = [
     price: 15.99,
     publisher: 'Kodansha USA Publishing',
     isbn: '978-1646516339',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1596,7 +1596,7 @@ const MangaData = [
     price: 13.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974743032',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1618,7 +1618,7 @@ const MangaData = [
     price: 13.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974751785',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1640,7 +1640,7 @@ const MangaData = [
     price: 9.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421513584',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1662,7 +1662,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-4088746999',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1684,7 +1684,7 @@ const MangaData = [
     price: 8.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-2505121244',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1706,7 +1706,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974742837',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1726,7 +1726,7 @@ const MangaData = [
     price: 13.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-4091255853',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1746,7 +1746,7 @@ const MangaData = [
     price: 15.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1421532912',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: true }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1768,7 +1768,7 @@ const MangaData = [
     price: 10.99,
     publisher: 'Gollancz',
     isbn: '978-0575080744',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   },
   {
     id: uniqid(),
@@ -1792,7 +1792,7 @@ const MangaData = [
     price: 7.99,
     publisher: 'VIZ Media LLC',
     isbn: '978-1974732180',
-    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false, hiddenGem: false }
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
   }
 ];
 
