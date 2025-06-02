@@ -23,7 +23,7 @@ export default function ProductDetail() {
                 <img src={product.image} alt="" />
                 <div className="product-details">
                     <div className="title-and-vol">
-                        <h1 className={product.title.length > 20 ? "long-title" : ""}>{product.title}</h1>
+                        <h1 className={product.title.length > 18 ? "long-title" : ""}>{product.title}</h1>
                         <p>{product.vol !== null && `Volume ${product.vol}`}</p>
                     </div>
                     <div className="product-genres">
@@ -32,6 +32,7 @@ export default function ProductDetail() {
                     <p className="context">{product.context.main}</p>
                     <p className="context">{product.context.sub}</p>
                     <div className="product-btns">
+                        <p className="product-price">£<span className="price-tag">{product.price}</span></p>
                         <button className="add-cart-btn"><i className="fa-solid fa-cart-plus"></i> ADD TO CART</button>
                         {product.additionalInfo.wishlist ? <i className="wishlist fa-solid fa-heart"></i> : <i className="wishlist fa-regular fa-heart"></i> }
                     </div>
