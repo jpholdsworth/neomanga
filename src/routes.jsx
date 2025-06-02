@@ -2,7 +2,7 @@ import App from "./App";
 import Home from "./component/home";
 import ErrorPage from "./component/error-page";
 import Products from "./component/products";
-import MangaProduct from "./component/product-detail";
+import ProductDetail from "./component/product-detail";
 
 // APP
     // BEST SELLERS
@@ -28,7 +28,7 @@ const routes = [
     },
     {
         path: '/product/:productId',
-        element: <MangaProduct />,
+        element: <ProductDetail />,
         errorElement: <ErrorPage />,
     }
 ];
