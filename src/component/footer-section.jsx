@@ -1,7 +1,33 @@
-import SubsriptionBox from "./subscription-box";
 import FooterDetails from "./footer-details";
-import GitHub from "./github";
 import "../styles/footer-section.css";
+
+function SubsriptionBox() {
+    return(
+        <div className="subscribe-container">
+            <div>
+                <h4>Be a Part of the <span className="title">NeoManga//</span> Community</h4>
+                <p>Transmit your email address to unlock exclusive manga deals, special event updates, and the latest blog posts — straight to your inbox!</p>
+            </div>
+            <div>
+                <input type="email" placeholder="Enter your email here" />
+                <button className="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+    );
+}
+
+function GitHub() {
+    const currentYear = new Date().getFullYear();
+    
+    return (
+        <div className="github-section">
+            <p>Copyright &copy; {currentYear} JHoldsworth23</p>
+            <a href="https://github.com/Jholdsworth23" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-github"></i>
+            </a>
+        </div>
+    )
+}
 
 export default function FooterSection() {
     return (
