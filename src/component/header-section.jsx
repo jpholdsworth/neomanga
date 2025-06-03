@@ -18,9 +18,9 @@ function Navigation() {
                 <i className="fa-solid fa-magnifying-glass" />
             </div>
             <div className="icons-buttons">
-                <i className="fa-solid fa-user" />
-                <i className="fa-solid fa-heart" />
-                <i className="fa-solid fa-cart-shopping" />
+                <Link className="icon-link"><i className="fa-solid fa-user" /></Link>
+                <Link className="icon-link"><i className="fa-solid fa-heart" /></Link>
+                <Link to="/cart" className="icon-link"><i className="fa-solid fa-cart-shopping" /></Link>
             </div>
         </div>
     );
