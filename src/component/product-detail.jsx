@@ -1,11 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 import MangaData from "../../manga-data.js";
-import HeaderSection from "./header-section.jsx";
 import AdditionalInfo from "./additional-info.jsx";
-import FooterSection from "./footer-section.jsx";
 import "../styles/product-detail.css";
 
 export default function ProductDetail() {
+    const { addItemToCart } = useOutletContext()
     const { productId } = useParams();
 
     const product = MangaData.filter(manga => manga.id === productId)[0];
@@ -15,7 +14,6 @@ export default function ProductDetail() {
 
     return (
         <>
-            <HeaderSection />
             <div className="back-btn-container">
                 <button className="back-btn" type="submit" onClick={() => window.history.back()}>&lt; Go Back</button>
             </div>
@@ -33,7 +31,13 @@ export default function ProductDetail() {
                     <p className="context">{product.context.sub}</p>
                     <div className="product-btns">
                         <p className="product-price">£<span className="price-tag">{product.price}</span></p>
-                        <button className="add-cart-btn"><i className="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                        <button 
+                          className="add-cart-btn"
+                          onClick={() => { addItemToCart(product); }}
+                        >
+                            <i className="fa-solid fa-cart-plus"></i> 
+                            ADD TO CART
+                        </button>
                         {product.additionalInfo.wishlist ? <i className="wishlist fa-solid fa-heart"></i> : <i className="wishlist fa-regular fa-heart"></i> }
                     </div>
                     {!longDesc && <AdditionalInfo productInfo={product} /> }
@@ -44,7 +48,6 @@ export default function ProductDetail() {
                 <p className="product-author">About {product.author.name}:</p>
                 <p className="author-bio">{product.author.bio}</p>
             </div>
-            <FooterSection />
         </>
     );
 }
