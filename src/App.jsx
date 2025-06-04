@@ -12,12 +12,17 @@ function App() {
   // const [searchItem, setSearchItem] = useState('');
 
   // ADD WISHLIST ITEM and REMOVE WISHLIST ITEM
+
+  function addItemToCart(item) {
+    setCart([...cart, item]);
+  }
+
   // ADD ITEM to the Cart and REMOVE ITEM from the cart
 
   return (
     <>
       <HeaderSection />
-        <Outlet context={{ mangaData, setMangaData, cart, setCart }} />
+        <Outlet context={{ mangaData, setMangaData, cart, addItemToCart }} />
       <FooterSection />
     </>
   );
