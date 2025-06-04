@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import "../styles/manga-carousel.css";
 
 export default function MangaCarousel({ data }) {
+    const { cart, addItemToCart } = useOutletContext();
     const [index, setIndex] = useState(0);
+
     const visibleCards = 4;
     const cardWidth = 16.5;
 
@@ -37,7 +39,13 @@ export default function MangaCarousel({ data }) {
                             <p>Volume {manga.vol}</p>
                             <p className="manga-price">£{manga.price}</p>
                             <div className="carousel-btns">
-                                <button className="add-cart-btn"><i className="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                                <button 
+                                  className="add-cart-btn"
+                                  disabled={cart.includes(manga)}
+                                  onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItemToCart(manga); }}
+                                >
+                                    { cart.includes(manga) ? "ADDED IN CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
+                                </button>
                                 {manga.additionalInfo.wishlist ?
                                     <i className="wishlist fa-solid fa-heart"></i> :
                                     <i className="wishlist fa-regular fa-heart"></i>

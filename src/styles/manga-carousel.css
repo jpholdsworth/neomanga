@@ -94,11 +94,16 @@
     transition: all 0.2s ease;
 }
 
+.add-cart-btn:disabled {
+    background-color: #DD2B37;
+    color: #FFFFFF;
+}
+
 .add-cart-btn, .fa-heart {
     cursor: pointer;
 }
 
-.add-cart-btn:hover {
+.add-cart-btn:hover:enabled {
     color: #FFC038;
     background-color: #242424;
     border-color: #FFC038;
@@ -106,6 +111,7 @@
 
 .fa-cart-plus {
     font-size: 1rem;
+    margin-right: 4px;
 }
 
 .wishlist.fa-heart {
