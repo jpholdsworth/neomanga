@@ -5,7 +5,7 @@ import SpecialOffers from "./special-offers";
 import BlogPosts from "./blog";
 
 export default function Home() {
-    const [mangaData] = useOutletContext();
+    const { mangaData } = useOutletContext();
     
     const random = mangaData.sort(() => 0.5 - Math.random());
     const featuredManga = mangaData.find((obj) => obj.title === "AKIRA");

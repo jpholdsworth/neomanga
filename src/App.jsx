@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   const [mangaData, setMangaData] = useState(MangaData);
   // const [wishlist, setWishlist] = useState([]);
-  // const [shoppingCart, setShoppingCart] = useState([]);
+  const [cart, setCart] = useState([]);
   // const [searchItem, setSearchItem] = useState('');
 
   // ADD WISHLIST ITEM and REMOVE WISHLIST ITEM
@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <HeaderSection />
-        <Outlet context={[mangaData, setMangaData]} />
+        <Outlet context={{ mangaData, setMangaData, cart, setCart }} />
       <FooterSection />
     </>
   );

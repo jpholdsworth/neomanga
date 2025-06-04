@@ -2,7 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import DisplayManga from "./display-manga";
 
 export default function Products({ type }) {
-    const [mangaData] = useOutletContext();
+    const { mangaData } = useOutletContext();
 
     const data = type === "best-selling" 
         ? mangaData.filter(obj => obj.additionalInfo.bestSeller) 
