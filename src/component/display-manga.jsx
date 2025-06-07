@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate, useOutletContext } from "react-router-dom";
 import "../styles/display-manga.css";
 import "../styles/genres.css";
 
@@ -8,6 +8,8 @@ function useQuery() {
 }
 
 function MangaGrid({ currentProducts, index }) {
+    const { cart, addItemToCart } = useOutletContext();
+
     return (
         <div className="display-container">
             <div className="manga-grid">
@@ -27,7 +29,13 @@ function MangaGrid({ currentProducts, index }) {
                                 </div>
                             </div>
                             <div className="item-btns">
-                                <button className="add-cart-btn"><i className="fa-solid fa-cart-plus"></i> ADD TO CART</button>
+                                <button 
+                                  className="add-cart-btn"
+                                  disabled={cart.includes(obj)}
+                                  onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItemToCart(obj); }}
+                                >
+                                    { cart.includes(obj) ? "ADDED TO CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
+                                </button>
                                 { obj.additionalInfo.wishlist ? <i className="wishlist fa-solid fa-heart"></i> : <i className="wishlist fa-regular fa-heart"></i> }
                             </div>
                         </Link>
