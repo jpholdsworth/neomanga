@@ -17,12 +17,14 @@ function App() {
     setCart([...cart, item]);
   }
 
-  // ADD ITEM to the Cart and REMOVE ITEM from the cart
+  function removeFromCart(productId) {
+    setCart(cart.filter(item => item.id !== productId))
+  }
 
   return (
     <>
       <HeaderSection />
-        <Outlet context={{ mangaData, setMangaData, cart, addItemToCart }} />
+        <Outlet context={{ mangaData, setMangaData, cart, addItemToCart, removeFromCart }} />
       <FooterSection />
     </>
   );
