@@ -44,7 +44,7 @@ export default function MangaCarousel({ data }) {
                                   disabled={cart.includes(manga)}
                                   onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItemToCart(manga); }}
                                 >
-                                    { cart.includes(manga) ? "ADDED IN CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
+                                    { cart.includes(manga) ? "ADDED TO CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
                                 </button>
                                 {manga.additionalInfo.wishlist ?
                                     <i className="wishlist fa-solid fa-heart"></i> :
