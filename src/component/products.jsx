@@ -8,7 +8,7 @@ export default function Products({ type }) {
         ? mangaData.filter(obj => obj.additionalInfo.bestSeller) 
         : type === "new-arrivals" 
         ? mangaData.filter(obj => obj.additionalInfo.newRelease) 
-        : [...mangaData].sort(() => 0.5 - Math.random());
+        : mangaData;
         
     return (
         <div>
