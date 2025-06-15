@@ -11,16 +11,21 @@ export default function ItemInCart({ product, quantity, onQuantityChange, remove
             <img src={product.image} alt="" />
             <div className="item-title">
                 <p>{product.title}</p>
-                {product.vol && <p>Volume {product.vol}</p>}
+                {product.vol !== null && <p>Volume {product.vol}</p>}
             </div>
-            <p>£ {product.price}</p>
-            <div className="quantity-btns">
-                <button onClick={() => changeQuantity(-1)} disabled={quantity === 1}>-</button>
-                <p>{quantity}</p>
-                <button onClick={() => changeQuantity(1)}>+</button>
+            <div className="price-container">
+                <p>£ {product.price}</p>
+                <div className="quantity-container">
+                    <p>Quantity</p>
+                    <div className="quantity-btns">
+                        <button onClick={() => changeQuantity(-1)} disabled={quantity === 1}>-</button>
+                        <p>{quantity}</p>
+                        <button onClick={() => changeQuantity(1)}>+</button>
+                    </div>
+                </div>
+                <p>£ {(product.price * quantity).toFixed(2)}</p>
+                <button onClick={() => removeItem(product.id)}>Remove</button>
             </div>
-            <p>£ {(product.price * quantity).toFixed(2)}</p>
-            <button onClick={() => removeItem(product.id)}>Remove</button>
         </>
     );
 }
