@@ -1,3 +1,11 @@
+.cart-title {
+    width: 60vw;
+    text-align: left;
+    font-size: 1.7rem;
+    letter-spacing: 1.4px;
+    margin: 20px auto 8px;
+}
+
 .items {
     width: 58vw;
     margin: auto;
@@ -5,10 +13,10 @@
 
 .cart-item {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
     gap: 64px;
-    padding: 18px 30px;
+    padding: 12px 10px;
     border-top: 1px solid #2E2E2E;
     font-size: 1.1rem;
     letter-spacing: 1.2px;
@@ -26,13 +34,14 @@
 }
 
 .item-title {
-    text-align: right;
+    text-align: left;
     justify-self: start;
     font-size: 0.8rem;
 }
 
 .item-title > p:first-child {
-    text-align: left;
+    width: 260px;
+    line-height: 24px;
     font-size: 1.3rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #FFFFFF;
@@ -41,8 +50,24 @@
 
 .item-title p { letter-spacing: 1.4px; }
 
+.price-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 42px;
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.quantity-container {
+    width: 120px;
+    margin: 0 auto;
+}
+
 .quantity-btns {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 12px;
+    text-align: center;
 }
