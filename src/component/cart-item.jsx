@@ -17,14 +17,16 @@ export default function ItemInCart({ product, quantity, onQuantityChange, remove
                 <p>£ {product.price}</p>
                 <div className="quantity-container">
                     <p>Quantity</p>
-                    <div className="quantity-btns">
-                        <button onClick={() => changeQuantity(-1)} disabled={quantity === 1}>-</button>
+                    <div className="quantity-buttons">
+                        <button className="quantity-btn" onClick={() => {quantity === 1 ? removeItem(product.id) : changeQuantity(-1)}}>
+                            {quantity == 1 ? <i className="fa-solid fa-trash"></i> : "-"}
+                        </button>
                         <p>{quantity}</p>
-                        <button onClick={() => changeQuantity(1)}>+</button>
+                        <button className="quantity-btn" onClick={() => changeQuantity(1)}>+</button>
                     </div>
                 </div>
                 <p>£ {(product.price * quantity).toFixed(2)}</p>
-                <button onClick={() => removeItem(product.id)}>Remove</button>
+                <button onClick={() => removeItem(product.id)}>Delete</button>
             </div>
         </>
     );
