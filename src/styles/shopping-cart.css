@@ -51,6 +51,7 @@
 .item-title p { letter-spacing: 1.4px; }
 
 .price-container {
+    width: 600px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -60,14 +61,44 @@
 }
 
 .quantity-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 120px;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
     margin: 0 auto;
 }
 
-.quantity-btns {
+.quantity-container > p {
+    margin-bottom: 4px;
+}
+
+.quantity-buttons {
+    width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
     text-align: center;
+    font-size: 1rem;
+    border: 0.2px solid #00A3C4;
+    border-radius: 3px;
+}
+
+.quantity-btn {
+    background-color: #00A3C4;
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border-radius: 0;
+    transition: all 0.1s ease-in;
+}
+
+.quantity-btn:first-child { margin-right: 8px; }
+.quantity-btn:last-child { margin-left: 8px; }
+
+.quantity-btn:hover {
+    background-color: rgba(0, 163, 196, 0.7);
 }
