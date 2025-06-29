@@ -23,7 +23,8 @@ function App() {
 
   return (
     <>
-      <HeaderSection />
+    {/* Quantity in the cart and wishlist */}
+      <HeaderSection cartQuantity={cart.length} />
         <Outlet context={{ mangaData, setMangaData, cart, addItemToCart, removeFromCart }} />
       <FooterSection />
     </>

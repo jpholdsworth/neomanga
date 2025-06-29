@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/header-section.css";
 import "../styles/navigation.css";
 
-function Navigation() {
+function Navigation({ cartQuantity }) {
     return (
         <div className="nav-bar">
             <div>
@@ -21,6 +21,7 @@ function Navigation() {
                 <Link className="icon-link"><i className="fa-solid fa-user" /></Link>
                 <Link className="icon-link"><i className="fa-solid fa-heart" /></Link>
                 <Link to="/cart" className="icon-link"><i className="fa-solid fa-cart-shopping" /></Link>
+                {cartQuantity != 0 && <p className="item-amount">{cartQuantity}</p>}
             </div>
         </div>
     );
@@ -38,10 +39,10 @@ function NavigationButtons() {
     );
 }
 
-export default function HeaderSection() {
+export default function HeaderSection({ cartQuantity }) {
     return (
         <div className="header-section">
-            <Navigation />
+            <Navigation cartQuantity={cartQuantity} />
             <div className="shipping-offer">
                 <p>
                    Free shipping for all order over £25 and just a reminder, all our deliveries are carbon neutral 
