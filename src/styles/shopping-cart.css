@@ -1,3 +1,7 @@
+.cart-container {
+    min-height: 52vh;
+}
+
 .cart-title {
     width: 60vw;
     text-align: left;
@@ -9,6 +13,22 @@
 .items {
     width: 58vw;
     margin: auto;
+}
+
+.no-item {
+    width: 600px;
+    font-family: 'Noto Sans', sans-serif;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.no-item-text {
+    width: 500px;
+    text-align: left;
 }
 
 .cart-item {
