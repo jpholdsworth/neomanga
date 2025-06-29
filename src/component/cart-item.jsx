@@ -26,7 +26,7 @@ export default function ItemInCart({ product, quantity, onQuantityChange, remove
                     </div>
                 </div>
                 <p>£ {(product.price * quantity).toFixed(2)}</p>
-                <button onClick={() => removeItem(product.id)}>Delete</button>
+                <button className="delete-btn" onClick={() => removeItem(product.id)}>Delete</button>
             </div>
         </>
     );
