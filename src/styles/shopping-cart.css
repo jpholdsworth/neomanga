@@ -102,3 +102,15 @@
 .quantity-btn:hover {
     background-color: rgba(0, 163, 196, 0.7);
 }
+
+.delete-btn {
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
+    background-color: transparent;
+    transition: all 0.15s ease-in;
+}
+
+.delete-btn:hover {
+    color: #DD2B37;
+    text-decoration: underline;
+}
