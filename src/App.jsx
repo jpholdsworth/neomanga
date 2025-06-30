@@ -21,11 +21,15 @@ function App() {
     setCart(cart.filter(item => item.id !== productId))
   }
 
+  function resetCart() {
+    setCart([]);
+  }
+
   return (
     <>
     {/* Quantity in the cart and wishlist */}
       <HeaderSection cartQuantity={cart.length} />
-        <Outlet context={{ mangaData, setMangaData, cart, addItemToCart, removeFromCart }} />
+        <Outlet context={{ mangaData, setMangaData, cart, addItemToCart, removeFromCart, resetCart }} />
       <FooterSection />
     </>
   );
