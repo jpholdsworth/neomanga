@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router-dom";
 import ItemInCart from "./cart-item";
 import "../styles/shopping-cart.css";
 
-function CheckoutPrice({ quantity, grandTotal }) {
+function CheckoutPrice({ quantity, grandTotal, removeAllItems }) {
     const totalQuantity = Object.values(quantity).reduce((sum, qty) => sum + qty, 0);
     const discount = (grandTotal * 0.2).toFixed(2);
     const shippingFee = grandTotal.toFixed(2) - discount < 25 ? 3.99 : 0;
@@ -11,16 +11,25 @@ function CheckoutPrice({ quantity, grandTotal }) {
     return (
         <>
             <p>Subtotal : £ {grandTotal.toFixed(2)}</p>
-            { totalQuantity >= 3 && <p>Discount ( 20% OFF )  : £ {discount}</p> }
-            { shippingFee ? <p>Shipping : £ { shippingFee }</p> : <p>Free Shipping</p> }
-            <hr />
+            { totalQuantity >= 3 && <p>Discount [ 20% OFF ] : £ {discount}</p> }
+            { shippingFee ? <p>Shipping : £ { shippingFee }</p> : <p>Free Shipping : £ 0.00</p> }
+            <hr className="checkout-breakline" />
             <p>Total : £ {(grandTotal.toFixed(2) - discount + shippingFee).toFixed(2)} </p>
+            <button 
+              onClick={() => {
+                window.alert("Oi! Thought you could slip past without payin'?!\n[ ERROR_200X : TRANSACTION COMPLETE ]\nYour order has breached the void.\nAppreciation: sarcastically noted.");
+                removeAllItems();
+              }} 
+              className="checkout-btn"
+            >
+                Proceed to Checkout
+            </button>
         </>
     )
 }
 
 export default function Cart() {
-    const { cart, removeFromCart } = useOutletContext();
+    const { cart, removeFromCart, resetCart } = useOutletContext();
     const [quantities, setQuantities] = useState({});
 
     useEffect(() => {
@@ -56,8 +65,8 @@ export default function Cart() {
                         </div>
                     ))}
                 </div>
-                <div>
-                    <CheckoutPrice quantity={quantities} grandTotal={grandTotal} />
+                <div className="checkout-container">
+                    <CheckoutPrice quantity={quantities} grandTotal={grandTotal} removeAllItems={resetCart} />
                 </div>
             </div>
         );
