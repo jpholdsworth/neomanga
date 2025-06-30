@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 import ItemInCart from "./cart-item";
 import "../styles/shopping-cart.css";
 
@@ -85,7 +85,7 @@ export default function Cart() {
                         <p><span>&gt; Directive:</span> Dive into a new universe</p>
                         
                     </div>
-                    <button>Browse Manga</button>
+                    <Link to="/shop-all" className="browse-btn">BROWSE MANGA</Link>
                 </div>
             </div>
         )

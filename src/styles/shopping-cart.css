@@ -33,6 +33,21 @@
     text-align: left;
 }
 
+.browse-btn {
+    font-size: 1rem;
+    background-color: #242424;
+    text-decoration: none;
+    color: #FEFEFE;
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin-top: 28px;
+    transition: all 0.15s ease-out;
+}
+
+.browse-btn:hover {
+    background-color: #DD2B37;
+}
+
 .cart-item {
     display: flex;
     justify-content: start;
