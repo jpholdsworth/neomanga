@@ -16,8 +16,8 @@ function App() {
     array !== "cart" ? setWishlist([...wishlist, item]) : setCart([...cart, item]);
   }
 
-  function removeFromCart(productId) {
-    setCart(cart.filter(item => item.id !== productId))
+  function removeItem(productId, array="cart") {
+    array !== "cart" ? setWishlist(wishlist.filter(item => item.id !== productId)) : setCart(cart.filter(item => item.id !== productId));
   }
 
   function resetCart() {
@@ -28,7 +28,7 @@ function App() {
     <>
     {/* Quantity in the cart and wishlist */}
       <HeaderSection cartQuantity={cart.length} />
-        <Outlet context={{ mangaData, setMangaData, wishlist, cart, addItem, removeFromCart, resetCart }} />
+        <Outlet context={{ mangaData, setMangaData, wishlist, cart, addItem, removeItem, resetCart }} />
       <FooterSection />
     </>
   );

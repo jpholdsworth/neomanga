@@ -29,7 +29,7 @@ function CheckoutPrice({ quantity, grandTotal, removeAllItems }) {
 }
 
 export default function Cart() {
-    const { cart, removeFromCart, resetCart } = useOutletContext();
+    const { cart, removeItem, resetCart } = useOutletContext();
     const [quantities, setQuantities] = useState({});
 
     useEffect(() => {
@@ -60,7 +60,7 @@ export default function Cart() {
                                 product={product}
                                 quantity={quantities[product.id] || 1}
                                 onQuantityChange={handleQuantityChange}
-                                removeItem={removeFromCart}
+                                removeItem={removeItem}
                             />
                         </div>
                     ))}
