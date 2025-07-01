@@ -2,10 +2,8 @@ import { useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import "../styles/manga-carousel.css";
 
-// add function to add the item to the list - wishlist and cart - use event to stop Propagation and prevent default
-
 export default function MangaCarousel({ data }) {
-    const { cart, wishlist, addItem } = useOutletContext();
+    const { cart, wishlist, addItem, removeItem } = useOutletContext();
     const [index, setIndex] = useState(0);
 
     const visibleCards = 4;
@@ -17,6 +15,16 @@ export default function MangaCarousel({ data }) {
 
     const handleNextManga = () => {
         if (index + visibleCards < data.length) setIndex(index + 1);
+    }
+
+    const handleItem = (event, manga, whereTo="cart") => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (whereTo !== "cart") {
+            !wishlist.includes(manga) ? addItem(manga, "wishlist") : removeItem(manga.id, "wishlist");
+        } else {
+            addItem(manga);
+        }
     }
 
     return (
@@ -44,11 +52,13 @@ export default function MangaCarousel({ data }) {
                                 <button 
                                   className="add-cart-btn"
                                   disabled={cart.includes(manga)}
-                                  onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItem(manga); }}
+                                  onClick={(event) => handleItem(event, manga) }
                                 >
                                     { cart.includes(manga) ? "ADDED TO CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
                                 </button>
-                                <div>
+                                <div
+                                    onClick={(event) => handleItem(event, manga, "wishlist") }
+                                >
                                     { wishlist.includes(manga) ? <i className="wishlist fa-solid fa-heart"></i> : <i className="wishlist fa-regular fa-heart"></i> }
                                 </div>
                             </div>

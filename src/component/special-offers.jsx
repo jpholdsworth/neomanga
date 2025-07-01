@@ -15,7 +15,7 @@ export default function SpecialOffers({ onePiece }) {
                     <p>20% Off When You Pick Any 3 Manga</p>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, illum.</p>
                     <p>Omnis pariatur et optio laudantium voluptas excepturi quisquam impedit aspernatur rem debitis quo consequuntur nemo culpa reprehenderit, ab commodi quae.</p>
-                    <Link to="shop-all"><button>Shop Now</button></Link>
+                    <Link to="shop-all"><button>SHOP NOW</button></Link>
                 </div>
             </div>
         </div>
