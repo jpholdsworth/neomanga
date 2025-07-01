@@ -8,7 +8,7 @@ function useQuery() {
 }
 
 function MangaGrid({ currentProducts, index }) {
-    const { cart, addItemToCart } = useOutletContext();
+    const { cart, addItem } = useOutletContext();
 
     return (
         <div className="display-container">
@@ -32,7 +32,7 @@ function MangaGrid({ currentProducts, index }) {
                                 <button 
                                   className="add-cart-btn"
                                   disabled={cart.includes(obj)}
-                                  onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItemToCart(obj); }}
+                                  onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItem(obj); }}
                                 >
                                     { cart.includes(obj) ? "ADDED TO CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
                                 </button>

@@ -2,7 +2,7 @@ import { useOutletContext, Link } from "react-router-dom";
 import "../styles/featured.css";
 
 export default function FeaturedCollection({ data }) {
-    const { cart, addItemToCart } = useOutletContext();
+    const { cart, addItem } = useOutletContext();
 
     return (
         <div className="featured-collection">
@@ -18,7 +18,7 @@ export default function FeaturedCollection({ data }) {
                     <button 
                       className="add-cart-btn akira"
                       disabled={cart.includes(data)}
-                      onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItemToCart(data)}}
+                      onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItem(data)}}
                     >
                         { cart.includes(data) ? "ADDED TO CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
                     </button>

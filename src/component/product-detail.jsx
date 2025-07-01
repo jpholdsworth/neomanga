@@ -4,7 +4,7 @@ import AdditionalInfo from "./additional-info.jsx";
 import "../styles/product-detail.css";
 
 export default function ProductDetail() {
-    const { cart, addItemToCart } = useOutletContext();
+    const { cart, addItem } = useOutletContext();
     const { productId } = useParams();
 
     const product = MangaData.filter(manga => manga.id === productId)[0];
@@ -34,7 +34,7 @@ export default function ProductDetail() {
                         <button 
                           className="add-cart-btn"
                           disabled={cart.includes(product)}
-                          onClick={() => { addItemToCart(product); }}
+                          onClick={() => { addItem(product); }}
                         >
                             { cart.includes(product) ? "ADDED TO CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
                         </button>

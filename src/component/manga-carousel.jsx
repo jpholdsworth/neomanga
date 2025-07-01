@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import "../styles/manga-carousel.css";
 
+// add function to add the item to the list - wishlist and cart - use event to stop Propagation and prevent default
+
 export default function MangaCarousel({ data }) {
-    const { cart, addItemToCart } = useOutletContext();
+    const { cart, wishlist, addItem } = useOutletContext();
     const [index, setIndex] = useState(0);
 
     const visibleCards = 4;
@@ -42,14 +44,13 @@ export default function MangaCarousel({ data }) {
                                 <button 
                                   className="add-cart-btn"
                                   disabled={cart.includes(manga)}
-                                  onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItemToCart(manga); }}
+                                  onClick={(event) => { event.preventDefault(); event.stopPropagation(); addItem(manga); }}
                                 >
                                     { cart.includes(manga) ? "ADDED TO CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
                                 </button>
-                                {manga.additionalInfo.wishlist ?
-                                    <i className="wishlist fa-solid fa-heart"></i> :
-                                    <i className="wishlist fa-regular fa-heart"></i>
-                                }
+                                <div>
+                                    { wishlist.includes(manga) ? <i className="wishlist fa-solid fa-heart"></i> : <i className="wishlist fa-regular fa-heart"></i> }
+                                </div>
                             </div>
                         </Link>
                     ))}

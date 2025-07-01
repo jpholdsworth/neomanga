@@ -7,14 +7,13 @@ import './App.css';
 
 function App() {
   const [mangaData, setMangaData] = useState(MangaData);
-  // const [wishlist, setWishlist] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
   const [cart, setCart] = useState([]);
   // const [searchItem, setSearchItem] = useState('');
 
   // ADD WISHLIST ITEM and REMOVE WISHLIST ITEM
-
-  function addItemToCart(item) {
-    setCart([...cart, item]);
+  function addItem(item, array="cart") {
+    array !== "cart" ? setWishlist([...wishlist, item]) : setCart([...cart, item]);
   }
 
   function removeFromCart(productId) {
@@ -29,7 +28,7 @@ function App() {
     <>
     {/* Quantity in the cart and wishlist */}
       <HeaderSection cartQuantity={cart.length} />
-        <Outlet context={{ mangaData, setMangaData, cart, addItemToCart, removeFromCart, resetCart }} />
+        <Outlet context={{ mangaData, setMangaData, wishlist, cart, addItem, removeFromCart, resetCart }} />
       <FooterSection />
     </>
   );
