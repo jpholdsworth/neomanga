@@ -19,7 +19,7 @@ function Navigation({ cartQuantity }) {
             </div>
             <div className="icons-buttons">
                 <Link className="icon-link"><i className="fa-solid fa-user" /></Link>
-                <Link className="icon-link"><i className="fa-solid fa-heart" /></Link>
+                <Link to="/wishlist" className="icon-link"><i className="fa-solid fa-heart" /></Link>
                 <Link to="/cart" className="icon-link"><i className="fa-solid fa-cart-shopping" /></Link>
                 {cartQuantity != 0 && <p className="item-amount">{cartQuantity}</p>}
             </div>
