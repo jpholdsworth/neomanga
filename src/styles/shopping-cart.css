@@ -4,7 +4,7 @@
     margin: auto;
 }
 
-.cart-title {
+.cart-title, .wishlist-title {
     width: 60vw;
     text-align: left;
     font-size: 1.7rem;
@@ -18,7 +18,7 @@
 }
 
 .no-item {
-    width: 600px;
+    width: 650px;
     font-family: 'Noto Sans', sans-serif;
     height: 50vh;
     display: flex;
