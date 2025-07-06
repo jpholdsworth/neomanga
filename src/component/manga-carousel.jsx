@@ -3,7 +3,7 @@ import { Link, useOutletContext } from "react-router-dom";
 import "../styles/manga-carousel.css";
 
 export default function MangaCarousel({ data }) {
-    const { cart, wishlist, addItem, removeItem } = useOutletContext();
+    const { cart, wishlist, handleItem } = useOutletContext();
     const [index, setIndex] = useState(0);
 
     const visibleCards = 4;
@@ -15,16 +15,6 @@ export default function MangaCarousel({ data }) {
 
     const handleNextManga = () => {
         if (index + visibleCards < data.length) setIndex(index + 1);
-    }
-
-    const handleItem = (event, manga, whereTo="cart") => {
-        event.preventDefault();
-        event.stopPropagation();
-        if (whereTo !== "cart") {
-            !wishlist.includes(manga) ? addItem(manga, "wishlist") : removeItem(manga.id, "wishlist");
-        } else {
-            addItem(manga);
-        }
     }
 
     return (

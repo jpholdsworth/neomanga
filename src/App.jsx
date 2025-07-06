@@ -24,11 +24,21 @@ function App() {
     setCart([]);
   }
 
+  const handleItem = (event, manga, whereTo="cart") => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (whereTo !== "cart") {
+          !wishlist.includes(manga) ? addItem(manga, "wishlist") : removeItem(manga.id, "wishlist");
+      } else {
+          addItem(manga);
+      }
+  }
+
   return (
     <>
     {/* Quantity in the cart and wishlist */}
       <HeaderSection cartQuantity={cart.length} />
-        <Outlet context={{ mangaData, setMangaData, wishlist, cart, addItem, removeItem, resetCart }} />
+        <Outlet context={{ mangaData, setMangaData, wishlist, cart, addItem, removeItem, resetCart, handleItem }} />
       <FooterSection />
     </>
   );
