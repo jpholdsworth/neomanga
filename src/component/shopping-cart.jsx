@@ -83,7 +83,6 @@ export default function Cart() {
                         <p>Just the void staring back — cold, endless, waiting . . .</p>
                         <p>Load your arsenal before the silence consumes you</p>
                         <p><span>&gt; Directive:</span> Dive into a new universe</p>
-                        
                     </div>
                     <Link to="/shop-all" className="browse-btn">BROWSE MANGA</Link>
                 </div>
