@@ -1,10 +1,10 @@
-.cart-container {
+.list-container {
     min-height: 52vh;
     width: 56vw;
     margin: auto;
 }
 
-.cart-title, .wishlist-title {
+.list-title {
     width: 60vw;
     text-align: left;
     font-size: 1.7rem;
@@ -18,7 +18,7 @@
 }
 
 .no-item {
-    width: 650px;
+    width: 680px;
     font-family: 'Noto Sans', sans-serif;
     height: 50vh;
     display: flex;
@@ -59,15 +59,18 @@
     letter-spacing: 1.2px;
 }
 
-.cart-item:last-child { border-bottom: 1px solid #2E2E2E; }
+.cart-item.last { border-bottom: 1px solid #2E2E2E; }
 
 .cart-item > img {
     width: 100px;
     height: auto;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .cart-item p {
     margin: 0;
+    line-height: 1.4;
 }
 
 .item-title {
