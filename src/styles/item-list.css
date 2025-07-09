@@ -48,7 +48,7 @@
     background-color: #DD2B37;
 }
 
-.cart-item {
+.list-item {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -59,16 +59,16 @@
     letter-spacing: 1.2px;
 }
 
-.cart-item.last { border-bottom: 1px solid #2E2E2E; }
+.list-item.last { border-bottom: 1px solid #2E2E2E; }
 
-.cart-item > img {
+.list-item > img {
     width: 100px;
     height: auto;
     object-fit: cover;
     border-radius: 4px;
 }
 
-.cart-item p {
+.list-item p {
     margin: 0;
     line-height: 1.4;
 }
