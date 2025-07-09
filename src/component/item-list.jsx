@@ -1,6 +1,6 @@
 import { useOutletContext, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import ItemInCart from "./cart-item";
+import ItemInList from "./display-item";
 import "../styles/item-list.css";
 
 function CheckoutPrice({ quantity, grandTotal, removeAllItems }) {
@@ -29,7 +29,7 @@ function CheckoutPrice({ quantity, grandTotal, removeAllItems }) {
 }
 
 export default function ItemList({ type }) {
-    const { cart, wishlist, removeItem, resetCart } = useOutletContext();
+    const { cart, wishlist, removeItem, resetCart, handleItem } = useOutletContext();
     const [quantities, setQuantities] = useState({});
 
     const title = type == "cart" ? "Shopping Basket" : "Your Wishlist";
@@ -56,8 +56,9 @@ export default function ItemList({ type }) {
                     { type === "cart" ? (
                         <>
                         {cart.map((product, idx) => (
-                            <div key={product.id} className={`cart-item ${idx === cart.length - 1 ? "last" : ""}`}>
-                                <ItemInCart 
+                            <div key={product.id} className={`list-item ${idx === cart.length - 1 ? "last" : ""}`}>
+                                <ItemInList
+                                    type="cart"
                                     product={product}
                                     quantity={quantities[product.id] || 1}
                                     onQuantityChange={handleQuantityChange}
@@ -71,9 +72,15 @@ export default function ItemList({ type }) {
                         </>
                     ) : (
                         <>
-                        {wishlist.map(product => (
-                            <div key={product.id} className="wishlist-item">
-                                {product.title}
+                        {wishlist.map((product, idx) => (
+                            <div key={product.id} className={`list-item ${idx === wishlist.length - 1 ? "last" : ""}`}>
+                                <ItemInList 
+                                    type="wishlist"
+                                    product={product}
+                                    removeItem={removeItem}
+                                    handleItem={handleItem}
+                                    list={cart}
+                                />
                             </div>
                         ))}
                         </>
