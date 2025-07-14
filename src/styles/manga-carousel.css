@@ -94,6 +94,11 @@
     transition: all 0.2s ease;
 }
 
+.add-cart-btn.wishlist {
+    font-size: 0.8rem;
+    font-family: 'Noto sans', sans-serif;
+}
+
 .add-cart-btn:disabled {
     background-color: #DD2B37;
     color: #FFFFFF;
