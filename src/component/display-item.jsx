@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ItemInList({ 
     type,
     product, 
@@ -16,11 +18,16 @@ export default function ItemInList({
 
     return (
         <>
-            <img src={product.image} alt="" />
-            <div className="item-title">
-                <p>{product.title}</p>
-                {product.vol !== null && <p>Volume {product.vol}</p>}
-            </div>
+            <Link 
+                className="product-link item"
+                to={`/product/${product.id}`}
+            >
+                <img src={product.image} alt="" />
+                <div className="item-title">
+                    <p>{product.title}</p>
+                    {product.vol !== null && <p>Volume {product.vol}</p>}
+                </div>
+            </Link>
             <div className="price-container">
                 <p>£ {product.price}</p>
                 {type === "cart" && <>
@@ -38,14 +45,14 @@ export default function ItemInList({
                 </>}
                 {type === "wishlist" && (
                     <button 
-                      className="add-cart-btn"
+                      className="add-cart-btn wishlist"
                       disabled={list.includes(product)}
                       onClick={(event) => handleItem(event, product)}
                     >
                         { list.includes(product) ? "ADDED TO CART" : <><i className="fa-solid fa-cart-plus"></i> ADD TO CART</> }
                     </button>
                 )}
-                <button className="delete-btn" onClick={() => removeItem(product.id)}>Delete</button>
+                <button className="delete-btn" onClick={() => removeItem(product.id, type)}>Delete</button>
             </div>
         </>
     );
