@@ -77,18 +77,19 @@ input {
     transition: all 0.15s ease-in-out;
 }
 
-.item-amount {
+.cart-item-amount, .wishlist-item-amount {
     font-family: 'Noto sans', sans-serif;
     font-size: 0.9rem;
     background-color: #DD2B37;
     padding: 4px 12px;
     border-radius: 50px;
     position: absolute;
-    right: -20px;
     top: 22px;
 }
 
-.item-amount:hover { cursor: default; }
+.cart-item-amount { right: -20px; }
+.wishlist-item-amount { right: 35px; }
+.cart-item-amount:hover, .wishlist-item-amount:hover { cursor: default; }
 
 .icons-buttons > .icon-link:hover, .fa-magnifying-glass:hover {
     cursor: pointer;

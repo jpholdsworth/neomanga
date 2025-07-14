@@ -11,7 +11,6 @@ function App() {
   const [cart, setCart] = useState([]);
   // const [searchItem, setSearchItem] = useState('');
 
-  // ADD WISHLIST ITEM and REMOVE WISHLIST ITEM
   function addItem(item, array="cart") {
     array !== "cart" ? setWishlist([...wishlist, item]) : setCart([...cart, item]);
   }
@@ -34,10 +33,14 @@ function App() {
       }
   }
 
+  const quantityCounter = {
+    cartLength: cart.length,
+    wishlistLength: wishlist.length,
+  };
+
   return (
     <>
-    {/* Quantity in the cart and wishlist */}
-      <HeaderSection cartQuantity={cart.length} />
+      <HeaderSection quantityCounter={quantityCounter} />
         <Outlet context={{ mangaData, setMangaData, wishlist, cart, addItem, removeItem, resetCart, handleItem }} />
       <FooterSection />
     </>
