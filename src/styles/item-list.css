@@ -2,6 +2,7 @@
     min-height: 52vh;
     width: 56vw;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 .list-title {
@@ -61,7 +62,18 @@
 
 .list-item.last { border-bottom: 1px solid #2E2E2E; }
 
-.list-item > img {
+.product-link.item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    transition: all 0.25s ease-in-out;
+}
+
+.product-link.item:hover {
+    color: #FFC038;
+}
+
+.product-link > img {
     width: 100px;
     height: auto;
     object-fit: cover;
