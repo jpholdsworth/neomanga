@@ -62,19 +62,21 @@
 
 .list-item.last { border-bottom: 1px solid #2E2E2E; }
 
-.product-link.item {
+.item-link.item {
     display: flex;
     align-items: center;
     gap: 60px;
+    color: #FEFEFE;
+    text-decoration: none;
     transition: all 0.25s ease-in-out;
 }
 
-.product-link.item:hover {
+.item-link.item:hover {
     color: #FFC038;
 }
 
-.product-link > img {
-    width: 100px;
+.item-link > img {
+    width: 110px;
     height: auto;
     object-fit: cover;
     border-radius: 4px;

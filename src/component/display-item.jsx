@@ -19,7 +19,7 @@ export default function ItemInList({
     return (
         <>
             <Link 
-                className="product-link item"
+                className="item-link item"
                 to={`/product/${product.id}`}
             >
                 <img src={product.image} alt="" />
