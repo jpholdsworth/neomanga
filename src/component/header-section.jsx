@@ -20,7 +20,7 @@ function Navigation({ quantityCounter }) {
                 <i className="fa-solid fa-magnifying-glass" />
             </div>
             <div className="icons-buttons">
-                <Link className="icon-link"><i className="fa-solid fa-user" /></Link>
+                <Link to="/account-login" className="icon-link"><i className="fa-solid fa-user" /></Link>
                 <Link to="/wishlist" className="icon-link"><i className="fa-solid fa-heart" /></Link>
                 {wishlistLength != 0 && <p className="wishlist-item-amount">{wishlistLength}</p>}
                 <Link to="/cart" className="icon-link"><i className="fa-solid fa-cart-shopping" /></Link>
