@@ -7,32 +7,11 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
-function CategoryPicker({ selectedCategory, sortCategory }) {
-    return (
-        <div className="category-container">
-            <label htmlFor="category-select">Sort By:</label>
-            <select 
-              name="categories" 
-              id="category-select" 
-              value={selectedCategory} 
-              onChange={e => sortCategory(e.target.value)}
-            >
-                <option value="">Recommended</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="alphabet-a">Alphabetical: A to Z</option>
-                <option value="alphabet-z">Alphabetical: Z to A</option>
-            </select>
-        </div>
-    );
-}
-
 function MangaGrid({ currentProducts, index }) {
-    const { cart, wishlist, selectedCategory, sortCategory, handleItem } = useOutletContext();
+    const { cart, wishlist, handleItem } = useOutletContext();
 
     return (
         <div className="display-container">
-            <CategoryPicker selectedCategory={selectedCategory} sortCategory={sortCategory} />
             <div className="manga-grid">
                 {currentProducts.map(obj => 
                     <div key={obj.id} className="product-container">
