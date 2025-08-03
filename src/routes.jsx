@@ -4,6 +4,7 @@ import ErrorPage from "./component/error-page";
 import ItemList from "./component/item-list";
 import Products from "./component/products";
 import ProductDetail from "./component/product-detail";
+import Account from "./component/account";
 
 // TODO: ACCOUNT SIGN IN
 // TODO: FILTER SEARCH
@@ -23,6 +24,10 @@ const routes = [
             { path: '/product/:productId', element: <ProductDetail /> }
         ],
     },
+    {
+        path: '/account-login',
+        element: <Account />
+    }
 ];
 
 export default routes;
