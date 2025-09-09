@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../styles/account.css';
 
 export default function Account() {
     const [formData, setFormData] = useState({ name: "", email: "", password: "", confirmPassword: "" });
