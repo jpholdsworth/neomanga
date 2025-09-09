@@ -1,0 +1,45 @@
+.account-container {
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    width: 98vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.account-title {
+    margin-bottom: 20px;
+}
+
+.account-container > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 16px;
+    border: 3px solid #DD2B37;
+    border-radius: 50%;
+}
+
+.account-container i {
+    font-size: 36px;
+    color: #DD2B37;
+}
+
+.account-title, .account-container > h1 {
+    font-family: 'AkiraExpanded', system-ui;
+}
+
+.account-container > h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1.8px;
+    margin-bottom: -2px;
+}
+
+/* form {
+    background-color: rgba(221,43,55, 0.8);
+} */
