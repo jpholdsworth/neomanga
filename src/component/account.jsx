@@ -48,49 +48,57 @@ export default function Account() {
                 <h1>{status === "new-account" ? "Create New Account" : "Sign in"}</h1>
                 <form onSubmit={handleSubmit} noValidate>
                     {status === "new-account" && (
-                        <div>
+                        <div className="input-container">
                             <label htmlFor="name">Name</label>
                             <input
-                                type="text"
-                                name="name"
-                                id="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                autoComplete="given-name"
+                              className="new-account-input"
+                              type="text"
+                              name="name"
+                              id="name"
+                              placeholder="Reika-09…"
+                              value={formData.name}
+                              onChange={handleChange}
+                              required
+                              autoComplete="given-name"
                             />
                         </div>
                     )}
-                    <div>
+                    <div className="input-container">
                         <label htmlFor="email">Email Address</label>
                         <input
+                          className="new-account-input"
                           type="email"
                           name="email"
                           id="email"
+                          placeholder="ghostwire@darknet.com…"
                           value={formData.email}
                           onChange={handleChange}
                           required
                           autoComplete="email"
                         />
                     </div>
-                    <div>
+                    <div className="input-container">
                         <label htmlFor="password">Password</label>
                         <input
+                          className="new-account-input"
                           type="password"
                           name="password"
                           id="password"
+                          placeholder="Enter your password…"
                           value={formData.password}
                           onChange={handleChange}
                           required
                         />
                     </div>
                     {status === "new-account" && (
-                        <div>
+                        <div className="input-container">
                             <label htmlFor="confirmPassword">Confirm Password</label>
                             <input
+                              className="new-account-input"
                               type="password"
                               name="confirmPassword"
                               id="confirmPassword"
+                              placeholder="Confirm your password…"
                               value={formData.confirmPassword}
                               onChange={handleChange}
                               required
