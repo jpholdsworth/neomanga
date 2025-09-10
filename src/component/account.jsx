@@ -41,92 +41,88 @@ export default function Account() {
                 <h1 className="logo-title">NeoMANGA//</h1>
                 <h1 className="logo-title">NeoMANGA//</h1>
             </div>
-            <div>
-                <i className="fa-solid fa-user"></i>
-            </div>
-            <h1>{status === "new-account" ? "Create New Account" : "Sign in"}</h1>
-
-            <form onSubmit={handleSubmit} noValidate>
-                {status === "new-account" && (
+            <div className="form-outline">
+                <div>
+                    <i className="fa-solid fa-user"></i>
+                </div>
+                <h1>{status === "new-account" ? "Create New Account" : "Sign in"}</h1>
+                <form onSubmit={handleSubmit} noValidate>
+                    {status === "new-account" && (
+                        <div>
+                            <label htmlFor="name">Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                                autoComplete="given-name"
+                            />
+                        </div>
+                    )}
                     <div>
-                        <label htmlFor="name">Name</label>
-                        <input 
-                            type="text"
-                            name="name"
-                            id="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            autoComplete="given-name"
+                        <label htmlFor="email">Email Address</label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          autoComplete="email"
                         />
                     </div>
-                )}
-
-                <div>
-                    <label htmlFor="email">Email Address</label>
-                    <input 
-                      type="email" 
-                      name="email"
-                      id="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      autoComplete="email"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input 
-                      type="password" 
-                      name="password"
-                      id="password"
-                      value={formData.password}
-                      onChange={handleChange}
-                      required
-                    />
-                </div>
-
-                {status === "new-account" && (
                     <div>
-                        <label htmlFor="confirmPassword">Confirm Password</label>
-                        <input 
-                          type="password" 
-                          name="confirmPassword"
-                          id="confirmPassword"
-                          value={formData.confirmPassword}
+                        <label htmlFor="password">Password</label>
+                        <input
+                          type="password"
+                          name="password"
+                          id="password"
+                          value={formData.password}
                           onChange={handleChange}
                           required
                         />
-                        {error && <p>{error}</p>}
                     </div>
+                    {status === "new-account" && (
+                        <div>
+                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <input
+                              type="password"
+                              name="confirmPassword"
+                              id="confirmPassword"
+                              value={formData.confirmPassword}
+                              onChange={handleChange}
+                              required
+                            />
+                            {error && <p>{error}</p>}
+                        </div>
+                    )}
+                    <button type="submit">
+                        {status === "new-account" ? "Create Account" : "Log in"}
+                    </button>
+                </form>
+                { status === "new-account" ? (
+                    <button
+                        onClick={() => { setStatus("sign-in"); setError("") }}
+                    >
+                        Already have an account? Sign in
+                    </button>
+                ) : (
+                    <>
+                        <button
+                            onClick={() => window.alert("Access denied? Ha. They want you locked out.\n[ ERROR_REBEL_404 ]\nReset your code — reclaim your identity.\nThe system fears those who refuse to fade.")}
+                        >
+                            Forgotten your password?
+                        </button>
+                        <button
+                            onClick={() => { setStatus("new-account"); setError("") }}
+                        >
+                            Create new account
+                        </button>
+                    </>
                 )}
-
-                <button type="submit">
-                    {status === "new-account" ? "Create Account" : "Log in"}
-                </button>                           
-            </form> 
-
-            { status === "new-account" ? (
-                <button
-                    onClick={() => { setStatus("sign-in"); setError("") }}
-                >
-                    Already have an account? Sign in
-                </button>
-            ) : (
-                <>
-                    <button
-                        onClick={() => window.alert("Access denied? Ha. They want you locked out.\n[ ERROR_REBEL_404 ]\nReset your code — reclaim your identity.\nThe system fears those who refuse to fade.")}
-                    >
-                        Forgotten your password?
-                    </button>
-                    <button
-                        onClick={() => { setStatus("new-account"); setError("") }}
-                    >
-                        Create new account
-                    </button>
-                </>
-            )}
+            </div>
         </div>
     );
 }
