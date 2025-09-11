@@ -45,7 +45,8 @@
     cursor: pointer;
 }
 
-.link:hover {
+.link:hover,
+form + a:hover {
     background-position: 0 100%;
 }
 

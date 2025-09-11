@@ -18,7 +18,7 @@
 .form-outline {
     position: relative;
     width: 400px;
-    padding: 24px 20px 12px;
+    padding: 24px 20px 16px;
     border: 3px solid rgba(100, 100, 100, 0.3);
     border-radius: 16px;
 }
@@ -57,7 +57,7 @@ form {
     justify-content: center;
     align-items: center;
     gap: 14px;
-    margin-top: 12px;
+    margin: 12px 0;
     padding: 0 30px;
 }
 
@@ -93,4 +93,19 @@ form > div {
 
 .input-container > label + .new-account-input::placeholder {
     color: rgb(100, 100, 100);
+}
+
+.form-outline button {
+    width: 200px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6px;
+    transition: background-color 0.15s ease-out;
+}
+
+.form-outline button:hover { background-color: #DD2B37; }
+
+.form-outline > a { 
+    display: block;
+    margin: 8px 0 !important; 
 }
