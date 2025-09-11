@@ -46,10 +46,13 @@ export default function Account() {
                     <i className="fa-solid fa-user"></i>
                 </div>
                 <h1>{status === "new-account" ? "Create New Account" : "Sign in"}</h1>
-                <form onSubmit={handleSubmit} noValidate>
+                <form onSubmit={handleSubmit} >
                     {status === "new-account" && (
                         <div className="input-container">
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">
+                                Name
+                                <span className="required"> *</span>
+                            </label>
                             <input
                               className="new-account-input"
                               type="text"
@@ -64,7 +67,10 @@ export default function Account() {
                         </div>
                     )}
                     <div className="input-container">
-                        <label htmlFor="email">Email Address</label>
+                        <label htmlFor="email">
+                            Email Address
+                            <span className="required"> *</span>
+                        </label>
                         <input
                           className="new-account-input"
                           type="email"
@@ -78,7 +84,10 @@ export default function Account() {
                         />
                     </div>
                     <div className="input-container">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password">
+                            Password
+                            <span className="required"> *</span>
+                        </label>
                         <input
                           className="new-account-input"
                           type="password"
@@ -92,7 +101,10 @@ export default function Account() {
                     </div>
                     {status === "new-account" && (
                         <div className="input-container">
-                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <label htmlFor="confirmPassword">
+                                Confirm Password
+                                <span className="required"> *</span>
+                            </label>
                             <input
                               className="new-account-input"
                               type="password"
