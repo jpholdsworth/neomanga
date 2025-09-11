@@ -123,23 +123,23 @@ export default function Account() {
                     </button>
                 </form>
                 { status === "new-account" ? (
-                    <button
+                    <a className="link"
                         onClick={() => { setStatus("sign-in"); setError("") }}
                     >
                         Already have an account? Sign in
-                    </button>
+                    </a>
                 ) : (
                     <>
-                        <button
+                        <a className="link"
                             onClick={() => window.alert("Access denied? Ha. They want you locked out.\n[ ERROR_REBEL_404 ]\nReset your code — reclaim your identity.\nThe system fears those who refuse to fade.")}
                         >
                             Forgotten your password?
-                        </button>
-                        <button
+                        </a>
+                        <a className="link"
                             onClick={() => { setStatus("new-account"); setError("") }}
                         >
                             Create new account
-                        </button>
+                        </a>
                     </>
                 )}
             </div>
