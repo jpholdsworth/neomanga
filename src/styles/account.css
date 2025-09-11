@@ -56,7 +56,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     margin-top: 12px;
     padding: 0 30px;
 }
@@ -71,10 +71,26 @@ form > div {
 
 .input-container > label + .new-account-input {
     background-color: #0D0D0D;
+    color: #FEFEFE;
     width: 250px;
-    padding: 0;
+    margin-top: 4px;
+    padding: 4px 6px 2px;
     border: none;
     border-bottom: 2px solid rgba(100, 100, 100, 0.3);
+    transition: border-bottom 0.125s ease-out;
 }
 
-/* :focus and ::placeholder */
+.required {
+    color: #DD2B37;
+    font-size: 1.1rem;
+}
+
+.input-container > label + .new-account-input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #DD2B37;
+}
+
+.input-container > label + .new-account-input::placeholder {
+    color: rgb(100, 100, 100);
+}
