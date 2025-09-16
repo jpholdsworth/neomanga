@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import '../styles/account.css';
 
 export default function Account() {
@@ -21,11 +22,11 @@ export default function Account() {
 
         if (status === "new-account") {
             if (formData.password !== formData.confirmPassword) {
-                setError("SYSTEM FAILURE: Passwords are arguing. Try again.");
+                setError("> SYSTEM FAILURE:\n Passwords are arguing. Try again.");
                 return;
             }
             if (!checkPasswordLength(formData.password)) {
-                setError("SHORT PASSWORD DETECTED: The syndicate encryptors are not impressed.");
+                setError("> SHORT PASSWORD DETECTED:\n The syndicate encryptors are not impressed.");
                 return;
             }
             setFormData({ name: "", email: "", password: "", confirmPassword: "" });
@@ -115,7 +116,7 @@ export default function Account() {
                               onChange={handleChange}
                               required
                             />
-                            {error && <p>{error}</p>}
+                            {error && <p className="account-error">{error}</p>}
                         </div>
                     )}
                     <button type="submit">
@@ -142,6 +143,9 @@ export default function Account() {
                         </a>
                     </>
                 )}
+                <Link to="/" className="account icon-link">
+                    <i className="fa-solid fa-house" />
+                </Link>
             </div>
         </div>
     );
