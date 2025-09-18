@@ -1,3 +1,58 @@
+.category-container {
+    display: flex;
+    justify-content: center;
+    font-size: 0.875rem;
+    letter-spacing: 1.2px;
+    gap: 32px;
+    margin: 16px auto -20px 8%;
+}
+
+.select-container {
+    position: relative;
+    display: inline-block;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-size: 0.9rem;
+    background-color: #1A1A1A;
+    border: 2px solid rgba(128, 128, 128, 0.4);
+    padding: 2px 26px 2px 8px;
+    margin-left: 8px;
+    transition: all 0.125s ease-in-out;
+}
+
+select:hover,
+select:focus {
+    outline: none;
+    border-color: #DD2B37;
+    border-radius: 8px;
+}
+
+.select-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    clip-path: polygon(35% 0, 100% 50%, 35% 100%, 0% 100%, 25% 50%, 0% 0%);
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-50%) rotate(90deg);
+    pointer-events: none;
+}
+
+.select-container:focus-within::after {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+/* https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select */
+
 .manga-grid-display {
     display: flex;
     flex-direction: column;
