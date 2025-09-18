@@ -7,31 +7,41 @@ function QueryPicker({ selectedCategory, sortCategory, panelCount, setPanelCount
         <div className="category-container">
             <div>
                 <label htmlFor="item-pp-select">Items per Page:</label>
-                <select
-                    name=""
-                    id=""
-                    value={panelCount}
-                    onChange={e => setPanelCount(parseInt(e.target.value))}
-                >
-                    <option value="9">9</option>
-                    <option value="15">15</option>
-                    <option value="30">30</option>
-                </select>
+                <div className="select-container">
+                    <select
+                        name="item-count"
+                        id="item-pp-select"
+                        value={panelCount}
+                        onChange={e => {
+                            setPanelCount(parseInt(e.target.value)); 
+                            e.target.blur(); 
+                        }}
+                    >
+                        <option value="9">9</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
             </div>
             <div>
                 <label htmlFor="category-select">Sort By:</label>
-                <select
-                  name="categories"
-                  id="category-select"
-                  value={selectedCategory}
-                  onChange={e => sortCategory(e.target.value)}
-                >
-                    <option value="">Recommended</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
-                    <option value="alphabet-a">Alphabetical: A to Z</option>
-                    <option value="alphabet-z">Alphabetical: Z to A</option>
-                </select>
+                <div className="select-container">
+                    <select
+                      name="categories"
+                      id="category-select"
+                      value={selectedCategory}
+                      onChange={e => {
+                        sortCategory(e.target.value);
+                        e.target.blur();
+                    }}
+                    >
+                        <option value="">Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="alphabet-a">Alphabetical: A to Z</option>
+                        <option value="alphabet-z">Alphabetical: Z to A</option>
+                    </select>
+                </div>
             </div>
         </div>
     );
