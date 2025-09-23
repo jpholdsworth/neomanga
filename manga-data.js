@@ -1793,7 +1793,115 @@ const MangaData = [
     publisher: 'VIZ Media LLC',
     isbn: '978-1974732180',
     additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
-  }
+  },
+  {
+    id: uniqid(),
+    image: 'https://m.media-amazon.com/images/I/81IgJ1cGaWS.jpg',
+    title: 'Kaiju No. 8',
+    vol: 1,
+    pageLength: 204,
+    genres: [ 'Shōnen', 'Science Fiction', 'Adventure',],
+    author: {
+      name: 'Naoya Matsumoto',
+      bio: 'Naoya Matsumoto is a Japanese manga artist best known for creating Kaiju No. 8, a popular action series that combines thrilling battles, heartfelt drama, and moments of humor. Born on March 14, 1982, Matsumoto gained recognition with Kaiju No. 8 (2020–present), which follows Kafka Hibino, a man who gains the ability to transform into a kaiju while striving to protect humanity as part of the Defense Force. The series became a breakout success, with its fast-paced storytelling, emotional depth, and cinematic artwork. Matsumoto’s energetic style and balance of action and character-driven narrative have made him a rising voice in contemporary manga.'
+    },
+    context: {
+      main: 'Kafka wants to clean up kaiju, but not literally! Will a sudden metamorphosis stand in the way of his dream?' + 
+        '\n' + 
+        'With the highest kaiju-emergence rates in the world, Japan is no stranger to attack by deadly monsters. Enter the Japan Defense Force, a military organization tasked with the neutralization of kaiju. Kafka Hibino, a kaiju-corpse cleanup man, has always dreamed of joining the force. But when he gets another shot at achieving his childhood dream, he undergoes an unexpected transformation. How can he fight kaiju now that he’s become one himself?!',
+      sub: 'Kafka hopes to one day keep his pact with his childhood friend Mina to join the Japan Defense Force and fight by her side. But while she’s out neutralizing kaiju as Third Division captain, Kafka is stuck cleaning up the aftermath of her battles. When a sudden rule change makes Kafka eligible for the Defense Force, he decides to try out for the squad once more. There’s just one problem—he’s made the Defense Force’s neutralization list under the code name Kaiju No. 8.'
+    },
+    price: 7.99,
+    publisher: 'VIZ Media LLC',
+    isbn: '978-1974725984',
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
+  },
+  {
+    id: uniqid(),
+    image: 'https://m.media-amazon.com/images/I/81tkIOIlM2L._UF1000,1000_QL80_.jpg',
+    title: 'Shiver: Junji Ito Selected Stories',
+    vol: null,
+    pageLength: 400,
+    genres: [ 'Seinen', 'Dark Fantasy', 'Supernatural', 'Horror' ],
+    author: {
+      name: 'Junji Ito',
+      bio: 'Junji Ito is a Japanese horror manga artist renowned for his eerie storytelling and unsettling artwork. Born on July 31, 1963, in Gifu, Japan, he was inspired by horror legends like H.P. Lovecraft and Kazuo Umezu. His most famous works, including Uzumaki, Tomie, and The Enigma of Amigara Fault, are known for their psychological terror, grotesque imagery, and deeply disturbing themes. Ito’s mastery of cosmic horror and the uncanny has made him one of the most influential figures in the horror genre, with his work inspiring adaptations in film, anime, and literature worldwide.'
+    },
+    context: {
+      main: 'A best-of story selection by the master of horror manga.' + 
+        '\n' + 
+        'This volume includes nine of Junji Ito’s best short stories, as selected by the author himself and presented with accompanying notes and commentary.',
+      sub: 'An arm peppered with tiny holes dangles from a sick girl’s window… After an idol hangs herself, balloons bearing the faces of their destined victims appear in the sky… An amateur film crew hires an extremely individualistic fashion model and faces a real bloody ending… An offering of nine fresh nightmares for the delectation of horror fans.'
+    },
+    price: 16.99,
+    publisher: 'VIZ Media LLC',
+    isbn: '978-1421596938',
+    additionalInfo: { bestSeller: false, newRelease: false, wishlist: false }
+  },
+  {
+    id: uniqid(),
+    image: 'https://m.media-amazon.com/images/I/91BLr-0jORL.jpg',
+    title: 'Smashed: Junji Ito Story Collection',
+    vol: null,
+    pageLength: 416,
+    genres: [ 'Seinen', 'Dark Fantasy', 'Supernatural', 'Horror' ],
+    author: {
+      name: 'Junji Ito',
+      bio: 'Junji Ito is a Japanese horror manga artist renowned for his eerie storytelling and unsettling artwork. Born on July 31, 1963, in Gifu, Japan, he was inspired by horror legends like H.P. Lovecraft and Kazuo Umezu. His most famous works, including Uzumaki, Tomie, and The Enigma of Amigara Fault, are known for their psychological terror, grotesque imagery, and deeply disturbing themes. Ito’s mastery of cosmic horror and the uncanny has made him one of the most influential figures in the horror genre, with his work inspiring adaptations in film, anime, and literature worldwide.'
+    },
+    context: {
+      main: 'Thirteen chilling nightmares, presented by the master of horror.',
+      sub: 'Try not to be noticed when you eat the secret nectar, otherwise you’ll get smashed… What horrific events happened to create the earthbound—people tied to a certain place for the rest of their short lives? Then, a strange haunted house comes to town, but no one expects it to lead to a real hell… Welcome to Junji Ito’s world, a world with no escape from endless nightmares.'
+    },
+    price: 14.99,
+    publisher: 'VIZ Media LLC',
+    isbn: '978-1421598468',
+    additionalInfo: { bestSeller: true, newRelease: false, wishlist: false }
+  },
+  {
+    id: uniqid(),
+    image: 'https://m.media-amazon.com/images/I/912V2U+luQL.jpg',
+    title: 'Kagurabachi',
+    vol: 1,
+    pageLength: 216,
+    genres: [ 'Shōnen', 'Dark Fantasy', 'Action' ],
+    author: {
+      name: 'Takeru Hokazono',
+      bio: 'Takeru Hokazono is a Japanese manga artist best known for creating Kagurabachi, a breakout shōnen series that blends dark fantasy, action, and emotional storytelling. Born in 1997, Hokazono debuted with one-shots before achieving recognition with Kagurabachi (2023–present), which follows Chihiro Rokuhira, the son of a legendary swordsmith who embarks on a quest for revenge after his father is murdered. The series quickly gained popularity for its striking artwork, intense sword battles, and mix of revenge-driven drama with moments of levity. Hokazono’s ability to craft a gritty yet stylish narrative has positioned him as one of the most promising new voices in modern manga.'
+    },
+    context: {
+      main: 'Chihiro\'s cursed past sends him down a quest of bloody vengeance!' + 
+        '\n' + 
+        'Chihiro Rokuhira’s father, Kunishige, is the most famous swordsmith in the land. Thanks to his six enchanted blades, the war that has been gripping the nation ends, and peaceful days follow. After the war, he retrieves all six blades and hides them in the cellar of his workshop—but sorcerers raid his home and leave Kunishige dead in front of Chihiro. Many years later, Chihiro wields Kunishige’s seventh and final enchanted blade on a mission to retrieve the stolen swords!',
+      sub: 'As a young boy, Chihiro trains every day under his father to become a swordsmith. Although different in temperament, the two spend peaceful days laughing and working together. But one day, tragedy strikes… Now Chihiro burns with hatred and sets out to exact revenge. Following clues left behind by a ruthless yakuza organization, Chihiro confronts the Hishaku, a deadly group of sorcerers that may be behind his father’s murder!',
+    },
+    price: 7.99,
+    publisher: 'VIZ Media LLC',
+    isbn: '978-1974747245',
+    additionalInfo: { bestSeller: false, newRelease: true, wishlist: false }
+  },
+  {
+    id: uniqid(),
+    image: 'https://m.media-amazon.com/images/I/91yC4nRfLzL.jpg',
+    title: 'Kagurabachi',
+    vol: 3,
+    pageLength: 192,
+    genres: [ 'Shōnen', 'Dark Fantasy', 'Action' ],
+    author: {
+      name: 'Takeru Hokazono',
+      bio: 'Takeru Hokazono is a Japanese manga artist best known for creating Kagurabachi, a breakout shōnen series that blends dark fantasy, action, and emotional storytelling. Born in 1997, Hokazono debuted with one-shots before achieving recognition with Kagurabachi (2023–present), which follows Chihiro Rokuhira, the son of a legendary swordsmith who embarks on a quest for revenge after his father is murdered. The series quickly gained popularity for its striking artwork, intense sword battles, and mix of revenge-driven drama with moments of levity. Hokazono’s ability to craft a gritty yet stylish narrative has positioned him as one of the most promising new voices in modern manga.'
+    },
+    context: {
+      main: 'Chihiro\'s cursed past sends him down a quest of bloody vengeance!' + 
+        '\n' + 
+        'Chihiro Rokuhira’s father, Kunishige, is the most famous swordsmith in the land. Thanks to his six enchanted blades, the war that has been gripping the nation ends, and peaceful days follow. After the war, he retrieves all six blades and hides them in the cellar of his workshop—but sorcerers raid his home and leave Kunishige dead in front of Chihiro. Many years later, Chihiro wields Kunishige’s seventh and final enchanted blade on a mission to retrieve the stolen swords!',
+      sub: 'The strongest enchanted blade, known as the Shinuchi, is up for sale at a black market. Chihiro’s determined to steal the Shinuchi back, but standing in his way are skilled sorcerers devoted to safeguarding the auction. Can Chihiro slash his way through and reclaim the fabled katana?',
+    },
+    price: 8.99,
+    publisher: 'VIZ Media LLC',
+    isbn: '978-1974754786',
+    additionalInfo: { bestSeller: true, newRelease: true, wishlist: false }
+  },
 ];
 
 export default MangaData;
