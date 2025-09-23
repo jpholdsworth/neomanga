@@ -1,8 +1,9 @@
 import { useOutletContext } from "react-router-dom";
+import FilterSection from "./filter-section";
 import DisplayManga from "./display-manga";
 import { useState } from "react";
 
-function QueryPicker({ selectedCategory, sortCategory, panelCount, setPanelCount }) {
+function QuerySorter({ selectedCategory, sortCategory, panelCount, setPanelCount }) {
     return (
         <div className="category-container">
             <div>
@@ -59,13 +60,13 @@ export default function Products({ type }) {
         
     return (
         <div>
-            <QueryPicker 
+            <QuerySorter
                 selectedCategory={selectedCategory} 
                 sortCategory={sortCategory}
                 panelCount={panelCount}
                 setPanelCount={setPanelCount}
             />
-            {/* filter section */}
+            <FilterSection />
             <DisplayManga products={data} panelCount={panelCount} />
         </div>
     )
