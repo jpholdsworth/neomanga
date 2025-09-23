@@ -67,12 +67,21 @@ export default function DisplayManga({ products, panelCount }) {
 
     const initialIndex = parseInt(query.get("page")) || 0;
     const [index, setIndex] = useState(initialIndex);
+    
+    const currentProducts = products.slice(index * panelCount, (index + 1) * panelCount);
+    const pageCount = Math.ceil(products.length / panelCount);
 
     useEffect(() => {
         if (location.pathname !== "/shop-all") {
             setIndex(0);
         }
     }, [location.pathname]);
+
+    useEffect(() => {
+        if (index > pageCount - 1) {
+            setIndex(pageCount - 1);
+        }
+    }, [pageCount, index]);
 
     function handleSetIndex(newIndex) {
         setIndex(newIndex);
@@ -84,9 +93,6 @@ export default function DisplayManga({ products, panelCount }) {
             behavior: 'smooth',
         });
     }
-
-    const currentProducts = products.slice(index * panelCount, (index + 1) * panelCount);
-    const pageCount = Math.ceil(products.length / panelCount);
 
     return (
         <div className="manga-grid-display">
