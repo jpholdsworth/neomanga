@@ -48,16 +48,10 @@ function QuerySorter({ selectedCategory, sortCategory, panelCount, setPanelCount
     );
 }
 
-export default function Products({ type }) {
+export default function Products() {
     const { mangaData, selectedCategory, sortCategory } = useOutletContext();
     const [panelCount, setPanelCount] = useState(15);
 
-    const data = type === "best-selling" 
-        ? mangaData.filter(obj => obj.additionalInfo.bestSeller) 
-        : type === "new-arrivals" 
-        ? mangaData.filter(obj => obj.additionalInfo.newRelease) 
-        : mangaData;
-        
     return (
         <div>
             <QuerySorter
@@ -67,7 +61,7 @@ export default function Products({ type }) {
                 setPanelCount={setPanelCount}
             />
             <FilterSection />
-            <DisplayManga products={data} panelCount={panelCount} />
+            <DisplayManga products={mangaData} panelCount={panelCount} />
         </div>
     )
 }
