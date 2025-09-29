@@ -13,7 +13,7 @@ function App() {
   const [cart, setCart] = useState([]);
   // const [searchItem, setSearchItem] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
-  const [filterQuery, setFilterQuery] = useState({ genres: [], minPrice: 0, maxPrice: 60 });
+  const [filterQuery, setFilterQuery] = useState({ genres: [], maxPrice: 60 });
 
   const location = useLocation();
   useEffect(() => {
@@ -31,6 +31,8 @@ function App() {
     if (filterQuery.genres.length > 0) {
       filteredData = filteredData.filter(manga => manga.genres.some(g => filterQuery.genres.includes(g)));
     }
+
+    filteredData = filteredData.filter(manga => manga.price <= filterQuery.maxPrice);
 
     if (selectedCategory.includes("price")) {
       filteredData.sort((a, b) => selectedCategory === "price-low" ? a.price - b.price : b.price - a.price);
@@ -73,7 +75,6 @@ function App() {
     wishlistLength: wishlist.length,
   };
 
-  // TODO: HANDLE CHANGE OF GENRES AND PRICE RANGE to sort the data and set new state for mangaData
   const handleGenre = (event, newGenre) => {
     setFilterQuery({ 
       ...filterQuery, 
@@ -81,10 +82,13 @@ function App() {
     });
   }
 
+  const handleChangePrice = (value) => {
+    setFilterQuery({...filterQuery, maxPrice: value})
+  }
+
   return (
     <>
       <HeaderSection quantityCounter={quantityCounter} />
-      {/* Add state of filter query and functions in contect attribute */}
         <Outlet context={{ 
           mangaData, 
           setMangaData, 
@@ -97,7 +101,8 @@ function App() {
           resetCart, 
           handleItem,
           filterQuery,
-          handleGenre
+          handleGenre,
+          handleChangePrice
         }} />
       <FooterSection />
     </>
