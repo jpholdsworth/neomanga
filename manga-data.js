@@ -1196,7 +1196,7 @@ const MangaData = [
     title: 'Fire Punch',
     vol: 1,
     pageLength: 200,
-    genres: [ 'Shōnen', 'Dark Fantasy', 'Dystopian', 'Supernatural thriller' ],
+    genres: [ 'Shōnen', 'Dark Fantasy', 'Dystopian', 'Supernatural Thriller' ],
     author: {
       name: 'Tatsuki Fujimoto',
       bio: 'Tatsuki Fujimoto is a Japanese manga artist best known as the creator of Chainsaw Man and Fire Punch. Born on October 10, 1993, he gained recognition for his unconventional storytelling, dark humor, and cinematic approach to action and emotion. Chainsaw Man, serialized in Weekly Shōnen Jump since 2018, became a global sensation for its unpredictable plot, unique characters, and blend of horror and absurdity. Fujimoto is also known for his one-shot works like Goodbye, Eri and Look Back, which showcase his ability to craft deeply emotional and thought-provoking narratives. His bold, genre-defying style has made him one of the most innovative voices in modern manga.'
@@ -1218,7 +1218,7 @@ const MangaData = [
     title: 'Fire Punch',
     vol: 4,
     pageLength: 208,
-    genres: [ 'Shōnen', 'Dark Fantasy', 'Dystopian', 'Supernatural thriller' ],
+    genres: [ 'Shōnen', 'Dark Fantasy', 'Dystopian', 'Supernatural Thriller' ],
     author: {
       name: 'Tatsuki Fujimoto',
       bio: 'Tatsuki Fujimoto is a Japanese manga artist best known as the creator of Chainsaw Man and Fire Punch. Born on October 10, 1993, he gained recognition for his unconventional storytelling, dark humor, and cinematic approach to action and emotion. Chainsaw Man, serialized in Weekly Shōnen Jump since 2018, became a global sensation for its unpredictable plot, unique characters, and blend of horror and absurdity. Fujimoto is also known for his one-shot works like Goodbye, Eri and Look Back, which showcase his ability to craft deeply emotional and thought-provoking narratives. His bold, genre-defying style has made him one of the most innovative voices in modern manga.'
@@ -1478,7 +1478,7 @@ const MangaData = [
     title: 'Tokyo Ghoul',
     vol: 7,
     pageLength: 200,
-    genres: [ 'Seinen', 'Dark Fantasy', 'Supernatural thriller' ],
+    genres: [ 'Seinen', 'Dark Fantasy', 'Supernatural Thriller' ],
     author: {
       name: 'Sui Ishida',
       bio: 'Sui Ishida is a Japanese manga artist best known as the creator of Tokyo Ghoul and Choujin X. Born on December 28, 1986, Ishida gained widespread recognition with Tokyo Ghoul (2011–2014) and its sequel Tokyo Ghoul:re, praised for their psychological depth, dark themes, and intricate artwork. In 2021, he launched Choujin X, a supernatural action series showcasing his signature storytelling style and unique artistic vision. Ishida’s work blends horror, emotion, and philosophy, making him one of the most distinctive voices in modern manga.'
@@ -1692,7 +1692,7 @@ const MangaData = [
     title: 'Dandadan',
     vol: 6,
     pageLength: 200,
-    genres: [ 'Shōnen', 'Action', 'Romance comedy', 'Supernatural thriller' ],
+    genres: [ 'Shōnen', 'Action', 'Romantic comedy', 'Supernatural Thriller' ],
     author: {
       name: 'Yukinobu Tatsu',
       bio: 'Yukinobu Tatsu is a Japanese manga artist best known as the creator of Dandadan, a supernatural action-comedy series that blends elements of horror, humor, and adventure. Serialized in Shonen Jump+, Dandadan quickly gained popularity for its fast-paced storytelling, quirky characters, and unique blend of supernatural lore. The series follows two teenagers who get caught up in bizarre and dangerous events involving ghosts, aliens, and otherworldly forces. Tatsu’s dynamic art style, paired with his knack for humor and intense action, has made Dandadan a standout title in modern manga.'
