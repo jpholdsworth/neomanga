@@ -75,17 +75,6 @@ function App() {
     wishlistLength: wishlist.length,
   };
 
-  const handleGenre = (event, newGenre) => {
-    setFilterQuery({ 
-      ...filterQuery, 
-      genres: event.target.checked ? [...filterQuery.genres, newGenre] : filterQuery.genres.filter(g => g !== newGenre) 
-    });
-  }
-
-  const handleChangePrice = (value) => {
-    setFilterQuery({...filterQuery, maxPrice: value})
-  }
-
   return (
     <>
       <HeaderSection quantityCounter={quantityCounter} />
@@ -101,8 +90,7 @@ function App() {
           resetCart, 
           handleItem,
           filterQuery,
-          handleGenre,
-          handleChangePrice
+          setFilterQuery
         }} />
       <FooterSection />
     </>
