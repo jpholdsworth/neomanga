@@ -38,34 +38,43 @@ export default function FilterSection() {
         });
     }
 
-    return (
-        <div className="filter-selection-container">
-            <FilterBox title="genres:">
-                {uniqueGenres.map((genre, idx) => 
-                    <div key={idx}>
-                        <label>
-                            <input 
-                              type="checkbox" 
-                              value={genre}
-                              checked={filterQuery.genres.includes(genre)}
-                              onChange={e => handleGenre(e, genre)}
-                            />
-                            {genre}
-                        </label>
-                    </div>
-                )}
-            </FilterBox>
+    const clearFilter = () => {
+        setFilterQuery({
+            genres: [],
+            maxPrice: 60
+        });
+    }
 
-            <FilterBox title={`PRICE RANGE : up to £ ${filterQuery.maxPrice}`}>
-                <input 
-                  type="range"
-                  min={7}
-                  max={60}
-                  step={1}
-                  value={filterQuery.maxPrice}
-                  onChange={e => handleChangePrice(Number(e.target.value))}
-                />
-            </FilterBox>
-        </div>
+    return (
+        <>
+            <div className="filter-selection-container">
+                <FilterBox title="genres:">
+                    {uniqueGenres.map((genre, idx) =>
+                        <div key={idx}>
+                            <label>
+                                <input
+                                  type="checkbox"
+                                  value={genre}
+                                  checked={filterQuery.genres.includes(genre)}
+                                  onChange={e => handleGenre(e, genre)}
+                                />
+                                {genre}
+                            </label>
+                        </div>
+                    )}
+                </FilterBox>
+                <FilterBox title={`PRICE RANGE : up to £ ${filterQuery.maxPrice}`}>
+                    <input
+                      type="range"
+                      min={7}
+                      max={60}
+                      step={1}
+                      value={filterQuery.maxPrice}
+                      onChange={e => handleChangePrice(Number(e.target.value))}
+                    />
+                </FilterBox>
+            </div>
+            <button onClick={() => clearFilter()}>clear filter</button>
+        </>
     );
 }
