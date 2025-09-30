@@ -1,15 +1,18 @@
 import { useOutletContext } from "react-router-dom";
 
-function FilterBox({ children }) {
+function FilterBox({ title, children }) {
     return (
-        <div>
-            {children}
-        </div>
+        <>
+            <p>{title}</p>
+            <div>
+                {children}
+            </div>
+        </>
     );
 }
 
 export default function FilterSection() {
-    const { filterQuery, handleGenre, handleChangePrice } = useOutletContext();
+    const { filterQuery, setFilterQuery } = useOutletContext();
 
     const uniqueGenres = [
         'Shōnen', 'Seinen', 'Action', 'Adventure', 'Comedy', 'Coming-of-age', 
@@ -21,9 +24,23 @@ export default function FilterSection() {
         'Sword and Sorcery', 'Thriller'
     ];
 
+    const handleGenre = (event, newGenre) => {
+        setFilterQuery({ 
+          ...filterQuery, 
+          genres: event.target.checked ? [...filterQuery.genres, newGenre] : filterQuery.genres.filter(g => g !== newGenre) 
+        });
+    }
+
+    const handleChangePrice = (value) => {
+        setFilterQuery({
+            ...filterQuery,
+            maxPrice: value
+        });
+    }
+
     return (
         <div className="filter-selection-container">
-            <FilterBox>
+            <FilterBox title="genres:">
                 {uniqueGenres.map((genre, idx) => 
                     <div key={idx}>
                         <label>
@@ -38,11 +55,8 @@ export default function FilterSection() {
                     </div>
                 )}
             </FilterBox>
-            <FilterBox>
-                <label>PRICE : </label>
-                <span>
-                    up to £ {filterQuery.maxPrice}
-                </span>
+
+            <FilterBox title={`PRICE RANGE : up to £ ${filterQuery.maxPrice}`}>
                 <input 
                   type="range"
                   min={7}
