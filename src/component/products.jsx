@@ -1,7 +1,7 @@
-import { useOutletContext } from "react-router-dom";
+import { useLocation, useOutletContext } from "react-router-dom";
 import FilterSection from "./filter-section";
 import DisplayManga from "./display-manga";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function QuerySorter({ selectedCategory, sortCategory, panelCount, setPanelCount }) {
     return (
@@ -49,8 +49,15 @@ function QuerySorter({ selectedCategory, sortCategory, panelCount, setPanelCount
 }
 
 export default function Products() {
-    const { mangaData, selectedCategory, sortCategory } = useOutletContext();
+    const { mangaData, selectedCategory, sortCategory, setFilterQuery } = useOutletContext();
     const [panelCount, setPanelCount] = useState(15);
+
+    const location = useLocation();
+    useEffect(() => {
+        if (location.pathname !== "/shop-all") {
+            setFilterQuery({ genres: [], maxPrice: 60 });
+        }
+    }, [location.pathname, setFilterQuery])
 
     return (
         <div>
@@ -60,8 +67,10 @@ export default function Products() {
                 panelCount={panelCount}
                 setPanelCount={setPanelCount}
             />
-            <FilterSection />
-            <DisplayManga products={mangaData} panelCount={panelCount} />
+            <div className="main-body-container">
+                {location.pathname === "/shop-all" && <FilterSection />}
+                <DisplayManga products={mangaData} panelCount={panelCount} />
+            </div>
         </div>
     )
 }
