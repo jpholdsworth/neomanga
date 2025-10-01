@@ -1,3 +1,11 @@
+.main-body-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    margin-right: 120px;
+}
+
 .category-container {
     display: flex;
     justify-content: center;
@@ -51,14 +59,12 @@ select:focus {
     transform: translateY(-50%) rotate(-90deg);
 }
 
-/* https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select */
-
 .manga-grid-display {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 180px;
+    margin-left: 60px;
 }
 
 .display-container {
