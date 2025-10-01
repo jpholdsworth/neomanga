@@ -1,16 +1,16 @@
 import { useOutletContext } from "react-router-dom";
-import { useMemo } from "react";
+import { useMemo } from 'react';
 import MangaCarousel from "./manga-carousel";
 import FeaturedCollection from "./featured";
 import SpecialOffers from "./special-offers";
 import BlogPosts from "./blog";
 
 export default function Home() {
-    const { mangaData } = useOutletContext();
-    
+    const { mangaData, originalMangaData } = useOutletContext();
+
     const random = useMemo(() => [...mangaData].sort(() => 0.5 - Math.random()), [mangaData]);
-    const featuredManga = mangaData.find((obj) => obj.title === "AKIRA");
-    const onePieceManga = mangaData.filter((obj) => obj.title === "One Piece" && obj.vol >= 100);
+    const featuredManga = useMemo(() => originalMangaData.find((obj) => obj.title === "AKIRA"), [originalMangaData]);
+    const onePieceManga = useMemo(() => originalMangaData.filter((obj) => obj.title === "One Piece" && obj.vol >= 100), [originalMangaData]);
 
     return (
         <>
