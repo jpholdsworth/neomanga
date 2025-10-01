@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom";
+import { useLocation, useOutletContext } from "react-router-dom";
 
 function FilterBox({ title, children }) {
     return (
@@ -12,6 +12,7 @@ function FilterBox({ title, children }) {
 }
 
 export default function FilterSection() {
+    const location = useLocation();
     const { filterQuery, setFilterQuery } = useOutletContext();
 
     const uniqueGenres = [
@@ -47,34 +48,38 @@ export default function FilterSection() {
 
     return (
         <>
-            <div className="filter-selection-container">
-                <FilterBox title="genres:">
-                    {uniqueGenres.map((genre, idx) =>
-                        <div key={idx}>
-                            <label>
+            {location.pathname === "/shop-all" && (<>
+                <div className="filter-selection-container">
+                    <FilterBox title="genres:">
+                        {uniqueGenres.map((genre, idx) =>
+                            <div key={idx}>
                                 <input
                                   type="checkbox"
+                                  id={`genre-${idx}`}
+                                  name="genres"
                                   value={genre}
                                   checked={filterQuery.genres.includes(genre)}
                                   onChange={e => handleGenre(e, genre)}
-                                />
-                                {genre}
-                            </label>
-                        </div>
-                    )}
-                </FilterBox>
-                <FilterBox title={`PRICE RANGE : up to £ ${filterQuery.maxPrice}`}>
-                    <input
-                      type="range"
-                      min={7}
-                      max={60}
-                      step={1}
-                      value={filterQuery.maxPrice}
-                      onChange={e => handleChangePrice(Number(e.target.value))}
-                    />
-                </FilterBox>
-            </div>
-            <button onClick={() => clearFilter()}>clear filter</button>
+                                />  
+                                <label htmlFor={`genre-${idx}`}>{genre}</label>
+                            </div>
+                        )}
+                    </FilterBox>
+                    <FilterBox title={`PRICE RANGE : up to £ ${filterQuery.maxPrice}`}>
+                        <input
+                          type="range"
+                          id="max-price"
+                          name="maxPrice"
+                          min={7}
+                          max={60}
+                          step={1}
+                          value={filterQuery.maxPrice}
+                          onChange={e => handleChangePrice(Number(e.target.value))}
+                        />
+                    </FilterBox>
+                </div>
+                <button onClick={() => clearFilter()}>clear filter</button>
+            </>)}
         </>
     );
 }
