@@ -81,6 +81,7 @@ function App() {
         <Outlet context={{ 
           mangaData, 
           setMangaData, 
+          originalMangaData,
           wishlist, 
           cart, 
           selectedCategory, 
