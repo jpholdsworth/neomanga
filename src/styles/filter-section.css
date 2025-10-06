@@ -4,6 +4,10 @@
     margin-bottom: 40px;
 }
 
+.filter-container + .manga-grid-display {
+    margin-left: 60px;
+}
+
 .checkbox-input {
     display: flex;
     justify-items: center;

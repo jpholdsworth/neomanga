@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: flex-start;
     gap: 0;
-    margin-right: 120px;
 }
 
 .category-container {
@@ -64,7 +63,6 @@ select:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 60px;
 }
 
 .display-container {
