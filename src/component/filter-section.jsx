@@ -2,13 +2,13 @@ import { useOutletContext } from "react-router-dom";
 import "../styles/filter-section.css";
 import { useState } from "react";
 
-function FilterBox({ title, children }) {
+function FilterBox({ title, className = "", children }) {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className="filter-box">
-            <p className="filter-title" onClick={() => setIsOpen(!isOpen)} >{title.toUpperCase()}</p>
-            <div className={`${isOpen ? "open-filter-box" : "hide-filter-box"}`}>
+        <div className={`filter-box ${className}`}>
+            <p className="filter-title" onClick={() => setIsOpen(!isOpen)}>{title.toUpperCase()}</p>
+            <div className={`filter-content ${isOpen ? "open" : ""}`}>
                 {children}
             </div>
         </div>
@@ -67,7 +67,7 @@ export default function FilterSection() {
                         </div>
                     )}
                 </FilterBox>
-                <FilterBox title={`PRICE RANGE : up to £ ${filterQuery.maxPrice}`}>
+                <FilterBox title={`PRICE RANGE up to £${filterQuery.maxPrice}`} className="no-scroll" >
                     <input
                       type="range"
                       id="max-price"
