@@ -12,7 +12,6 @@
 
 .checkbox-input {
     display: flex;
-    justify-items: center;
     align-items: flex-start;
     margin-bottom: 6px;
 }
@@ -51,38 +50,59 @@ input[type="checkbox"]:checked::before {
 .filter-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 200px;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border: 2px solid #DD2B37;
     border-radius: 14px;
 }
 
 .filter-title {
     font-family: 'AkiraExpanded', system-ui;
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
     letter-spacing: 2px;
+    font-weight: 700;
     margin: 0;
+    cursor: pointer;
 }
 
-.open-filter-box {
+.filter-content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.4s ease;
+}
+
+.filter-content.open {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    animation: open-menu 0.8s ease;
+    justify-content: flex-start;
+    max-height: 400px;
+    opacity: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    margin-top: 12px;
     transform-origin: top;
+    animation: open-menu 0.6s ease forwards;
 }
 
-.hide-filter-box {
+.no-scroll .filter-content.open {
+    overflow-y: visible;
+    scrollbar-width: none;
+}
+
+.no-scroll .filter-content.open::-webkit-scrollbar {
     display: none;
-    animation: close-menu 0.8s ease;
-    transform-origin: top;
 }
 
 @keyframes open-menu {
     from {
         transform: scaleY(0);
+        opacity: 0;
     } 
     to {
         transform: scaleY(1);
+        opacity: 1;
     }
 }
