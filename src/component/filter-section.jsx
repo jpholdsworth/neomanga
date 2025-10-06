@@ -1,14 +1,17 @@
 import { useOutletContext } from "react-router-dom";
 import "../styles/filter-section.css";
+import { useState } from "react";
 
 function FilterBox({ title, children }) {
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
-        <>
-            <p>{title}</p>
-            <div>
+        <div className="filter-box">
+            <p className="filter-title" onClick={() => setIsOpen(!isOpen)} >{title.toUpperCase()}</p>
+            <div className={`${isOpen ? "open-filter-box" : "hide-filter-box"}`}>
                 {children}
             </div>
-        </>
+        </div>
     );
 }
 
@@ -49,7 +52,7 @@ export default function FilterSection() {
     return (
         <>
             <div className="filter-container">
-                <FilterBox title="genres:">
+                <FilterBox title="genres">
                     {uniqueGenres.map((genre, idx) =>
                         <div key={idx} className="checkbox-input">
                             <input
