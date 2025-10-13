@@ -68,8 +68,24 @@ export default function Products() {
                 setPanelCount={setPanelCount}
             />
             <div className="main-body-container">
-                {location.pathname === "/shop-all" && <FilterSection />}
-                <DisplayManga products={mangaData} panelCount={panelCount} />
+                {(location.pathname === "/shop-all" && mangaData.length > 0) && <FilterSection />}
+                {mangaData.length === 0 ? (
+                    <div className="no-item no-result">
+                        <div className="glitch">
+                            <span>[ ERROR_100X.FILTER_MESS_UP ]</span>
+                            <span>[ ERROR_100X.FILTER_MESS_UP ]</span>
+                            <span>[ ERROR_100X.FILTER_MESS_UP ]</span>
+                        </div>
+                        <div className="no-item-text">
+                            <p>Even the void found no manga matching your filters . . .</p>
+                            <p>Too picky? Or perhaps too thrifty?</p>
+                            <p><span>&gt; Directive:</span> Reset your filters and try again</p>
+                        </div>
+                        <button className="browse-btn" onClick={() => setFilterQuery({genres: [], maxPrice: 60})}>RESET THE FILTER</button>
+                    </div>
+                ) : (
+                    <DisplayManga products={mangaData} panelCount={panelCount} />
+                )}
             </div>
         </div>
     )
