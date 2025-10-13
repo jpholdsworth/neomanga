@@ -2,7 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import "../styles/filter-section.css";
 import { useState } from "react";
 
-function FilterBox({ title, className = "", children }) {
+function FilterBox({ title, className = "", genreSelected = [], children }) {
     const [isOpen, setIsOpen] = useState(false);
     const openClassName = isOpen ? "open" : "";
 
@@ -14,6 +14,12 @@ function FilterBox({ title, className = "", children }) {
                 </p>
                 <span className={openClassName}>&raquo;</span>
             </div>
+            {genreSelected.length > 0 && (
+                <div className="genres-selected">
+                    <span>Genre selected:</span>               
+                    <p>{genreSelected.join(", ")}</p> 
+                </div>
+            )}
             <div className={`filter-content ${openClassName}`}>
                 {children}
             </div>
@@ -58,7 +64,7 @@ export default function FilterSection() {
     return (
         <>
             <div className="filter-container">
-                <FilterBox title="genres">
+                <FilterBox title="genres" genreSelected={filterQuery.genres}>
                     {uniqueGenres.map((genre, idx) =>
                         <div key={idx} className="checkbox-input">
                             <input
@@ -85,7 +91,7 @@ export default function FilterSection() {
                       onChange={e => handleChangePrice(Number(e.target.value))}
                     />
                 </FilterBox>
-                <button onClick={() => clearFilter()}>clear filter</button>
+                <button className="clear-filter-btn" onClick={() => clearFilter()}>clear filter</button>
             </div>
         </>
     );
