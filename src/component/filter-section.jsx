@@ -3,12 +3,18 @@ import "../styles/filter-section.css";
 import { useState } from "react";
 
 function FilterBox({ title, className = "", children }) {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const openClassName = isOpen ? "open" : "";
 
     return (
-        <div className={`filter-box ${className}`}>
-            <p className="filter-title" onClick={() => setIsOpen(!isOpen)}>{title.toUpperCase()}</p>
-            <div className={`filter-content ${isOpen ? "open" : ""}`}>
+        <div className={`filter-box ${className} ${openClassName}`}>
+            <div className="filter-text" onClick={() => setIsOpen(!isOpen)}>
+                <p className="filter-title">
+                    {title.toUpperCase()}
+                </p>
+                <span className={openClassName}>&raquo;</span>
+            </div>
+            <div className={`filter-content ${openClassName}`}>
                 {children}
             </div>
         </div>
