@@ -58,6 +58,8 @@ select:focus {
     transform: translateY(-50%) rotate(-90deg);
 }
 
+.no-result { width: 750px !important; }
+
 .manga-grid-display {
     display: flex;
     flex-direction: column;
