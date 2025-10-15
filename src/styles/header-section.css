@@ -1,40 +1,44 @@
 .header-section {
-    width: 100vw;
+    width: 100%;
     background-color: #0D0D0D;
     color: #FFFFFF;
 }
 
 .shipping-offer {
     background-color: #DD2B37;
-    padding: 2px 0;
+    padding: 0.3rem 0;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+    text-align: center;
 }
 
 .shipping-offer > p {
-    margin: 5px;
+    margin: 0.3rem;
     font-weight: 700;
     letter-spacing: 1.8px;
 }
 
 .text-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: start;
-    gap: 85px;
-    font-size: 0.9rem;
+    gap: clamp(0.5rem, 4vw, 5rem);
+    row-gap: 0.2rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
     text-transform: uppercase;
     letter-spacing: 1.8px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .link {
     position: relative;
     display: inline-block;
+    text-align: center;
     overflow: hidden;
     color: #FFFFFF;
-    margin: 12px 0 8px;
+    margin: 0.75rem 0 8px;
     background: linear-gradient(to right, #DD2B37, #DD2B37 50%, #FFFFFF 50%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -50,7 +54,19 @@ form + a:hover {
     background-position: 0 100%;
 }
 
+.text-links .link:not(:last-child)::after {
+    content: "";
+}
+
 hr {
-    width: 63vw;
+    width: min(90%, 63vw);
     margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+    .text-links .link:not(:last-child)::after {
+        content: "|";
+        margin-left: 0.5rem;
+        opacity: 1;
+    }
 }
