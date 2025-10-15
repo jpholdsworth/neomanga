@@ -29,6 +29,12 @@ body {
   min-height: 100vh;
 }
 
+#root {
+  max-width: 100vw;
+  overflow-x: hidden;
+  text-align: center;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -38,17 +44,4 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
