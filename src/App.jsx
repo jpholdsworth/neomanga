@@ -3,7 +3,6 @@ import { Outlet, useLocation } from 'react-router-dom';
 import MangaData from '../manga-data';
 import HeaderSection from './component/header-section';
 import FooterSection from './component/footer-section';
-import './App.css';
 
 function App() {
   const [originalMangaData] = useState(() => MangaData.slice());
@@ -45,7 +44,7 @@ function App() {
       });
     }
 
-    setMangaData(filteredData);
+    setMangaData([...filteredData]);
   }, [originalMangaData, selectedType, filterQuery, selectedCategory]);
 
   function addItem(item, array="cart") {
