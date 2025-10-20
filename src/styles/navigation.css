@@ -1,10 +1,12 @@
 .nav-bar {
-    width: 70%;
+    width: min(90%, 1020px);
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    padding: 28px 0 16px;
+    padding: clamp(0.8rem, 3vw, 2rem) 0;
     margin: 0 auto;
+    gap: 1rem;
 }
 
 .logo-title {
@@ -13,7 +15,7 @@
     -webkit-text-fill-color: #242424;
     letter-spacing: 4px;
     line-height: 6px;
-    font-size: 2.6rem;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
 }
 
 .logo-title:first-child {
@@ -25,6 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 360px;
     padding: 4px 6px 4px 24px;
     border: 3px solid #DD2B37;
     border-radius: 50px;
@@ -35,7 +38,7 @@ input {
     border: none;
     background-color: transparent;
     transition: width 0.5s ease-in-out;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     color: #FFFFFF;
 }
 
@@ -50,10 +53,10 @@ input {
     justify-content: center;
     align-items: center;
     background-color: #DD2B37;
-    width: 35px;
-    height: 35px;
+    width: clamp(30px, 6vw, 35px);
+    height: clamp(30px, 6vw, 35px);
     border-radius: 50%;
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     transition: all 0.3s ease-in-out;
 }
 
@@ -66,9 +69,9 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: clamp(0.8rem, 3vw, 1.5rem);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .icon-link {
@@ -79,19 +82,37 @@ input {
 
 .cart-item-amount, .wishlist-item-amount {
     font-family: 'Noto sans', sans-serif;
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
     background-color: #DD2B37;
-    padding: 4px 12px;
+    padding: 0.3rem 0.7rem;
     border-radius: 50px;
     position: absolute;
-    top: 22px;
+    top: 0;
+    transform: translateY(55%);
 }
 
-.cart-item-amount { right: -20px; }
-.wishlist-item-amount { right: 35px; }
+.cart-item-amount { right: -1.2rem; }
+.wishlist-item-amount { right: 2rem; }
 .cart-item-amount:hover, .wishlist-item-amount:hover { cursor: default; }
 
 .icons-buttons > .icon-link:hover, .fa-magnifying-glass:hover {
     cursor: pointer;
     color: #DD2B37;
+}
+
+@media (max-width: 900px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .search-bar {
+        max-width: 90%;
+    }
+
+    .icons-buttons {
+        gap: 2rem;
+        font-size: 1.2rem;
+    }
 }
