@@ -43,6 +43,7 @@ h4 {
 
 .subscribe-container > div:last-child {
     display: flex;
+    margin-bottom: 0.5rem;
 }
 
 input[type="email"] {
