@@ -1,9 +1,10 @@
 .genre-tag {
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
     width: fit-content;
     background-color: #DD2B37;
-    padding: 2px 10px;
+    padding: clamp(2px, 0.5vw, 4px) clamp(8px, 2vw, 10px);
     border-radius: 16px;
+    letter-spacing: 0.5px;
 }
 
 .shonen { background-color: #FF4500; }
