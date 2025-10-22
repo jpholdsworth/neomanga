@@ -133,7 +133,7 @@ h4 + p {
     display: flex;
     flex-wrap: wrap;
     gap: clamp(2px, 1vw, 4px);
-    margin: clamp(4px, 1vw, 8px) 0;
+    margin: 8px 0;
 }
 
 .item-btns {
