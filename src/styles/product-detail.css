@@ -1,12 +1,12 @@
 .back-btn-container {
     font-family: 'Noto Sans', sans-serif;
-    width: 58%;
+    width: min(90%, 1000px);
     text-align: left;
     margin: 14px auto;
 }
 
 .back-btn {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
     letter-spacing: 1.2px;
     background: linear-gradient(to left, #FFC038, #FFC038 50%, #FFFFFF 50%);
     background-clip: text;
@@ -34,52 +34,50 @@
     transition: transform 0.375s ease-out;
 }
 
-.back-btn:hover::after {
-    transform: scaleX(1);
-}
+.back-btn:hover::after { transform: scaleX(1); }
 
 .detail-container {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 30px;
-    width: 60vw;
+    gap: clamp(12px, 4vw, 30px);
+    width: min(90%, 1000px);
     margin: 0px auto 24px;
 }
 
 .detail-container > img {
-    width: 420px;
+    flex: 0 1 auto;
+    width: clamp(240px, 20vw, 420px);
     height: auto;
-    margin-left: 26px;
+    margin-left: clamp(0, 2vw, 26px);
+    align-self: flex-start;
 }
 
 .product-details {
     display: flex;
     flex-direction: column;
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     text-align: left;
     letter-spacing: 0.8px;
 }
 
 .title-and-vol {
-    width: max-content;
+    width: 100%;
     font-family: 'AkiraExpanded', system-ui;
-    letter-spacing: 4px;
+    letter-spacing: clamp(2px, 0.6vw, 4px);
 }
 
 .title-and-vol > h1 {
-    font-size: 2.6rem;
-    line-height: 42px;
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+    line-height: 1.2;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #FFFFFF;
     -webkit-text-fill-color: #242424;
     margin: 8px 0 0;
 }
 
-.long-title {
-    width: 650px;
-}
+.long-title { width: 650px; }
 
 .title-and-vol > h1 + p {
     margin: 0;
@@ -88,21 +86,22 @@
 
 .product-genres {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    gap: 16px;
+    gap: clamp(6px, 1vw, 16px);
     margin: 4px 0;
 }
 
 .context {
-    width: 90%;
-    font-size: 0.9rem;
+    width: 100%;
+    font-size: clamp(0.85rem, 1vw, 0.9rem);
     margin: 8px 0;
 }
 
 .product-price {
     font-family: 'AkiraExpanded', system-ui;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2vw, 1.4rem);
     font-weight: 700;
     color: #FFC038;
     text-align: right;
@@ -112,18 +111,19 @@
 
 .product-price > .price-tag {
     color: #FFC038;
-    font-size: 1.3rem;
+    font-size: clamp(1.2rem, 1.5vw, 1.3rem);
     margin-left: 4px;
 }
 
 .product-btns {
-    font-size: 0.8rem;
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
     display: flex;
+    flex-wrap: wrap;
     align-self: end;
     justify-items: center;
     align-items: center;
-    gap: 16px;
-    margin: 12px 120px;
+    gap: clamp(10px, 2vw, 16px);
+    margin: clamp(12px, 3vw, 20px) auto;
 }
 
 .product-break-line {
@@ -141,15 +141,15 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 12px;
+    gap: clamp(10px, 2vw, 12px);
     text-align: center;
-    font-size: 0.9rem;
+    font-size: clamp(0.6rem, 1vw, 0.9rem);
 }
 
 .section-break-line + .additional-info-section {
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1rem;
-    width: 45%;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    width: min(90%, 500px);
     margin: 12px auto;
 }
 
@@ -159,13 +159,13 @@
 
 .info > i {
     margin: 6px 0;
-    font-size: 26px;
+    font-size: clamp(18px, 2vw, 26px);
 }
 
 .author-details {
-    width: 56vw;
+    width: min(90%, 800px);
     font-family: 'Noto Sans', system-ui;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 1vw, 0.95rem);
     letter-spacing: 0.8px;
     text-align: left;
     margin: auto;
@@ -173,9 +173,31 @@
 
 .product-author {
     text-decoration: underline;
-    margin-bottom: 0;
+    margin-bottom: 4px;
 }
 
 .author-bio {
     margin: 6px 0 24px;
+}
+
+@media (max-width: 768px) {
+    .detail-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title-and-vol,
+    .title-and-vol > h1 + p {
+        text-align: center;
+    }
+
+    .long-title { width: 360px; }
+
+    .product-genres {
+        justify-content: center;
+    }
+
+    .additional-info-section {
+        margin: auto;
+    }
 }
