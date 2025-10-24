@@ -1,9 +1,7 @@
-.featured-collection {
-    margin: 38px auto;
-}
+.featured-collection { margin: 38px auto; }
 
 .subheading {
-    font-size: 2.2rem;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
     text-align: start;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #FEFEFE;
@@ -17,7 +15,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 24px;
+    gap: clamp(8px, 2vw, 24px);
     background: linear-gradient(to right, rgba(221, 43, 55, 0.35), rgba(221, 43, 55, 0.9), rgba(221, 43, 55, 1));
     width: 60%;
     padding: 34px 0 34px 22%;
@@ -27,13 +25,13 @@
 }
 
 .akira-img {
-    width: 200px;
+    width: clamp(150px, 20vw, 200px);
     height: auto;
     border: solid 3px #FEFEFE;
 }
 
 .featured-container > div {
-    width: 45%;
+    width: clamp(180px, 40%, 45%);
     font-family: "Noto Sans", sans-serif;
     color: #FEFEFE;
     text-align: left;
@@ -41,20 +39,18 @@
 
 .featured-container p:first-child {
     font-family: 'AkiraExpanded', system-ui;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
     letter-spacing: 2px;
     line-height: 26px;
     margin: 0;
 }
 
 .featured-container p {
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
     margin: 10px 0;
 }
 
-.featured-container .add-cart-btn {
-    font-size: 0.8rem;
-}
+.featured-container .add-cart-btn { font-size: clamp(0.7rem, 1.2vw, 0.8rem); }
 
 .fade-img {
     position: absolute;
@@ -65,4 +61,37 @@
     transform: rotate(-25deg);
     z-index: 0;
     mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+}
+
+@media (max-width: 1024px) {
+    .featured-container {
+        width: 80%;
+        padding: clamp(20px, 4vw, 34px);
+        border-radius: 0 100px 100px 0;
+        gap: clamp(12px, 4vw, 24px);
+        padding: 34px 12px 34px 15%;
+    }
+
+    .featured-container > div { width: 90%; }
+
+    .akira-img { margin-bottom: 8px; }
+    .fade-img { display: none; }
+
+    .subheading {
+        margin: 0 5% 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .featured-container {
+        width: 96%;
+        flex-direction: column;
+        align-items: center;
+        padding: clamp(12px, 3vw, 24px);
+        border-radius: 0 90px 90px 0;
+        padding: 34px 0 34px 0;
+    }
+
+    .featured-container > div { text-align: center; }
 }
