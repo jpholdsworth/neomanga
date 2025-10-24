@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function ItemInList({ 
-    type,
+    type="cart",
     product, 
     quantity, 
     onQuantityChange, 
@@ -28,7 +28,7 @@ export default function ItemInList({
                     {product.vol !== null && <p>Volume {product.vol}</p>}
                 </div>
             </Link>
-            <div className="price-container">
+            <div className={`price-container ${type === "cart" ? "basket" : ""}`}>
                 <p>£ {product.price}</p>
                 {type === "cart" && <>
                     <div className="quantity-container">
