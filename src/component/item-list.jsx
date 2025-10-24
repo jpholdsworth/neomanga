@@ -58,7 +58,6 @@ export default function ItemList({ type }) {
                         {cart.map((product, idx) => (
                             <div key={product.id} className={`list-item ${idx === cart.length - 1 ? "last" : ""}`}>
                                 <ItemInList
-                                    type="cart"
                                     product={product}
                                     quantity={quantities[product.id] || 1}
                                     onQuantityChange={handleQuantityChange}
