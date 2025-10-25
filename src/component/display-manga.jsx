@@ -7,6 +7,18 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
+function useWindowWidth() {
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return width;
+}
+
 function MangaGrid({ currentProducts, index }) {
     const { cart, wishlist, handleItem } = useOutletContext();
 
@@ -51,14 +63,53 @@ function MangaGrid({ currentProducts, index }) {
 }
 
 function Pagination({ index, pageCount, handleSetIndex }) {
+    const width = useWindowWidth();
+
+    const getPageNumbers = () => {
+        const pages = [];
+        const totalPages = pageCount;
+        const current = index + 1;
+
+        if (totalPages <= 9 || width >= 1024) {
+            for (let i = 1; i <= totalPages; i++) pages.push(i);
+        } else {
+            pages.push(1);
+            if (current > 3) pages.push('start-ellipsis');
+        
+            const start = Math.max(2, current - 1);
+            const end = Math.min(totalPages - 1, current + 1);
+        
+            for (let i = start; i <= end; i++) pages.push(i);
+            if (current < totalPages - 2) pages.push('end-ellipsis');
+        
+            pages.push(totalPages); 
+        }
+
+        return pages;
+    }
+  
+    const pages = getPageNumbers();
+  
     return (
         <div className="index-nav">
-            <button disabled={ index === 0 } onClick={() => handleSetIndex(index - 1)}>&#8882;</button>
-            {[...Array(pageCount)].map((_, i) => <div key={i} className={'idx-btn' + (index === i ? ' active' : '')} onClick={() => handleSetIndex(i)}>{i + 1}</div>)}
-            <button disabled={ index === pageCount - 1 } onClick={() => handleSetIndex(index + 1)}>&#8883;</button>
+            <button disabled={index === 0} onClick={() => handleSetIndex(index - 1)}>&#8882;</button>
+            {pages.map((p, i) => (
+                p === 'start-ellipsis' || p === 'end-ellipsis' ? (
+                    <span key={i} className="ellipsis">…</span>
+                ) : (
+                    <div
+                      key={i}
+                      className={'idx-btn' + (index === p - 1 ? ' active' : '')}
+                      onClick={() => handleSetIndex(p - 1)}
+                    >
+                        {p}
+                    </div>
+                )
+            ))}
+            <button disabled={index === pageCount - 1} onClick={() => handleSetIndex(index + 1)}>&#8883;</button>
         </div>
     );
-}
+};
 
 export default function DisplayManga({ products, panelCount }) {
     const query = useQuery();
