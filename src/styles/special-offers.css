@@ -1,40 +1,41 @@
 .special-offer {
-    margin: 60px auto 80px;
+    margin: 5vh auto 8vh;
 }
 
 .special-offer .subheading {
     text-align: right;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
 }
 
 .special-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 24px;
+    gap: clamp(16px, 4vw, 24px);
     background: linear-gradient(to left, rgba(255, 192, 56, 0.35), rgba(255, 192, 56, 0.9), rgba(255, 192, 56, 1));
     color: #0D0D0D;
     letter-spacing: 1px;
     width: 60%;
-    padding: 34px 25% 34px 0;
+    padding: clamp(24px, 5vw, 34px) clamp(10%, 25%, 25%) clamp(24px, 5vw, 34px) 0;
     margin-left: auto;
-    border-radius: 180px 0 0 180px;
+    border-radius: clamp(120px, 15vw, 180px) 0 0 clamp(120px, 15vw, 180px);
 }
 
 .three-manga {
     position: relative;
     display: flex;
     width: auto;
-    margin-bottom: 50px;
+    margin-bottom: clamp(20px, 5vw, 50px);
 }
 
 .three-manga img {
     position: absolute;
-    width: 245px;
+    width: clamp(150px, 20vw, 245px);
 }
 
-.three-manga img:nth-child(1) { z-index: 2; transform: translate(-10px, -150px) rotate(-14deg); }
-.three-manga img:nth-child(2) { z-index: 1; transform: translate(160px, -170px); }
-.three-manga img:nth-child(3) { transform: translate(290px, -170px) rotate(15deg); }
+.three-manga img:nth-child(1) { z-index: 2; transform: translate(clamp(-50px, -2vw, -50px), -150px) rotate(-14deg); }
+.three-manga img:nth-child(2) { z-index: 1; transform: translate(clamp(35px, 8vw, 160px), -170px); }
+.three-manga img:nth-child(3) { transform: translate(clamp(110px, 18vw, 290px), -170px) rotate(15deg); }
 
 .offer-text {
     display: flex;
@@ -43,32 +44,51 @@
     align-items: center;
     font-family: 'Noto Sans', sans-serif;
     margin-left: 560px;
-    width: 65%;
+    width: 80%;
     text-align: left;
 }
 
 .offer-text p:first-child {
     font-family: 'AkiraExpanded', system-ui;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 3vw, 1.4rem);
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: clamp(4px, 1vw, 8px);
 }
 
 .offer-text p {
-    font-size: 1rem;
-    margin: 2px 0;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin: clamp(2px, 0.5vw, 2px) 0;
 }
 
 .offer-text button {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     border: 2px solid transparent;
     border-radius: 28px;
-    padding: 12px 38px;
-    margin: 16px 0 0;
+    padding: clamp(8px, 1.5vw, 12px) clamp(20px, 4vw, 38px);
+    margin: clamp(12px, 2vw, 16px) 0 0;
     transition: all 0.15s ease-in-out;
 }
 
 .offer-text button:hover {
     border: 2px solid #0D0D0D;
     background-color: #DD2B37;
+}
+
+@media (max-width: 768px) {
+    .special-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .three-manga {
+        transform: translate(-100px, 140px) rotate(5deg);
+    }
+
+    .offer-text {
+        width: 100%;
+        margin-top: 200px;
+        margin-left: 36px;
+        text-align: center;
+    }
 }

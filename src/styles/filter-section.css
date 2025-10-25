@@ -1,27 +1,26 @@
 .filter-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.2rem;
     font-family: 'Noto-Sans', sans-serif;
     margin-top: 36px;
     margin-bottom: 40px;
 }
 
-.filter-container + .manga-grid-display {
-    margin-left: 20px;
-}
+.filter-container + .manga-grid-display { margin-left: 20px; }
 
 .checkbox-input {
     display: flex;
     align-items: flex-start;
     margin-bottom: 6px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 input[type="checkbox"] {
     appearance: none;
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
     border: 1.5px solid rgb(128, 128, 128);
     border-radius: 2px;
     display: grid;
@@ -30,8 +29,8 @@ input[type="checkbox"] {
 
 input[type="checkbox"]::before {
     content: "";
-    width: 14px;
-    height: 14px;
+    width: 0.9rem;
+    height: 0.9rem;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
     box-shadow: inset 14px 14px #DD2B37;
@@ -39,50 +38,42 @@ input[type="checkbox"]::before {
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
-input[type="checkbox"]:checked { 
-    border-color: #DD2B37;
-}
-
-input[type="checkbox"]:checked::before {
-    transform: scale(1) rotate(5deg);
-}
+input[type="checkbox"]:checked {  border-color: #DD2B37; }
+input[type="checkbox"]:checked::before { transform: scale(1) rotate(5deg); }
 
 input[type="range"] {
-    margin: 8px auto 12px;
+    margin: 0.5rem auto 0.8rem;
     accent-color: #DD2B37;
 }
 
 .filter-box {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    padding: 10px 20px;
+    width: min(90%, 220px);
+    padding: 0.8rem 1.2rem;
     border: 2px solid rgba(128, 128, 128, 0.1);
     border-radius: 14px;
     transition: all 0.3s ease-in-out;
 }
 
-.filter-box:hover {
-    border-color: #DD2B37;
-}
-
-.filter-box.open {
-    border-color: #DD2B37;
-}
+.filter-box:hover,
+.filter-box.open { border-color: #DD2B37; }
 
 .filter-text {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.8rem;
     cursor: pointer;
 }
 
 .genres-selected > p {
     margin: 0;
+    word-break: break-word;
 }
 
 .filter-title {
     font-family: 'AkiraExpanded', system-ui;
+    font-size: clamp(0.8rem, 3vw, 0.9rem);
     width: 200px;
     overflow: hidden;
     text-align: center;
@@ -92,14 +83,12 @@ input[type="range"] {
 }
 
 .filter-title + span {
-    font-size: 1.6rem;
+    font-size: clamp(1rem, 3vw, 1.6rem);
     transform: rotate(90deg);
     transition: transform 0.4s ease-in-out;
 }
 
-.filter-title + span.open {
-    transform: rotate(270deg);
-}
+.filter-title + span.open { transform: rotate(270deg); }
 
 .filter-content {
     overflow: hidden;
@@ -122,10 +111,18 @@ input[type="range"] {
 }
 
 .clear-filter-btn {
+    width: min(90%, 350px);
     text-transform: uppercase;
     letter-spacing: 1.1px;
     border-radius: 16px;
     transition: all 0.15s ease-in-out;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    margin: auto;
+}
+
+.ellipsis {
+  padding: 0 0.5rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 .clear-filter-btn:hover { background-color: #DD2B37; }
@@ -148,4 +145,9 @@ input[type="range"] {
         transform: scaleY(1);
         opacity: 1;
     }
+}
+
+@media (max-width: 768px) {
+    .filter-container { margin-bottom: 12px; }
+    .filter-container + .manga-grid-display { margin-left: 0; }
 }
