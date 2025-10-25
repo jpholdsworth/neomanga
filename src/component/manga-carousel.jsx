@@ -1,13 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import "../styles/manga-carousel.css";
 
 export default function MangaCarousel({ data }) {
     const { cart, wishlist, handleItem } = useOutletContext();
     const [index, setIndex] = useState(0);
+    const [visibleCards, setVisibleCards] = useState(4);
+    const [cardWidth, setCardWidth] = useState(16.5);
 
-    const visibleCards = 4;
-    const cardWidth = 16.5;
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setVisibleCards(1);
+                setCardWidth(16.75);
+            } else {
+                setVisibleCards(4);
+                setCardWidth(16.5);
+            }
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const handlePrevManga = () => {
         if (index > 0) setIndex(index - 1);

@@ -105,10 +105,7 @@
 }
 
 .add-cart-btn.akira:disabled { border: 2px solid #242424; }
-
-.add-cart-btn, .fa-heart {
-    cursor: pointer;
-}
+.add-cart-btn, .fa-heart { cursor: pointer; }
 
 .add-cart-btn:hover:enabled {
     color: #FFC038;
@@ -121,18 +118,50 @@
     margin-right: 4px;
 }
 
-.wishlist.fa-heart {
-    font-size: 1.4rem;
-}
+.wishlist.fa-heart { font-size: 1.4rem; }
+.wishlist.fa-regular:hover { -webkit-text-fill-color: #DD2B37; }
+.wishlist.fa-solid { color: #DD2B37; }
+.wishlist.fa-solid:hover { color: #FFFFFF; }
 
-.wishlist.fa-regular:hover {
-    -webkit-text-fill-color: #DD2B37;
-}
+@media (max-width: 768px) {
+    #carousel {
+        gap: 10px;
+        margin: 20px auto;
+    }
 
-.wishlist.fa-solid {
-    color: #DD2B37;
-}
+    .carousel-wrapper {
+        width: 95%;
+    }
 
-.wishlist.fa-solid:hover {
-    color: #FFFFFF;
+    .carousel-container {
+        gap: 10px;
+    }
+
+    .manga-card {
+        width: 275px;
+        padding: 12px 6px 6px;
+        border-left: 4px solid #DD2B37;
+        border-right: 4px solid #DD2B37;
+        border-radius: 12px;
+    }
+
+    .carousel-image {
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .manga-title { font-size: 0.9rem; }
+    .manga-title + p { font-size: 0.7rem; }
+
+    .carousel-btns {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.7rem;
+    }
+
+    #carousel > button {
+        font-size: 2.5rem;
+        padding: 6px;
+    }
 }
