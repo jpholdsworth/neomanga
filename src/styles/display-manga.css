@@ -226,3 +226,35 @@ h4 + p {
         margin: clamp(8px, 2vw, 12px) 0;
     }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .manga-grid {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(10px, 3vw, 14px);
+    }
+
+    .manga-grid img {
+        width: auto;
+        height: clamp(140px, 20vw, 200px);
+        margin: clamp(10px, 2vw, 16px) 0 0 clamp(2px, 1vw, 2px);
+    }
+
+    .item-details {
+        margin: 0 12px;
+    }
+
+    .item-btns {
+        justify-content: flex-end;
+        margin: clamp(8px, 2vw, 12px) clamp(8px, 2vw, 20px);
+    }
+
+    .index-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .idx-btn {
+        padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
+    }
+}
