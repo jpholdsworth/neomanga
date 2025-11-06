@@ -73,7 +73,7 @@ input[type="range"] {
 
 .filter-title {
     font-family: 'AkiraExpanded', system-ui;
-    font-size: clamp(0.8rem, 3vw, 0.9rem);
+    font-size: clamp(0.6rem, 1.5vw, 0.9rem);
     width: 200px;
     overflow: hidden;
     text-align: center;
@@ -150,4 +150,12 @@ input[type="range"] {
 @media (max-width: 768px) {
     .filter-container { margin-bottom: 12px; }
     .filter-container + .manga-grid-display { margin-left: 0; }
+}
+
+@media (max-width: 1400px) and (min-width: 769px) {
+    .filter-container {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: -12px;
+    }
 }
