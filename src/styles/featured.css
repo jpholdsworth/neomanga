@@ -63,16 +63,16 @@
     mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
     .featured-container {
-        width: 80%;
+        width: 75%;
         padding: clamp(20px, 4vw, 34px);
-        border-radius: 0 100px 100px 0;
+        border-radius: 0 200px 200px 0;
         gap: clamp(12px, 4vw, 24px);
         padding: 34px 12px 34px 15%;
     }
 
-    .featured-container > div { width: 90%; }
+    .featured-container > div { width: 70%; }
 
     .akira-img { margin-bottom: 8px; }
     .fade-img { display: none; }
