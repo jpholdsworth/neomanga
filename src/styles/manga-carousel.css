@@ -33,6 +33,24 @@
     transition: transform 0.5s ease-in-out;
 }
 
+.no-results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.no-results-message {
+    width: 40%;
+    font-size: 1.3rem;
+    color: #FEFEFE;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FEFEFE;
+    -webkit-text-fill-color: #242424;
+    letter-spacing: 4px;
+}
+
 .manga-card {
     position: relative;
     display: flex;

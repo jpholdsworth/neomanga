@@ -38,6 +38,14 @@ export default function MangaCarousel({ data }) {
         if (index + visibleCards < data.length) setIndex(index + 1);
     }
 
+    if (!data || data.length === 0) {
+        return (
+            <div className="no-results-container">
+                <p className="no-results-message">No results found. Try a different search or filter.</p>
+            </div>
+        )
+    }
+
     return (
         <div id="carousel">
             <button onClick={handlePrevManga} disabled={index === 0}>
