@@ -64,6 +64,10 @@ input {
     background-color: #FFFFFF;
 }
 
+.clear-icon {
+    margin-right: 12px;
+}
+
 .icons-buttons {
     position: relative;
     display: flex;
