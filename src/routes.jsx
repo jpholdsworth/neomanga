@@ -6,9 +6,6 @@ import Products from "./component/products";
 import ProductDetail from "./component/product-detail";
 import Account from "./component/account";
 
-// TODO: ACCOUNT SIGN IN
-// TODO: FILTER SEARCH
-
 const routes = [
     {
         path: '/',
