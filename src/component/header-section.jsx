@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/header-section.css";
 import "../styles/navigation.css";
 
-function Navigation({ quantityCounter }) {
+function Navigation({ quantityCounter, searchManga, setSearchManga }) {
     const { cartLength, wishlistLength } = quantityCounter;
 
     return (
@@ -14,9 +14,16 @@ function Navigation({ quantityCounter }) {
             <div className="search-bar">
                 <input 
                   type="text"
-                  onChange={undefined}
-                  placeholder="Search Product..."
+                  value={searchManga}
+                  onChange={e => setSearchManga(e.target.value)}
+                  placeholder="Product or Author..."
                 />
+                {searchManga && (
+                    <i 
+                        className="fa-solid fa-xmark clear-icon"
+                        onClick={() => setSearchManga("")}
+                    />
+                )}
                 <i className="fa-solid fa-magnifying-glass" />
             </div>
             <div className="icons-buttons">
@@ -42,10 +49,10 @@ function NavigationButtons() {
     );
 }
 
-export default function HeaderSection({ quantityCounter }) {
+export default function HeaderSection({ quantityCounter, searchManga, setSearchManga }) {
     return (
         <div className="header-section">
-            <Navigation quantityCounter={quantityCounter} />
+            <Navigation quantityCounter={quantityCounter} searchManga={searchManga} setSearchManga={setSearchManga} />
             <div className="shipping-offer">
                 <p>
                    Free shipping for all order over £25 and just a reminder, all our deliveries are carbon neutral 

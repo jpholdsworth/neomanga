@@ -10,7 +10,7 @@ function App() {
   const [selectedType, setSelectedType] = useState('');
   const [wishlist, setWishlist] = useState([]);
   const [cart, setCart] = useState([]);
-  // const [searchItem, setSearchItem] = useState('');
+  const [searchManga, setSearchManga] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [filterQuery, setFilterQuery] = useState({ genres: [], maxPrice: 60 });
 
@@ -33,6 +33,14 @@ function App() {
 
     filteredData = filteredData.filter(manga => manga.price <= filterQuery.maxPrice);
 
+    if (searchManga.trim() !== "") {
+      const searchLower = searchManga.toLowerCase();
+      filteredData = filteredData.filter(manga => 
+        manga.title.toLowerCase().includes(searchLower) ||
+        manga.author?.name?.toLowerCase().includes(searchLower)
+      );
+    }
+
     if (selectedCategory.includes("price")) {
       filteredData.sort((a, b) => selectedCategory === "price-low" ? a.price - b.price : b.price - a.price);
     } else if (selectedCategory.includes("alphabet")) {
@@ -45,7 +53,7 @@ function App() {
     }
 
     setMangaData([...filteredData]);
-  }, [originalMangaData, selectedType, filterQuery, selectedCategory]);
+  }, [originalMangaData, selectedType, filterQuery, searchManga, selectedCategory]);
 
   function addItem(item, array="cart") {
     array !== "cart" ? setWishlist([...wishlist, item]) : setCart([...cart, item]);
@@ -76,7 +84,7 @@ function App() {
 
   return (
     <>
-      <HeaderSection quantityCounter={quantityCounter} />
+      <HeaderSection quantityCounter={quantityCounter} searchManga={searchManga} setSearchManga={setSearchManga} />
         <Outlet context={{ 
           mangaData, 
           setMangaData, 
