@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import '../styles/account.css';
 
@@ -6,6 +6,12 @@ export default function Account() {
     const [formData, setFormData] = useState({ name: "", email: "", password: "", confirmPassword: "" });
     const [status, setStatus] = useState("new-account");
     const [error, setError] = useState("");
+
+    useEffect(() => {
+        status === "new-account" ? 
+        document.title = "NeoManga// Sign In" :
+        document.title = "NeoManga// Log In";
+    }, [status]);
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -143,7 +149,7 @@ export default function Account() {
                         </a>
                     </>
                 )}
-                <Link to="/" className="account icon-link">
+                <Link to="/" className="account icon-link" onClick={() => {document.title = "NeoManga// Home"}}>
                     <i className="fa-solid fa-house" />
                 </Link>
             </div>

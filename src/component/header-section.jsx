@@ -21,9 +21,9 @@ function Navigation({ quantityCounter }) {
             </div>
             <div className="icons-buttons">
                 <Link to="/account-login" className="icon-link"><i className="fa-solid fa-user" /></Link>
-                <Link to="/wishlist" className="icon-link"><i className="fa-solid fa-heart" /></Link>
+                <Link to="/wishlist" className="icon-link" onClick={() => document.title = "NeoManga// Wishlist"}><i className="fa-solid fa-heart" /></Link>
                 {wishlistLength != 0 && <p className="wishlist-item-amount">{wishlistLength}</p>}
-                <Link to="/cart" className="icon-link"><i className="fa-solid fa-cart-shopping" /></Link>
+                <Link to="/cart" className="icon-link" onClick={() => document.title = "NeoManga// Shopping Cart"}><i className="fa-solid fa-cart-shopping" /></Link>
                 {cartLength != 0 && <p className="cart-item-amount">{cartLength}</p>}
             </div>
         </div>
@@ -34,10 +34,10 @@ function Navigation({ quantityCounter }) {
 function NavigationButtons() {
     return (
         <div className="text-links">
-            <Link to="/" className="link">Home</Link>
-            <Link to="/best-sellers" className="link">Our Bestsellers</Link>
-            <Link to="/new-arrivals" className="link">New Arrivals</Link>
-            <Link to="/shop-all" className="link">Shop All</Link>
+            <Link to="/" className="link" onClick={() => document.title = "NeoManga// Home"}>Home</Link>
+            <Link to="/best-sellers" className="link" onClick={() => document.title = "NeoManga// Best Sellers"}>Our Bestsellers</Link>
+            <Link to="/new-arrivals" className="link" onClick={() => document.title = "NeoManga// New Arrivals"}>New Arrivals</Link>
+            <Link to="/shop-all" className="link" onClick={() => document.title = "NeoManga// Shop All"}>Shop All</Link>
         </div>
     );
 }
