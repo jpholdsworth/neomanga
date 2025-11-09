@@ -13,6 +13,12 @@ export default function MangaCarousel({ data }) {
             if (window.innerWidth <= 768) {
                 setVisibleCards(1);
                 setCardWidth(16.75);
+            } else if (window.innerWidth <= 1000) {
+                setVisibleCards(2);
+                setCardWidth(16.625);
+            } else if (window.innerWidth <= 1300) {
+                setVisibleCards(3);
+                setCardWidth(16.5625);
             } else {
                 setVisibleCards(4);
                 setCardWidth(16.5);
