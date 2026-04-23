@@ -11,7 +11,7 @@
 ## 👋 Introduction
 
 
-### 💡 Why This Project Matters?
+### 💡 Why This Project Matters
 
 
 ### 📹 Preview
@@ -22,6 +22,7 @@
 - [Features](#-features)
 - [Design Choices](#-design-choices)
 - [Architecture](#️-architecture)
+- [Development Principles](#-development-principles)
 - [Tech Stack](#️-tech-stack)
 - [Getting Started](#-getting-started)
 - [Development Log](#-development-log)
@@ -40,6 +41,9 @@
 
 
 ## 🏗️ Architecture
+
+
+## 🧩 Development Principles
 
 
 ## 🛠️ Tech Stack
