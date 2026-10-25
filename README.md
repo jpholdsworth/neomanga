@@ -76,29 +76,96 @@ NeoManga was conceived as a user-friendly online manga store where readers can d
 ## 🏗️ Architecture
 NeoManga uses a component-based architecture, dividing the interface into small, reusable React components. React Router handles client-side navigation, the Context API manages shared state, and a custom manga data file populates the product catalogue.
  
-The main parts of the application are:
+### Component Structure
+- **`App`** - the main application component, providing the overall structure.
+- **`Home`** - organises the homepage content and its featured sections.
+- **`Products` & `ItemList`** - display manga products and organise product listings.
+- **`DisplayManga` & `DisplayItem`** - present manga content and individual items within the catalogue.
+- **`ProductDetail`** - displays detailed information about a selected manga title.
+- **`FilterSection`** - provides filtering controls to help users find manga.
+- **`MangaCarousel` & `Featured`** - showcase manga titles and featured content.
+- **`HeaderSection` & `FooterSection`** - provide shared navigation and footer content across the application.
+- **`Account`, `Blog` & `AdditionalInfo`** - provide account-related, blog and supplementary content.
+- **`ErrorPage`** - displays an error view when a route cannot be resolved or an error needs to be handled.
 
-- **UI Components** - reusable components for displaying manga products, product details and shopping cart items.
-- **Product Data** - a custom data file containing the manga information used to render the catalogue.
-- **State Management** - React state and the Context API manage application data and share cart information between components where needed.
-- **Routing** - React Router connects the different views, letting users move between the catalogue, individual product pages and other views.
-- **Shopping Cart** - users can add and remove items, adjust quantities, and see the total price update dynamically.
-- **Responsive Interface** - CSS styling adapts the layout to different screen sizes and devices.
-
-This structure keeps the application organised, separates responsibilities, and makes individual features easier to maintain and extend.
-
-## 🧩 Development Principles
-Throughout development, I applied core front-end principles to build a functional, maintainable and user-friendly application:
+### State Management
+Application state is managed using React hooks and the Context API:
  
-- **Component Reusability** - building reusable React components to reduce duplication and keep the interface consistent.
-- **Separation of Concerns** - giving product data, UI components, routing and cart functionality distinct responsibilities.
-- **State Management** - using React state and the Context API to manage application data and share it between components without excessive prop passing.
-- **Data-Driven Rendering** - generating product listings and details from structured manga data rather than hardcoding each product.
-- **User Experience** - providing search, filtering, quantity controls and clear product information to make browsing and shopping straightforward.
-- **Responsive Design** - designing layouts that stay usable across desktop, tablet and mobile devices.
-- **Incremental Development** - building and refining features step by step, testing and fixing issues as the application evolved.
-These principles strengthened my understanding of React development and helped me make practical decisions about structuring and maintaining an interactive web application.
+- **`useState`** manages local component state, such as search queries, filtering options and interactive UI elements, where applicable.
+- **Context API** shares shopping cart state between the components that need access to cart data, reducing excessive prop passing.
+State updates keep the relevant interface elements in sync with user interactions, including cart changes, item quantities and price calculations.
 
+<details>
+<summary>View data flow</summary>
+
+1. Manga product information is loaded from the custom manga data file.
+2. Product components render the catalogue using the available manga data.
+3. Users browse, search and filter manga titles.
+4. Selecting a manga navigates to its product details view.
+5. Shopping cart interactions update the shared cart state.
+6. Quantity changes update the cart contents and total price.
+7. React re-renders affected components when their relevant state changes.
+
+</details>
+
+<details>
+<summary>View project file structure</summary>
+
+```
+src/
+├── assets/
+│   ├── AkiraExpandedDemo.otf
+│   ├── alien.png
+│   └── NotoSans-Regular.ttf
+├── component/
+│   ├── account.jsx
+│   ├── additional-info.jsx
+│   ├── blog.jsx
+│   ├── display-item.jsx
+│   ├── display-manga.jsx
+│   ├── error-page.jsx
+│   ├── featured.jsx
+│   ├── filter-section.jsx
+│   ├── footer-details.jsx
+│   ├── footer-section.jsx
+│   ├── header-section.jsx
+│   ├── home.jsx
+│   ├── item-list.jsx
+│   ├── manga-carousel.jsx
+│   ├── product-detail.jsx
+│   ├── products.jsx
+│   └── special-offers.jsx
+├── styles/
+│   ├── account.css
+│   ├── blog.css
+│   ├── display-manga.css
+│   ├── error-page.css
+│   ├── featured.css
+│   ├── filter-section.css
+│   ├── footer-section.css
+│   ├── genres.css
+│   ├── header-section.css
+│   ├── item-list.css
+│   ├── manga-carousel.css
+│   ├── navigation.css
+│   ├── product-detail.css
+│   └── special-offers.css
+├── App.jsx
+├── index.css
+├── main.jsx
+└── routes.jsx
+```
+ 
+</details>
+
+### 🔑 Key Principles
+- **Separation of Concerns** - keeping React components, styling, routing and product data separate to keep the codebase organised.
+- **Component Reusability** - using dedicated components for shared interface elements, product displays and navigation.
+- **Shared State Management** - using the Context API to share application state between components where required.
+- **Data-Driven Rendering** - generating product listings and details from structured manga data.
+- **Client-Side Routing** - using React Router to navigate between application views.
+- **Responsive Design** - styling the interface to support different screen sizes and devices.
+- **Maintainability** - organising components and stylesheets into distinct files to make the application easier to understand and update.
 
 ## 🛠️ Tech Stack
 
