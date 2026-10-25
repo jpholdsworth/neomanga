@@ -204,10 +204,17 @@ http://localhost:5173/
 
 
 ## 🔮 Future Improvements
-
+- [ ] Add cart persistance using `localStorage` to retain shopping cart contents across page refreshes
+- [ ] Migrate manga data from JSON to a SQL database accessed through a backend API, supporting structured queries and more flexible product searching and filtering
+- [ ] Introduce role-based authorisation to control access to features and actions according to user roles
+- [ ] Integrate a payment provider to support secure transactions and complete the checkout experience
+- [ ] Enhance accessibility with improved keyboard navigation, semantic HTML and ARIA attributes for people with different accessibility needs
+- [ ] Add automated tests for component behaviour and core functionality, including shopping cart operations and checkout
+- [ ] Implement a light and dark theme toggle so users can switch between modes
+- [ ] Explore lazy loading and code splitting to improve loading performance as the application grows
 
 ## 🙏 Acknowledgements
-
+Special thanks to my friends for providing valuable feedback on the user interface (UI) and user experience (UX). Their feedback helped me identify areas for improvement and refine the overall shopping experience.
 
 ## 📜 License
 This project's source code is licensed under the [MIT License](https://mit-license.org/)
