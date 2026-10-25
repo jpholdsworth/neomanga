@@ -22,6 +22,7 @@ This project was an opportunity to develop my skills in building interactive web
 Key concepts explored include:
 - `useState` - managing shopping cart contents, search queries, and product filtering
 - `useEffect` - handling side effects where needed
+- **Context API** - sharing cart state between components without excessive prop passing
 - **React Router** - implementing client-side navigation between application views
 - **JSON data management** - structuring and displaying manga product information from a custom JSON file
 - **Component-based architecture** - separating functionality into reusable UI components
@@ -63,7 +64,6 @@ NeoManga was conceived as a user-friendly online manga store where readers can d
 - 🛒 **Cart Management** - add and remove titles, and review your selections.
 - 🔢 **Quantity Controls** - increase or decrease the quantity of each item.
 - 💷 **Automatic Price Calculation** - totals update instantly as quantities change.
-- 💾 **Cart Persistence** - cart contents are retained across page refreshes.
 
 **Experience**
 - 🧭 **Client-Side Routing** - move between views with React Router, with no full-page reloads.
@@ -74,9 +74,30 @@ NeoManga was conceived as a user-friendly online manga store where readers can d
 
 
 ## 🏗️ Architecture
+NeoManga uses a component-based architecture, dividing the interface into small, reusable React components. React Router handles client-side navigation, the Context API manages shared state, and a custom manga data file populates the product catalogue.
+ 
+The main parts of the application are:
 
+- **UI Components** - reusable components for displaying manga products, product details and shopping cart items.
+- **Product Data** - a custom data file containing the manga information used to render the catalogue.
+- **State Management** - React state and the Context API manage application data and share cart information between components where needed.
+- **Routing** - React Router connects the different views, letting users move between the catalogue, individual product pages and other views.
+- **Shopping Cart** - users can add and remove items, adjust quantities, and see the total price update dynamically.
+- **Responsive Interface** - CSS styling adapts the layout to different screen sizes and devices.
+
+This structure keeps the application organised, separates responsibilities, and makes individual features easier to maintain and extend.
 
 ## 🧩 Development Principles
+Throughout development, I applied core front-end principles to build a functional, maintainable and user-friendly application:
+ 
+- **Component Reusability** - building reusable React components to reduce duplication and keep the interface consistent.
+- **Separation of Concerns** - giving product data, UI components, routing and cart functionality distinct responsibilities.
+- **State Management** - using React state and the Context API to manage application data and share it between components without excessive prop passing.
+- **Data-Driven Rendering** - generating product listings and details from structured manga data rather than hardcoding each product.
+- **User Experience** - providing search, filtering, quantity controls and clear product information to make browsing and shopping straightforward.
+- **Responsive Design** - designing layouts that stay usable across desktop, tablet and mobile devices.
+- **Incremental Development** - building and refining features step by step, testing and fixing issues as the application evolved.
+These principles strengthened my understanding of React development and helped me make practical decisions about structuring and maintaining an interactive web application.
 
 
 ## 🛠️ Tech Stack
