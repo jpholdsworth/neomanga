@@ -13,7 +13,7 @@
 ![e-commerce website responsiveness](/doc/responsive.png)
 
 ## 👋 Introduction
-**NeoManga** is a manga e-commerce web application designed to provide users with an intuitive shopping experience for browsing and discovering manga titles. Built with React and Vite, the project features interactive product filtering, search functionality, and a shopping cart, allowing users to explore the catalogue and manage their selections. Manga product information is organised in a custom JSON file, providing a structured way to store, manage, and display catalogue data.
+**NeoManga** is a manga e-commerce web application built with React and Vite, designed to provide an intuitive shopping experience for browsing and discovering manga titles. It features product search and filtering, client-side navigation, and shopping cart functionality, allowing users to explore the catalogue and manage their selections. Manga product information is organised in a custom JSON data file to populate the product catalogue.
 
 ### 💡 Why This Project Matters
 This project was created to strengthen my understanding of building interactive e-commerce applications using React and modern front-end development principles. It focuses on managing product data, handling user interactions, implementing client-side navigation, and creating a responsive shopping experience through reusable components and state-driven UI updates.
@@ -48,10 +48,22 @@ The result is an interactive manga shopping application that demonstrates practi
 - [License](#-license)
 
 ## 🎯 The Vision
+The vision behind **NeoManga** is to create a user-friendly online platform where manga enthusiasts can easily discover, browse, and select manga titles through a smooth and intuitive shopping experience. The project aims to combine a clean, responsive interface with practical e-commerce functionality, making it simple for users to explore the catalogue, find titles they're interested in, and manage their shopping cart.
 
+Through NeoManga, I wanted to apply my frontend development skills to a practical, real-world use case while building an application that reflects the core features and interactions of an online manga store.
 
 ## ✨ Features
-
+- 📚 **Manga Catalogue** - browse a collection of manga titles with cover artwork and product information.
+- 🔍 **Search Functionality** - search the catalogue to find specific manga titles.
+- 🎯 **Product Filtering** - filter manga listings to narrow down the available selection.
+- 📖 **Product Details** - open an individual manga page to view its product information.
+- 🛒 **Shopping Cart Management** - add and remove manga titles and manage selected items.
+- 🔢 **Quantity Controls** - increase or decrease the quantity of each item in the shopping cart.
+- 💷 **Automatic Price Calculation** - dynamically calculate the total cost of items in the cart based on their quantities.
+- 💾 **Cart Persistence** - retain shopping cart contents across page refreshes.
+- 🧭 **Client-Side Routing** - navigate between application views using React Router without full-page reloads.
+- 📱 **Responsive Design** - adapt the layout to desktop, tablet, and mobile screen sizes.
+- ⚛️ **Dynamic UI Updates** - update product listings, cart quantities, and totals in response to user interactions.
 
 ## 🎨 Design Choices
 
