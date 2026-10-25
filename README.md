@@ -13,25 +13,27 @@
 ![e-commerce website responsiveness](/doc/responsive.png)
 
 ## 👋 Introduction
+
 **NeoManga** is a manga e-commerce web application built with React and Vite, designed to provide an intuitive shopping experience for browsing and discovering manga titles. It features product search and filtering, client-side navigation, and shopping cart functionality, allowing users to explore the catalogue and manage their selections. Manga product information is organised in a custom JSON data file to populate the product catalogue.
 
 ### 💡 Why This Project Matters
-This project was created to strengthen my understanding of building interactive e-commerce applications using React and modern front-end development principles. It focuses on managing product data, handling user interactions, implementing client-side navigation, and creating a responsive shopping experience through reusable components and state-driven UI updates.
+This project was an opportunity to develop my skills in building interactive web applications with React and modern frontend development techniques. By creating an e-commerce experience, I gained practical experience managing application state, organising reusable components, handling user interactions, and implementing client-side navigation.
 
-Through this project, I explored key concepts including:
+Key concepts explored include:
 - `useState` - managing shopping cart contents, search queries, and product filtering
-- `useEffect` - handling side effects and synchronising data where required
-- **React Router** - implementing client-side navigation between different views of the application
-- **JSON data management** - organising manga product information in a custom JSON file and using it to populate the product catalogue
-- **Component-based architecture** - building reusable components for product listings, navigation, and shopping cart functionality
-- **Event handling** - responding to user interactions such as searching, filtering, and adding or removing items from the cart
-- **Dynamic rendering** - updating displayed products and cart contents based on user actions
+- `useEffect` - handling side effects where needed
+- **React Router** - implementing client-side navigation between application views
+- **JSON data management** - structuring and displaying manga product information from a custom JSON file
+- **Component-based architecture** - separating functionality into reusable UI components
+- **Dynamic rendering and event handling** - updating the interface in response to user interactions
 
-The result is an interactive manga shopping application that demonstrates practical React state management, client-side routing, structured data handling, and core e-commerce functionality.
+The project brings these concepts together in a functional e-commerce application, demonstrating my understanding of React fundamentals and practical frontend development.
 
 ### 📹 Preview
+
 ![Watch preview](/doc/preview.gif)
-*This preview demonstrates browsing and selecting manga products, viewing product details, and displaying the contents of the shopping cart.*
+
+**A walkthrough of browsing and selecting manga, viewing product details, and reviewing the shopping cart.*
 
 ## 📑 Table of Contents
 - [The Vision](#-the-vision)
@@ -48,22 +50,25 @@ The result is an interactive manga shopping application that demonstrates practi
 - [License](#-license)
 
 ## 🎯 The Vision
-The vision behind **NeoManga** is to create a user-friendly online platform where manga enthusiasts can easily discover, browse, and select manga titles through a smooth and intuitive shopping experience. The project aims to combine a clean, responsive interface with practical e-commerce functionality, making it simple for users to explore the catalogue, find titles they're interested in, and manage their shopping cart.
-
-Through NeoManga, I wanted to apply my frontend development skills to a practical, real-world use case while building an application that reflects the core features and interactions of an online manga store.
+NeoManga was conceived as a user-friendly online manga store where readers can discover titles, explore product details, and manage their selections through an intuitive shopping experience. My goal was to combine a clean, responsive interface with essential e-commerce functionality while applying my frontend development skills to a practical project.
 
 ## ✨ Features
-- 📚 **Manga Catalogue** - browse a collection of manga titles with cover artwork and product information.
-- 🔍 **Search Functionality** - search the catalogue to find specific manga titles.
-- 🎯 **Product Filtering** - filter manga listings to narrow down the available selection.
-- 📖 **Product Details** - open an individual manga page to view its product information.
-- 🛒 **Shopping Cart Management** - add and remove manga titles and manage selected items.
-- 🔢 **Quantity Controls** - increase or decrease the quantity of each item in the shopping cart.
-- 💷 **Automatic Price Calculation** - dynamically calculate the total cost of items in the cart based on their quantities.
-- 💾 **Cart Persistence** - retain shopping cart contents across page refreshes.
-- 🧭 **Client-Side Routing** - navigate between application views using React Router without full-page reloads.
-- 📱 **Responsive Design** - adapt the layout to desktop, tablet, and mobile screen sizes.
-- ⚛️ **Dynamic UI Updates** - update product listings, cart quantities, and totals in response to user interactions.
+**Browsing & Discovery**
+- 📚 **Manga Catalogue** - browse a collection of titles with cover artwork and product information.
+- 🔍 **Search** - quickly find specific manga titles.
+- 🎯 **Product Filtering** - narrow down the catalogue to the titles you want.
+- 📖 **Product Details** - open an individual manga page to view its full product information.
+
+**Shopping Cart**
+- 🛒 **Cart Management** - add and remove titles, and review your selections.
+- 🔢 **Quantity Controls** - increase or decrease the quantity of each item.
+- 💷 **Automatic Price Calculation** - totals update instantly as quantities change.
+- 💾 **Cart Persistence** - cart contents are retained across page refreshes.
+
+**Experience**
+- 🧭 **Client-Side Routing** - move between views with React Router, with no full-page reloads.
+- 📱 **Responsive Design** - the layout adapts to desktop, tablet and mobile screens.
+- ⚛️ **Dynamic UI Updates** - listings, quantities and totals respond immediately to user actions.
 
 ## 🎨 Design Choices
 
