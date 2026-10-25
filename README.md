@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-<!-- External link to the webpage -->
+👉 ![View NeoManga](https://neomangashop.netlify.app/)
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
@@ -10,7 +10,7 @@
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 ![Status](https://img.shields.io/badge/status-live-brightgreen?style=for-the-badge)
 
-<!-- responsive pictures on multi devices -->
+![e-commerce website responsiveness](/doc/responsive.png)
 
 ## 👋 Introduction
 
