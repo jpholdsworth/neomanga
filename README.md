@@ -95,4 +95,6 @@ http://localhost:5173/
 ## 📜 License
 This project's source code is licensed under the [MIT License](https://mit-license.org/)
 
-> Manga cover artwork belongs to its respective copyright holders, publishers and creators. Some images were sourced from Amazon product listings. \n\n NeoManga is an independent project and is not affiliated with or endorsed by Amazon or any manga publisher.
+> Manga cover artwork belongs to its respective copyright holders, publishers and creators. Some images were sourced from Amazon product listings. 
+>
+> NeoManga is an independent project and is not affiliated with or endorsed by Amazon or any manga publisher.
