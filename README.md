@@ -13,13 +13,25 @@
 ![e-commerce website responsiveness](/doc/responsive.png)
 
 ## 👋 Introduction
-
+**NeoManga** is a manga e-commerce web application designed to provide users with an intuitive shopping experience for browsing and discovering manga titles. Built with React and Vite, the project features interactive product filtering, search functionality, and a shopping cart, allowing users to explore the catalogue and manage their selections. Manga product information is organised in a custom JSON file, providing a structured way to store, manage, and display catalogue data.
 
 ### 💡 Why This Project Matters
+This project was created to strengthen my understanding of building interactive e-commerce applications using React and modern front-end development principles. It focuses on managing product data, handling user interactions, implementing client-side navigation, and creating a responsive shopping experience through reusable components and state-driven UI updates.
 
+Through this project, I explored key concepts including:
+- `useState` - managing shopping cart contents, search queries, and product filtering
+- `useEffect` - handling side effects and synchronising data where required
+- **React Router** - implementing client-side navigation between different views of the application
+- **JSON data management** - organising manga product information in a custom JSON file and using it to populate the product catalogue
+- **Component-based architecture** - building reusable components for product listings, navigation, and shopping cart functionality
+- **Event handling** - responding to user interactions such as searching, filtering, and adding or removing items from the cart
+- **Dynamic rendering** - updating displayed products and cart contents based on user actions
+
+The result is an interactive manga shopping application that demonstrates practical React state management, client-side routing, structured data handling, and core e-commerce functionality.
 
 ### 📹 Preview
-
+![Watch preview](/doc/preview.gif)
+*This preview demonstrates browsing and selecting manga products, viewing product details, and displaying the contents of the shopping cart.*
 
 ## 📑 Table of Contents
 - [The Vision](#-the-vision)
